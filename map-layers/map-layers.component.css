@@ -1,0 +1,93 @@
+/* Subtractions
+Need to remove from css and inherit properties */
+
+.layerMenu {
+    border-top: none;
+}
+
+.layerMenu ul {
+    min-width: auto;
+}
+
+.mtx-layerMenu-panel-heading {
+    padding: 10px 15px;
+}
+
+.layerMenu li.disabled {
+    color: unset;
+}
+
+
+/* Changes */
+
+.layerMenu li {
+    padding: 0 0 6px 0;
+}
+
+.mtx-layerMenu-panel-body {
+    padding: 10px 15px;
+}
+
+
+/* Additions */
+
+.text-amethyst {
+    color: #77448b;
+}
+
+.layerMenu {
+    font-size: 14px;
+    min-width: 240px;
+    border: 1px solid #d2d2d2;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.layerMenu .panel {
+    border-radius: 0;
+}
+
+.layerMenu li.disabled label {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.layerMenu li label {
+    display: block;
+}
+
+.layerMenu input[type='checkbox'],
+.layerMenu input[type="radio"] {
+    margin: 3px 0 0 0;
+}
+
+.layerMenu .date-range-options {
+    display: none;
+    margin: 6px 0;
+}
+
+.layerMenu .mtx-layerMenu-panel-group {
+    margin-bottom: 0;
+}
+
+.layerMenu .mtx-layerMenu-panel-heading {
+    border-radius: 0;
+}
+
+.layerMenu .j-layerLabel::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.layerMenu .j-layerLabel.collapsed::before {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}

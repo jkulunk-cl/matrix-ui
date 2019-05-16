@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!-- 
+    
+        Notes
+        - Replace "Zoom In" warning label and with Tooltip
+        - Replace "textCenterPointer" class with "btn btn-link pull-right"
+
+    -->
+
+    <!-- FOR PROTOTYPE ONLY -->
+    <link href="http://dogwood.argon.dev.tarasoft.local/Matrix/css/matrix?v=t1t_zwImln-5g2LjHrSB8aeHnmaMttAJEvv1KfZJPSQ1" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+        .layerMenu {
+            display: block;
+            margin: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- // FOR PROTOTYPE ONLY -->
+
+    <link rel="stylesheet" href="map-layers.component.css">
+    <script src="map-layers.component.js"></script>
+
+</head>
+
+<body>
+    <div id="m_ucIMap_m_divLayers" class="layerMenu">
+        <div class="panel-group mtx-layerMenu-panel-group" role="tablist" id="mapLayers">
+            <div id="m_mapBoundaries" class="panel panel-default">
+                <div class="panel-heading mtx-layerMenu-panel-heading" role="tab" id="headingOne">
+                    <div id="m_ucIMap_m_btnCollapseOne" class="j-layerLabel" role="button" data-toggle="collapse" data-parent="#mapLayers" data-target="#m_ucIMap_collapseOne" aria-expanded="true" aria-controls="m_ucIMap_collapseOne">
+                        Boundaries
+                    </div>
+                </div>
+                <div id="m_ucIMap_collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body mtx-layerMenu-panel-body">
+
+                        <!-- <div class="NavBar_menuItem zoomIn" style="display: block;">Zoom In</div> -->
+
+                        <ul id="m_ucIMap_m_ulBoundaries" class="j-layerListItems">
+
+                            <li class="NavBar_menuItem disabled"><label>
+                                    <input type="checkbox" gpllayer="b_parcel" minzoom="15" maxzoom="21"
+                                        checked="checked" disabled="disabled">
+                                    Parcel
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_zip" minzoom="12" maxzoom="21">
+                                    Zip
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_city" minzoom="10" maxzoom="21">
+                                    City
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_county" minzoom="5" maxzoom="21">
+                                    County
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_school" minzoom="10" maxzoom="21">
+                                    Unified School District
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_hood" minzoom="10" maxzoom="21">
+                                    Neighborhood
+                                </label></li>
+
+                            <li class="NavBar_menuItem disabled"><label>
+                                    <input type="checkbox" gpllayer="b_flood" minzoom="15" maxzoom="21"
+                                        disabled="disabled">
+                                    Flood Zones
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_1" minzoom="10" maxzoom="20">
+                                    MLS Areas
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_2" minzoom="5" maxzoom="20">
+                                    Congressional Districts
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_4" minzoom="8" maxzoom="20">
+                                    Groundwater Districts
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_9" minzoom="9" maxzoom="20">
+                                    Elementary School
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_10" minzoom="9" maxzoom="20">
+                                    Middle School
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_11" minzoom="9" maxzoom="20">
+                                    High School
+                                </label></li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" gpllayer="b_12" minzoom="5" maxzoom="20">
+                                    USDA - Ineligible Areas
+                                </label></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!---->
+            <div id="m_map_Status" class="panel panel-default">
+                <div class="panel-heading mtx-layerMenu-panel-heading" role="tab" id="heading_Status">
+                    <div id="m_ucIMap_m_btnCollapse_Status" class="j-layerLabel collapsed" role="button" data-toggle="collapse" data-parent="#mapLayers" data-target="#m_ucIMap_collapse_Status" aria-expanded="false" aria-controls="m_ucIMap_collapse_Status">
+                        MLS Status
+                    </div>
+                </div>
+                <div id="m_ucIMap_collapse_Status" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_Status">
+                    <div class="panel-body mtx-layerMenu-panel-body">
+
+                        <!-- <div class="NavBar_menuItem zoomIn" style="display: block;">Zoom In</div> -->
+
+                        <ul id="m_ucIMap_m_ul_Status" class="j-layerListItems">
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" checked="checked">
+                                    <i class="fas fa-map-marker mtx-text--confirm"></i> Active
+                                </label>
+                            </li>
+
+                            <li class="NavBar_menuItem"><label>
+                                    <input type="checkbox" minzoom="12" maxzoom="21">
+                                    <i class="fas fa-map-marker mtx-text--warn"></i> Pending
+                                </label>
+                            </li>
+
+                            <li class="NavBar_menuItem">
+
+                                <label>
+                                    <input class="mls_status_option" data-target="date-range-sold" type="checkbox" minzoom="10" maxzoom="21">
+                                    <i class="fas fa-map-marker mtx-text--error"></i> Sold
+                                </label>
+
+                                <select id="date-range-sold" class="form-control date-range-options">
+                                    <option>Last 3 months</option>
+                                    <option>Last 6 months</option>
+                                    <option>Last 9 months</option>
+                                    <option>Last 12 months</option>
+                                </select>
+
+                            </li>
+                            <li class="NavBar_menuItem"><label>
+                                    <input class="mls_status_option" data-target="date-range-expired"  type="checkbox" minzoom="5" maxzoom="21">
+                                    <i class="fas fa-map-marker text-amethyst"></i> Expired
+                                </label>
+
+                                <select id="date-range-expired" class="form-control date-range-options">
+                                    <option>Last 3 months</option>
+                                    <option>Last 6 months</option>
+                                    <option>Last 9 months</option>
+                                    <option>Last 12 months</option>
+                                </select>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!---->
+
+            <div id="m_ucIMap_m_mapGPLPropCharacteristics" class="panel panel-default">
+                <div class="panel-heading mtx-layerMenu-panel-heading" role="tab" id="headingTwo">
+                    <div id="m_ucIMap_m_btnCollapseTwo" class="j-layerLabel collapsed" role="button" data-toggle="collapse" data-parent="#mapLayers" data-target="#m_ucIMap_collapseTwo" aria-expanded="false" aria-controls="m_ucIMap_collapseTwo">
+                        Parcel Characteristics
+                    </div>
+                </div>
+                <div id="m_ucIMap_collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body mtx-layerMenu-panel-body">
+                        <div id="m_ucIMap_m_phGPLPropCharacteristics" class="GPLPropChar">
+
+                            <!-- <div class="NavBar_menuItem zoomIn" style="display: block;">Zoom In</div> -->
+                            <ul class="j-layerListItems GPLPropChar">
+                                <li class="NavBar_menuItem disabled">
+                                    <label>
+                                        <input type="radio" name="gplPropChar"
+                                            data-char="" checked="checked" minzoom="15" maxzoom="21" disabled="disabled">
+                                            None
+                                        </label>
+                                </li>
+
+                                <li class="NavBar_menuItem disabled">
+                                    <label>
+                                        <input type="radio" name="gplPropChar"
+                                            data-char="lotarea" minzoom="15" maxzoom="21" disabled="disabled">
+                                            Lot Area
+                                        </label>
+                                </li>
+                                <li class="NavBar_menuItem disabled"><label><input type="radio" name="gplPropChar"
+                                            data-char="apn" minzoom="15" maxzoom="21" disabled="disabled">
+                                            APN
+                                        </label>
+                                </li>
+                                <li class="NavBar_menuItem disabled">
+                                    <label>
+                                        <input type="radio" name="gplPropChar" data-char="bedbath" minzoom="15" maxzoom="21" disabled="disabled">
+                                            Bed/Bath
+                                        </label>
+                                </li>
+                                <li class="NavBar_menuItem disabled">
+                                    <label>
+                                    <input type="radio" name="gplPropChar" data-char="bldgarea" minzoom="15" maxzoom="21" disabled="disabled">
+                                            Building Area
+                                        </label>
+                                </li>
+                                <li class="NavBar_menuItem disabled">
+                                    <label>
+                                        <input type="radio" name="gplPropChar" data-char="owner" minzoom="15" maxzoom="21" disabled="disabled">
+                                            Owner Name
+                                    </label>
+                                </li>
+                                <li class="NavBar_menuItem disabled">
+                                    <label>
+                                        <input type="radio" name="gplPropChar" data-char="addr" minzoom="15" maxzoom="21" disabled="disabled">
+                                            Address
+                                        </label>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="m_ucIMap_m_mapGPLTrends" class="panel panel-default">
+                <div class="panel-heading mtx-layerMenu-panel-heading" role="tab" id="headingThree">
+                    <div id="m_ucIMap_m_btnCollapseThree" class="j-layerLabel collapsed" role="button" data-toggle="collapse" data-parent="#mapLayers" data-target="#m_ucIMap_collapseThree" aria-expanded="false" aria-controls="m_ucIMap_collapseThree">
+                        Trends
+                    </div>
+                </div>
+                <div id="m_ucIMap_collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body mtx-layerMenu-panel-body">
+                        <div id="m_ucIMap_m_pnlGPLTrends" class="GPLTrends">
+
+                            <!-- <div class="NavBar_menuItem zoomIn" style="display: none;">Zoom In</div> -->
+                            <ul class="">
+                                <li class="NavBar_menuItem subSeparator">Type</li>
+                                <li>
+                                    <ul class="j-layerListItems GPLTrends">
+                                        <li><label><input type="radio" name="gplTrendType" data-type="none" minzoom="4"
+                                                    maxzoom="21" checked="checked">
+                                                    None</label></li>
+                                        <li><label><input type="radio" name="gplTrendType"
+                                                    data-type="med_sale_prc">
+                                                    Median Sale Price</label></li>
+                                        <li><label><input type="radio" name="gplTrendType"
+                                                    data-type="avmx">
+                                                    RealAVM™</label></li>
+                                        <li><label><input type="radio" name="gplTrendType" data-type="cases_nbr">
+                                            Sales Activity</label></li>
+                                        <li><label><input type="radio" name="gplTrendType"
+                                                    data-type="med_sqft_cost">
+                                                    Median Sq Ft cost</label></li>
+                                        <li><label><input type="radio" name="gplTrendType" data-type="frcl_nbr">
+                                            # Properties in foreclosure</label></li>
+                                        <li><label><input type="radio" name="gplTrendType" data-type="frcl_rt">
+                                            % Properties in foreclosure</label></li>
+                                        <li class="NavBar_menuItem subSeparator">
+                                            Aggregation level</li>
+                                        <li><label><input type="radio" name="gplTrendAgg" data-agg="zip"
+                                                    checked="checked">
+                                                    Zip</label></li>
+                                        <li><label><input type="radio" name="gplTrendAgg"
+                                                    data-agg="nghd">
+                                                    Neighborhood</label></li>
+                                        <li class="NavBar_menuItem subSeparator">
+                                            Property Type</li>
+                                        <li><label><input type="radio" name="gplTrendProp" data-prop="sfr">
+                                            SFR</label>
+                                        </li>
+                                        <li><label><input type="radio" name="gplTrendProp"
+                                                    data-prop="condo">
+                                                    Condo</label></li>
+                                        <li><label><input type="radio" name="gplTrendProp" data-prop="comb"
+                                                    checked="checked">
+                                                    Both</label></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="m_ucIMap_m_mapPOI" class="panel panel-default">
+                <div class="panel-heading mtx-layerMenu-panel-heading" role="tab" id="headingFour">
+                    <div id="m_ucIMap_m_btnCollapseFour" class="j-layerLabel collapsed" role="button" data-toggle="collapse" data-parent="#mapLayers" data-target="#m_ucIMap_collapseFour" aria-expanded="false" aria-controls="m_ucIMap_collapseFour">
+                        Points of Interest
+                    </div>
+                </div>
+                <div id="m_ucIMap_collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body mtx-layerMenu-panel-body">
+
+                        <!-- <div class="NavBar_menuItem zoomIn" style="display: block;">Zoom In</div> -->
+                        <ul class="j-layerListItems BingPOI">
+
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_arts_entertainment_small.png"
+                                        alt=""><input minzoom="15" maxzoom="21" type="checkbox"
+                                        poitype="movie_theater,museum,amusement_park,aquarium,art_gallery"
+                                        disabled="disabled">
+                                        Arts and Entertainment</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_banking_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox" poitype="bank"
+                                        disabled="disabled">
+                                        Banking</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_education_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox" poitype="school,university"
+                                        disabled="disabled">
+                                        Education</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_fire_police_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox" poitype="fire_station,police"
+                                        disabled="disabled">
+                                        Fire and Police</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_dining_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox" poitype="restaurant,bakery,cafe"
+                                        disabled="disabled">
+                                        Food and Dining</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_gas_stations_small.png"
+                                        alt=""><input minzoom="15" maxzoom="21" type="checkbox" poitype="gas_station"
+                                        disabled="disabled">
+                                        Gas Stations</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_healthcare_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox"
+                                        poitype="hospital,dentist,doctor,physiotherapist" disabled="disabled">
+                                        Health Care</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_libraries_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox" poitype="library"
+                                        disabled="disabled">
+                                        Libraries</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_postal_services_small.png"
+                                        alt=""><input minzoom="15" maxzoom="21" type="checkbox" poitype="post_office"
+                                        disabled="disabled">
+                                        Post Offices</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_religious_organizations_small.png"
+                                        alt=""><input minzoom="15" maxzoom="21" type="checkbox"
+                                        poitype="church,hindu_temple,mosque,synagogue" disabled="disabled">
+                                        Religious Organisations</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_shopping_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox"
+                                        poitype="store,home_goods_store,jewelry_store,bicycle_store,book_store,clothing_store,electronics_store,furniture_store,shoe_store,convenience_store,department_store,florist,grocery_or_supermarket,hardware_store,pet_store,pharmacy,shopping_mall"
+                                        disabled="disabled">
+                                        Shopping</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_sports_small.png" alt=""><input
+                                        minzoom="15" maxzoom="21" type="checkbox" poitype="park,gym,stadium"
+                                        disabled="disabled">
+                                        Sports</label></li>
+                            <li class="NavBar_menuItem disabled"><label><img
+                                        src="/Matrix/images/mapimages/ancillary/poi_transportation_small.png"
+                                        alt=""><input minzoom="15" maxzoom="21" type="checkbox"
+                                        poitype="train_station,taxi_stand,airport,bus_station,subway_station"
+                                        disabled="disabled">
+                                        Transportation</label></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-link pull-right j-mapClearAll">Clear All</div>
+        <div class="btn btn-link pull-right j-modalClose" style="display:none;">Ok</div>
+    </div>
+</body>
+
+</html>

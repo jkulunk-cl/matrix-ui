@@ -1,0 +1,19 @@
+
+
+/* Prototype only */
+
+/* Corrections */
+.checkbox {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox label {
+    padding-left: 20px;
+}
+
+.checkbox input[type="checkbox"] {
+    position: absolute;
+    margin-left: -20px;
+}
