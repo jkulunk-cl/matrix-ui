@@ -27,27 +27,44 @@
                     <div class="panel-body">
 
 
+                        <span class="J_formula" contenteditable="false"
+                            usfc_name="MultiStatus (Quick) (Detailed Broker)" usfcid="5672" j_functiontype="formula">
 
-                        <div class="checkbox">
-                            <label>
-                                <input CHECKED type=checkbox value=3778 name=FmBuild_Ctrl5672_LB> Active
-                            </label>
-                        </div>
+                            <div class="S_MultiStatus">
 
 
-                        <div class="input-group">
-                            <input class="form-control" onkeypress="return SearchJs.onTextBoxKeyPress(event, this);"
-                                id=FmFmBuild_Ctrl5672_3778_Ctrl5672_TB
-                                onpaste="return SearchJs.onTextBoxPaste(event, this);"
-                                name=FmFmBuild_Ctrl5672_3778_Ctrl5672_TB>
-                            <span class="input-group-btn">
-                                <button class="btn btn-secondary" type="button"
-                                    onclick="DateTextJs.openSearchCalendar(5672,document.getElementById('FmFmBuild_Ctrl5672_3778_Ctrl5672_TB'));">
-                                    <span class="far fa-calendar-alt" aria-hidden="true"></span>
-                                </button>
-                            </span>
-                        </div>
+                                <!-- active -->
+                                <div onclick="S_MultiStatusJs.onclick(this,event, '');">
 
+
+
+
+                                    <div class="checkbox">
+                                        <label>
+                                            <input CHECKED type=checkbox value=3778 name=FmBuild_Ctrl5672_LB> Active
+                                        </label>
+                                    </div>
+
+
+                                    <div class="input-group">
+                                        <input class="form-control"
+                                            onkeypress="return SearchJs.onTextBoxKeyPress(event, this);"
+                                            id=FmFmBuild_Ctrl5672_3778_Ctrl5672_TB
+                                            onpaste="return SearchJs.onTextBoxPaste(event, this);"
+                                            name=FmFmBuild_Ctrl5672_3778_Ctrl5672_TB>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button"
+                                                onclick="DateTextJs.openSearchCalendar(5672,document.getElementById('FmFmBuild_Ctrl5672_3778_Ctrl5672_TB'));">
+                                                <span class="far fa-calendar-alt" aria-hidden="true"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </span>
 
 
                     </div>
