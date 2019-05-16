@@ -75,26 +75,6 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
 
 
-                <div onclick="S_MultiStatusJs.onclick(this,event, '');">
-    
-                    <div>
-                    
-                    <div>
-                    <INPUT class=checkbox style="VISIBILITY: visible" CHECKED type=checkbox value=3778 name=FmBuild_Ctrl5672_LB>
-                    <LABEL>Active
-                    </LABEL>
-                </div>
-                </div>
-                    
-                    <div>
-                    <INPUT onkeypress="return SearchJs.onTextBoxKeyPress(event, this);" id=FmFmBuild_Ctrl5672_3778_Ctrl5672_TB class=textbox onpaste="return SearchJs.onTextBoxPaste(event, this);" name=FmFmBuild_Ctrl5672_3778_Ctrl5672_TB>
-                    <A style="VERTICAL-ALIGN: middle" href="javascript:DateTextJs.openSearchCalendar(5672,document.getElementById('FmFmBuild_Ctrl5672_3778_Ctrl5672_TB'));">
-                    <IMG border=0 alt=... src="/Matrix/images/calendarIcon.gif" width=16 height=16>
-                    </A>
-                </div>
-                </div>
-
-
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4"></div>
         </div>
@@ -112,25 +92,27 @@
 
                 <div>
 
-                    <div>
-                        <input disabled="" class="checkbox" checked="" type="checkbox" value="3778"
-                            name="FmBuild_Ctrl5672_LB">
-                        <label>Active
+                    <div class="checkbox">
+
+                        <label>
+                            <input disabled="" class="checkbox" checked="" type="checkbox" value="3778"
+                                name="FmBuild_Ctrl5672_LB"> Active
                         </label>
                     </div>
                 </div>
 
-                <div>
-                    <input onchange="SearchJs.setBackgroundColor(this, SearchJs.checkTextBox);"
-                        onkeypress="return SearchJs.onTextBoxKeyPress(event, this);"
-                        onkeyup="SearchJs.setBackgroundColor(this, SearchJs.checkTextBox);" disabled=""
-                        id="FmFmBuild_Ctrl5672_3778_Ctrl5672_TB" title="" class="textbox"
+                <div class="input-group">
+                    <input onkeypress="return SearchJs.onTextBoxKeyPress(event, this);" disabled=""
+                        id="FmFmBuild_Ctrl5672_3778_Ctrl5672_TB" title="" class="textbox form-control"
                         onpaste="return SearchJs.onTextBoxPaste(event, this);"
                         name="FmFmBuild_Ctrl5672_3778_Ctrl5672_TB">
-                    <a
-                        href="javascript:DateTextJs.openSearchCalendar(5672,document.getElementById('FmFmBuild_Ctrl5672_3778_Ctrl5672_TB'));">
-                        <img border="0" alt="..." src="/Matrix/images/calendarIcon.gif" width="16" height="16">
-                    </a>
+                    <span class="input-group-btn">
+
+                        <a class="btn btn-secondary"
+                            href="javascript:DateTextJs.openSearchCalendar(5672,document.getElementById('FmFmBuild_Ctrl5672_3778_Ctrl5672_TB'));">
+                            <span class="far fa-calendar-alt"></span>
+                        </a>
+                    </span>
                 </div>
             </div>
 
