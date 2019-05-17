@@ -1,8 +1,8 @@
 $(function () {
 
     $("#button1").on("click", function(){
-        
-        var pause = 6000;
+
+        var pause = 10000;
 
         var alertContainer = $("#alert1");        
         $(alertContainer).slideDown();
