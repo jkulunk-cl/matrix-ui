@@ -7,10 +7,9 @@ $(function () {
         var alertContainer = $("#alert1");
         var timeout = alertContainer.attr("data-timeout");
         
-        // Rework. problem with adding multiple on multiple clicks.
         var message = $(this).attr("data-message");
 
-        $(alertContainer).prepend(message);
+        $(alertContainer).prepend('<span>' + message + '</span>');
         $(alertContainer).slideDown();
 
         setTimeout(function(){
@@ -19,7 +18,7 @@ $(function () {
 
         var closeBtn = $(alertContainer).find(".close");
         $(closeBtn).on("click", function(){
-            $(this).parent().slideUp();
+            $(alertContainer).slideUp();
         });
 
     });

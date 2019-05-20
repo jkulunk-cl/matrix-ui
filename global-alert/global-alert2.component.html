@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!-- FOR PROTOTYPE ONLY -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link
+        href="http://dogwood.argon.dev.tarasoft.local/Matrix/css/matrix?v=t1t_zwImln-5g2LjHrSB8aeHnmaMttAJEvv1KfZJPSQ1"
+        rel="stylesheet" />
+    <link
+        href="http://dogwood.argon.dev.tarasoft.local/Matrix/css/custom?v=rXyVO-26rFxqRfXyQQXM9dQYPL-knCKbPgCqwoPiT381"
+        rel="stylesheet" />
+
+    <style>
+        .logo {
+            padding: 29px 0;
+        }
+
+        .tier4.navBar {
+            padding: 2px 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- // FOR PROTOTYPE ONLY -->
+
+
+    <link rel="stylesheet" href="global-alert.component.css">
+    <script src="global-alert2.component.js"></script>
+
+</head>
+
+<body>
+
+    <div class="TopMenuDiv">
+        <div class="TopMenuInner">
+            <img class="logo" src="../src/dogwood-logo.png" />
+        </div>
+    </div>
+
+    <div id="alert1" class="confirmationMessage fade"></div>
+
+    <div class="SB_outerDiv"></div>
+    <div class="tier4 navBar faded">
+        <a href="#">Full Loaf</a> >
+        <a href="#">Sliced Toast</a> >
+        <a href="#">Crumbs</a>
+    </div>
+    <div class="tier3">
+        <button id="button1" type="button" class="btn btn-primary" onclick="triggerAlert();">Trigger Alert</button>
+    </div>
+</body>
+
+</html>
