@@ -35,12 +35,16 @@ var alertMessage = (function(){
 
     var handleClose = function(options){
         document.getElementById(options.targetId).classList.remove('in');
+        document.getElementById(options.targetId).classList.remove(options.type);
         document.getElementById(options.targetId).innerHTML = '';
         clearTimeout(setTimer);
         return;
     };
 
     var init = function(options){
+        options = options || {};
+        options.targetId = options.targetId;
+        options.message = options.message;
         options.type = options.type || 'alert-warning';
         options.timeout = options.timeout || 10000;
 
@@ -59,13 +63,35 @@ var alertMessage = (function(){
 
 }());
 
+
+// for prototype
 function triggerAlert() {
 
     alertMessage.init({
         targetId: 'alert1',
-        message: 'I have an important message for you. Closing in 10...9...8...',
+        message: 'I have an important message for you. Closing in 10...9...8...'
+    });
+
+}
+
+function triggerSuccess() {
+
+    alertMessage.init({
+        targetId: 'alert1',
+        message: 'I have an important message for you. Closing in 5...4...3...',
+        type: 'alert-success',
+        timeout: 6000,
+    });
+
+}
+
+function triggerInfo() {
+
+    alertMessage.init({
+        targetId: 'alert1',
+        message: 'I have an important message for you. Closing in 5...4...3...',
         type: 'alert-info',
-        timeout: 10000,
+        timeout: 6000,
     });
 
 }
