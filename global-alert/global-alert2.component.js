@@ -45,7 +45,7 @@ var alertMessage = (function(){
         options = options || {};
         options.targetId = options.targetId;
         options.message = options.message;
-        options.type = options.type || 'alert-warning';
+        options.type = options.type || 'alert-info';
         options.timeout = options.timeout || 10000;
 
         if (options.targetId) {
@@ -65,11 +65,13 @@ var alertMessage = (function(){
 
 
 // for prototype
-function triggerAlert() {
+
+function triggerInfo() {
 
     alertMessage.init({
         targetId: 'alert1',
-        message: 'I have an important message for you. Closing in 10...9...8...'
+        message: 'Just letting you know about something. Closing in 5...4...3...',
+        timeout: 6000,
     });
 
 }
@@ -78,20 +80,19 @@ function triggerSuccess() {
 
     alertMessage.init({
         targetId: 'alert1',
-        message: 'I have an important message for you. Closing in 5...4...3...',
+        message: 'Yay! Something went well. Closing in 3...2...1...',
         type: 'alert-success',
-        timeout: 6000,
+        timeout: 4000,
     });
 
 }
 
-function triggerInfo() {
+function triggerWarning() {
 
     alertMessage.init({
         targetId: 'alert1',
-        message: 'I have an important message for you. Closing in 5...4...3...',
-        type: 'alert-info',
-        timeout: 6000,
+        message: 'I have an important message for you. Closing in 10...9...8...',
+        type: 'alert-warning',
     });
 
 }
