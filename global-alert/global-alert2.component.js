@@ -1,4 +1,9 @@
-var confirmMessage = (function(){
+// For use with BootStrap Alert styles
+// without jQuery
+
+var alertMessage = (function(){
+
+    var setTimer;
 
     var showAlert = function(options){
 
@@ -15,42 +20,35 @@ var confirmMessage = (function(){
 
         document.getElementById(options.targetId).appendChild(message);
         document.getElementById(options.targetId).appendChild(closeBtn);
-
+        document.getElementById(options.targetId).classList.add(options.type);
         document.getElementById(options.targetId).classList.add('in');
 
         closeBtn.addEventListener('click', function(){
             handleClose(options);
         });
 
-        setTimeout(function(){
+        setTimer = setTimeout(function(){
             handleClose(options);
         }, options.timeout);
+
     };
 
     var handleClose = function(options){
         document.getElementById(options.targetId).classList.remove('in');
         document.getElementById(options.targetId).innerHTML = '';
+        clearTimeout(setTimer);
         return;
     };
 
-
-
     var init = function(options){
-        options = options || {};
-        options.targetId = options.targetId;
-        options.message = options.message;
-        options.type = options.type || 'default';
+        options.type = options.type || 'alert-warning';
         options.timeout = options.timeout || 10000;
-
-        
 
         if (options.targetId) {
             showAlert(options);
-
         }
         else {
             console.error('No target ID provided');
-
         }
 
     };
@@ -63,11 +61,11 @@ var confirmMessage = (function(){
 
 function triggerAlert() {
 
-    confirmMessage.init({
+    alertMessage.init({
         targetId: 'alert1',
-        message: 'I have an important message for you',
-        type: 'info',
-        timeout: 3000,
+        message: 'I have an important message for you. Closing in 10...9...8...',
+        type: 'alert-info',
+        timeout: 10000,
     });
 
 }
