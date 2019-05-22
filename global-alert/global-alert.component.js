@@ -2,23 +2,29 @@ $(function () {
 
     $("#button1").on("click", function(){
 
-        
-        // Rework. add a data-target to the alert ID
         var alertContainer = $("#alert1");
         var timeout = alertContainer.attr("data-timeout");
-        
+        var closeBtn = alertContainer.find(".close");
         var message = $(this).attr("data-message");
 
-        $(alertContainer).prepend('<span>' + message + '</span>');
-        $(alertContainer).slideDown();
+        var clearMessage = function(){
+            alertContainer.slideUp(400, function(){
+                alertContainer.find('span').remove();
+            });
+        };
 
+        // show alert
+        alertContainer.prepend('<span>' + message + '</span>');
+        alertContainer.slideDown();
+
+
+        // hide alert
         setTimeout(function(){
-            $(alertContainer).slideUp();
+            clearMessage();
         }, timeout);
-
-        var closeBtn = $(alertContainer).find(".close");
-        $(closeBtn).on("click", function(){
-            $(alertContainer).slideUp();
+        
+        closeBtn.on("click", function(){
+            clearMessage();
         });
 
     });
