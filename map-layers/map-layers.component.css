@@ -14,9 +14,8 @@ Need to remove from css and inherit properties */
 }
 
 .layerMenu li.disabled {
-    color: unset;
+    color: inherit;
 }
-
 
 /* Changes */
 
@@ -27,7 +26,6 @@ Need to remove from css and inherit properties */
 .mtx-layerMenu-panel-body {
     padding: 10px 15px;
 }
-
 
 /* Additions */
 
@@ -55,8 +53,7 @@ Need to remove from css and inherit properties */
     display: block;
 }
 
-.layerMenu input[type='checkbox'],
-.layerMenu input[type="radio"] {
+.layerMenu input[type='checkbox'], .layerMenu input[type="radio"] {
     margin: 3px 0 0 0;
 }
 

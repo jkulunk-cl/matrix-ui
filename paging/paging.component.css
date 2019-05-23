@@ -1,5 +1,4 @@
-span.pagingLinks a,
-span.pagingLinks b {
+span.pagingLinks a, span.pagingLinks b {
     font-size: 13px;
     font-weight: normal;
     line-height: 28px;
@@ -8,7 +7,7 @@ span.pagingLinks b {
     text-decoration: none;
     display: inline-block;
     height: 28px;
-    border:none;
+    border: none;
     border-right: 1px solid #d2d2d2;
     padding: 0 16px;
     margin: 0 -2px;
@@ -16,10 +15,7 @@ span.pagingLinks b {
     background: transparent !important;
 }
 
-span.pagingLinks a:hover,
-span.pagingLinks b:hover,
-span.pagingLinks a:nth-last-child(-n+2):hover
-{
+span.pagingLinks a:hover, span.pagingLinks b:hover, span.pagingLinks a:nth-last-child(-n+2):hover {
     color: #222222 !important;
     background-color: #dedede !important;
 }
@@ -42,24 +38,23 @@ span.pagingLinks b:after {
     width: 24px;
     position: absolute;
     left: 26%;
-    top:8%;
+    top: 8%;
 }
 
 span.pagingLinks a:nth-last-child(-n+2) {
-    border:none;
+    border: none;
     border-right: 1px solid #d2d2d2;
 }
 
 div.tabbedMenu div.paging {
-    height: unset;
-    line-height: unset;
+    height: auto;
+    line-height: initial;
     margin-bottom: 4px;
     border: 1px solid #d2d2d2;
     border-right: none;
     background-color: #f1f1f1;
-
 }
 
 div.tabbedMenu ul.mainmenu {
-    margin-top:6px;
+    margin-top: 6px;
 }
