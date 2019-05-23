@@ -8,6 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <style type="text/css">
+        * {
+            color: #3a3a3a;
+            font-size: 16px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            font-weight: 300;
+            line-height: 25px;
+            mso-line-height-rule: exactly;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
         a:focus {
             opacity: 0.75;
             outline: none;
@@ -18,6 +29,7 @@
             body,
             table,
             td,
+            div,
             p,
             a,
             li,
@@ -31,7 +43,7 @@
             }
 
             table {
-                width: 100%;
+                width: 100% !important;
             }
 
             .wrapper {
@@ -43,6 +55,9 @@
                 color: #c6c6c6;
             }
 
+            .fixed-table {
+                width:auto !important;
+            }
             .responsive-table {
                 width: 100% !important;
             }
@@ -77,7 +92,7 @@
             <td align="center" valign="top" width="600">
 
                 <table class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600"
-                    style="border: 10px solid #f9f9f9; margin:10px;">
+                    style="border: 10px solid #f5f5f5; margin:10px;">
                     <tr>
                         <td>
 
@@ -90,8 +105,9 @@
                                     <td align="left" valign="top"
                                         style="padding-top:10px; padding-left:20px; padding-right:20px; padding-bottom:20px;">
 
-                                        [Salutation]
-                                        [Message]
+                                       <p>[Salutation]</p>
+                                       <p>[Message]</p> 
+                                        
 
                                     </td>
                                 </tr>
@@ -115,7 +131,7 @@
                                                         style="padding-left:20px; padding-right:20px; padding-bottom:20px;">
 
                                                         <img id="listing-photo" align="center" alt=""
-                                                            src="https://raw.githubusercontent.com/jkulunk-cl/cl-prototypes/master/email/src/listing-photo.jpg"
+                                                            src="https://raw.githubusercontent.com/jkulunk-cl/matrix-ui/master/email/src/listing-photo.jpg"
                                                             width="100%" height="100%"
                                                             style="display: block !important; height: auto; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; vertical-align: bottom; border: 0;">
 
@@ -134,9 +150,9 @@
                                             <tbody>
                                                 <tr>
                                                     <td valign="top"
-                                                        style="padding-left: 20px; padding-right:20px; color: #3a3a3a; mso-line-height-rule: exactly; line-height: 125%; word-break: break-word;"
+                                                        style="padding-left:20px; padding-right:20px; padding-bottom:10px; color: #3a3a3a; mso-line-height-rule: exactly; line-height: 125%; word-break: break-word;"
                                                         align="left">
-                                                        <div style="padding-bottom:10px;">
+
                                                             <div style="font-size:28px; line-height: 125%">
                                                                 $1,397,260</div>
                                                             <div>
@@ -145,20 +161,34 @@
                                                             <div style="font-size:12px;">
                                                                 946 Quivera St. Laguna Beach, CA 92651
                                                             </div>
-                                                        </div>
-
+                                                            <div>
+                                                                <table border="0" bgcolor="#eeeeee" cellpadding="0" class="fixed-table"
+                                                                    cellspacing="0"
+                                                                    style="color: #000000;border-collapse: separate !important; border-radius: 14px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="middle" align="center"
+                                                                                style="padding: 1px 8px; color: #000000 !important; font-size: 12px; font-weight: 400;">
+                                                                                Active
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <br/>
+                                                            </div>
+                                                        
                                                         <!-- BUTTON -->
-                                                        <table border="0" bgcolor="#007FAA" cellpadding="0"
+                                                        <table border="0" bgcolor="#007FAA" cellpadding="0" class="fixed-table"
                                                             cellspacing="0"
                                                             style="color: #FFFFFF;border-collapse: separate !important; border-radius: 0px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                             <tbody>
                                                                 <tr>
                                                                     <td valign="middle"
                                                                         style="padding: 6px 14px; color: #FFFFFF !important; font-size: 14px; font-weight: 400;">
-                                                                        <a title="See Details" href="#" target="_self"
+                                                                        <a title="More Details" href="#" target="_self"
                                                                             style="letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFFFFF !important; display: block;">
                                                                             <font color="#ffffff">
-                                                                                See Details
+                                                                                More Details
                                                                             </font>
                                                                         </a>
                                                                     </td>
@@ -238,34 +268,36 @@
 
             </td>
         </tr>
-        <tr>
+        <!-- <tr>
             <td align="center" valign="top" style="font-size: 12px; color: #c0c0c0; padding: 20px;">
-                <!---- MLS Attribution -->
 
                 Delivered by TRIAD MLS | 4196 Mendenhall Oaks
                 Parkway, Suite 110, High Point, NC
 
-                <!---- // MLS Attribution -->
             </td>
         </tr>
         <tr>
             <td align="center" valign="top">
                 (CoreLogic Logo)
             </td>
-        </tr>
+        </tr> -->
         <tr>
-            <td align="center" valign="top" style="padding-bottom:20px; font-size: 12px; color: #c0c0c0;">
-                <div>Copyright &copy; 2019 CoreLogic. All Rights
-                    Reserved.</div>
-                <div>
+            <td align="center" valign="top" style="font-size: 12px; color: #c0c0c0;">
+                Copyright &copy; 2019 CoreLogic. All Rights Reserved.
+                <!-- <div>
                     If you no longer wish to receive these messages <a title="Unsubscribe" href="#" target="_self"
                         style="color: #c0c0c0 !important; ">
                         <font color="#c0c0c0">click here to unsubscribe.</font>
                     </a>
-                </div>
+                </div> -->
             </td>
         </tr>
     </table>
+
+    <!-- Manage Application Strings -->
+    <div style="font-size: 12px; color: #c0c0c0; text-align: center;">
+        Delivered by TRIAD MLS | 4196 Mendenhall Oaks<br/>Parkway, Suite 110, High Point, NC
+    </div>
 
 </body>
 
