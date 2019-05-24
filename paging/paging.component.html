@@ -25,13 +25,14 @@
             padding: 2px 10px;
         }
 
-        .css_container {
-            height: 200px;
-            background-color: #f9f9f9;
-        }
-
         .barright {
             width: 100%;
+        }
+
+        .mockTable {
+            height: 200px;
+            width: 1400px;
+            background-color: #f9f9f9;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -66,232 +67,303 @@
         <a href="#">Crumbs</a>
     </div>
     <div class="tier3">
-        <div class="css_container">
-            <!-- results subheading -->
-            <div id="m_upSubHeader">
+        <table cellpadding="0" cellspacing="0" border="0" width="980">
+            <tr>
+                <td>
+                    <div class="css_container">
 
-                <div id="m_pnlSubHeader" class="resultsSubHeader css_heading  resultsActive">
+                        <!-- results subheading -->
+                        <div id="m_upSubHeader">
+                            <div id="m_pnlSubHeader" class="resultsSubHeader css_heading resultsActive">
 
-                    <div style="width: 968px; z-index: 99; position: relative">
-                        <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; table-layout: fixed;">
-                            <tbody>
-                                <tr align="left">
-                                    <td class="css_innerLeft hideOnMap hideOnResults" style="padding-right: 5px;">
-                                        <img id="m_imgTableIcon" src="/Matrix/Images/TableIcons/listing_residential.gif"
-                                            style="height:16px;width:16px;">
-                                        <span id="m_lblSearchName" style="vertical-align: 3px;">Quick</span>
-                                    </td>
-                                    <td class="css_innerLeft hideOnMap hideOnSearch hideNoResults"
-                                        style="width: 228px;">
-                                        <span id="m_lblPagingSummary"><span class="pagingLinks">
-                                                <a disabled="disabled">Previous</a>&nbsp;·
-                                                <a id="m_DisplayCore_dpy2"
-                                                    href="javascript:__doPostBack('m_DisplayCore','Redisplay|,,25')">Next</a></span>
-                                            ·&nbsp;<b>1</b>-<b>25</b> of <b>139</b></span>
-                                    </td>
-                                    <td class="css_innerLeft hideOnResults hideOnSearch hideNoResults"
-                                        style="width: 95px;">
-                                        <span id="m_lblMapSummary"><b></b> of <b></b></span>
-                                    </td>
-                                    <td class="css_innerLeft hideOnSearch hideNoResults" style="width: 95px;">
-                                        <span id="m_lblCheckedCount">Checked <strong>0</strong></span>
-                                    </td>
-                                    <td class="css_innerLeft hideOnSearch hideNoResults checkLinks"
-                                        style="width: 120px;">
-                                        <a id="m_lnkCheckAllLink"
-                                            onclick="if (!this.hasAttribute('disabled')) { javascript:DpyCB.onAllSetCheck(true); }"
-                                            href="javascript:void(0)" title="Check All">All</a>
-                                        ·
-                                        <a title="Un-check All" id="m_lnkCheckNoneLink"
-                                            onclick="if (!this.hasAttribute('disabled')) { DpyCB.onAllSetCheck(false); }"
-                                            href="javascript:void(0)" disabled="disabled">None</a>
-                                        ·
-                                        <a title="Check/Uncheck All on Page" id="m_lnkCheckPageLink" class="hideOnMap"
-                                            onclick="DpyCB.onPageCheck(!DpyCB.isPageChecked())"
-                                            href="javascript:void(0);">Page</a>
-                                        <a title="Check/Uncheck visible pins" id="m_lnkCheckVisibleLink"
-                                            class="hideOnResults" onclick="ResultsJs.checkVisibleMapPins();"
-                                            href="javascript:void(0)">Page</a>
-                                        <span class="hideOnResults">·</span>
-                                    </td>
-                                    <td class="css_innerLeft hideOnMap hideOnSearch"
-                                        style="width: 155px; text-overflow: ellipsis; overflow: hidden;">
+                                <div style="width: 968px; z-index: 99; position: relative">
+                                    <table cellspacing="0" cellpadding="0" border="0"
+                                        style="width: 100%; table-layout: fixed;">
+                                        <tbody>
+                                            <tr align="left">
+                                                <td class="css_innerLeft hideOnMap hideOnResults"
+                                                    style="padding-right: 5px;">
+                                                    <img id="m_imgTableIcon"
+                                                        src="/Matrix/Images/TableIcons/listing_residential.gif"
+                                                        style="height:16px;width:16px;">
+                                                    <span id="m_lblSearchName" style="vertical-align: 3px;">Quick</span>
+                                                </td>
 
-                                    </td>
-                                    <td class="css_innerLeft hideOnSearch hideOnResults" style="width: 24px;">&nbsp;<a
-                                            title="Clicking checks pins (Ctrl+click)" id="m_aSelectSingle"
-                                            onclick="ResultsJs.selectSingle(this);" href="javascript:void(0)"
-                                            style="display: inline-block;"><span
-                                                class="linkIcon icon_selectSingle"></span></a>
-                                    </td>
-                                    <td class="css_innerLeft hideOnSearch hideOnResults" style="width: 24px;">
-                                        <a title="Check all in area (Ctrl+drag)" id="m_aSelectMultiple"
-                                            onclick="ResultsJs.selectMultiple(this);" href="javascript:void(0)"
-                                            style="display: inline-block;"><span
-                                                class="linkIcon icon_selectMultiple"></span></a>
-                                    </td>
+                                                <!-- <td class="css_innerLeft hideOnMap hideOnSearch hideNoResults"
+                                                    style="width: 228px;">
+                                                    <span id="m_lblPagingSummary"><span class="pagingLinks">
+                                                            <a disabled="disabled">Previous</a>&nbsp;·
+                                                            <a id="m_DisplayCore_dpy2"
+                                                                href="javascript:__doPostBack('m_DisplayCore','Redisplay|,,25')">Next</a></span>
+                                                        ·&nbsp;<b>1</b>-<b>25</b> of <b>5000+</b></span>
+                                                </td> -->
+                                                <td class="css_innerLeft hideOnMap hideOnSearch hideNoResults">
+                                                    <span id="m_lblPagingSummary">
+                                                        Showing <b>1</b>-<b>25</b> of <b>5000+</b></span>
+                                                </td>
+                                                
+                                                <td class="css_innerLeft hideOnResults hideOnSearch hideNoResults"
+                                                    style="width: 95px;">
+                                                    <span id="m_lblMapSummary"><b></b> of <b></b></span>
+                                                </td>
+                                                <td class="css_innerLeft hideOnSearch hideNoResults"
+                                                    style="width: 95px;">
+                                                    <span id="m_lblCheckedCount">Checked <strong>0</strong></span>
+                                                </td>
+                                                <td class="css_innerLeft hideOnSearch hideNoResults checkLinks"
+                                                    style="width: 120px;">
+                                                    <a id="m_lnkCheckAllLink"
+                                                        onclick="if (!this.hasAttribute('disabled')) { javascript:DpyCB.onAllSetCheck(true); }"
+                                                        href="javascript:void(0)" disabled="disabled"
+                                                        title="Too many items to check (max 5000)">All</a>
+                                                    ·
+                                                    <a title="Un-check All" id="m_lnkCheckNoneLink"
+                                                        onclick="if (!this.hasAttribute('disabled')) { DpyCB.onAllSetCheck(false); }"
+                                                        href="javascript:void(0)" disabled="disabled">None</a>
+                                                    ·
+                                                    <a title="Check/Uncheck All on Page" id="m_lnkCheckPageLink"
+                                                        class="hideOnMap"
+                                                        onclick="DpyCB.onPageCheck(!DpyCB.isPageChecked())"
+                                                        href="javascript:void(0);">Page</a>
+                                                    <a title="Check/Uncheck visible pins" id="m_lnkCheckVisibleLink"
+                                                        class="hideOnResults" onclick="ResultsJs.checkVisibleMapPins();"
+                                                        href="javascript:void(0)">Page</a>
+                                                    <span class="hideOnResults">·</span>
+                                                </td>
+                                                <td class="css_innerLeft hideOnMap hideOnSearch"
+                                                    style="width: 155px; text-overflow: ellipsis; overflow: hidden;">
 
-                                    <td class="hideOnSearch hideOnResults" style="height: 26px; width: auto;">&nbsp;
-                                    </td>
-                                    <td class="hideOnMap hideOnResults" style="height: 26px; width: 500px;">&nbsp;</td>
+                                                </td>
+                                                <td class="css_innerLeft hideOnSearch hideOnResults"
+                                                    style="width: 24px;">&nbsp;<a
+                                                        title="Clicking checks pins (Ctrl+click)" id="m_aSelectSingle"
+                                                        onclick="ResultsJs.selectSingle(this);"
+                                                        href="javascript:void(0)" style="display: inline-block;"><span
+                                                            class="linkIcon icon_selectSingle"></span></a>
+                                                </td>
+                                                <td class="css_innerLeft hideOnSearch hideOnResults"
+                                                    style="width: 24px;">
+                                                    <a title="Check all in area (Ctrl+drag)" id="m_aSelectMultiple"
+                                                        onclick="ResultsJs.selectMultiple(this);"
+                                                        href="javascript:void(0)" style="display: inline-block;"><span
+                                                            class="linkIcon icon_selectMultiple"></span></a>
+                                                </td>
 
-                                    <td class="css_innerRight hideOnSearch hideOnMap">
-                                        <div style="padding: 4px 0px 4px 0px;">
-                                            <span id="m_ucDisplayPicker_m_mlChangeDisplay">Display</span>
-                                            <select name="m_ucDisplayPicker$m_ddlDisplayFormats"
-                                                id="m_ucDisplayPicker_m_ddlDisplayFormats" class="dropdown"
-                                                onchange="return ResultsJs.displayPickerDisplayChange(event);"
-                                                style="width:140px;">
-                                                <option value="U3992" class="hasGoggles">my:Tom Grid</option>
-                                                <option selected="selected" value="5" class="hasGoggles">Single Line
-                                                </option>
-                                                <option value="6292" class="noGoggles">int map</option>
-                                                <option value="6294" class="noGoggles">int map4</option>
-                                                <option value="6293" class="noGoggles">int map2 resp</option>
-                                                <option value="6295" class="noGoggles">int map4 resp</option>
-                                                <option value="6207" class="noGoggles">All Fields</option>
-                                                <option value="6067" class="hasGoggles">Single Line_Testing_CG</option>
-                                                <option value="6038" class="noGoggles">RES/FRM agent 1 page_copy
-                                                </option>
-                                                <option value="5917" class="noGoggles">Test</option>
-                                                <option value="1216" class="hasGoggles">Agent 1 Page</option>
-                                                <option value="6264" class="noGoggles">360 Property View</option>
-                                                <option value="5996" class="hasGoggles">Admin 1 Page</option>
-                                                <option value="6291" class="hasGoggles">Agent 2 Page_test</option>
-                                                <option value="1300" class="hasGoggles">Agent 1 Page w/photos</option>
-                                                <option value="1240" class="hasGoggles">Agent 2 Page</option>
-                                                <option value="6001" class="noGoggles">Customer Full_test</option>
-                                                <option value="6188" class="noGoggles">RESo DD Agent Full</option>
-                                                <option value="1106" class="noGoggles">Hot Sheets</option>
-                                                <option value="5830" class="noGoggles">Photo Report</option>
-                                                <option value="9" class="noGoggles">Showing Report Full</option>
-                                                <option value="5792" class="noGoggles">Sold Report</option>
-                                                <option value="5908" class="noGoggles">Appraiser Report</option>
-                                                <option value="6034" class="noGoggles">DOM/CDOM Investigation</option>
-                                                <option value="73" class="noGoggles">Customer Single Line</option>
-                                                <option value="76" class="noGoggles">Customer Full</option>
-                                                <option value="1544" class="noGoggles">Customer Full w/photos</option>
-                                                <option value="5824" class="noGoggles">Customer Thumbnail</option>
-                                                <option value="75" class="noGoggles">Customer Showing Report</option>
-                                                <option value="5945" class="noGoggles">Side-by-Side Thumbnail</option>
-                                                <option value="5940" class="noGoggles">test customer showing report
-                                                </option>
-                                                <option value="5711" class="hasGoggles">Agent 1 Page_TEST</option>
+                                                <td class="hideOnSearch hideOnResults"
+                                                    style="height: 26px; width: auto;">&nbsp;
+                                                </td>
+                                                <td class="hideOnMap hideOnResults" style="height: 26px; width: 500px;">
+                                                    &nbsp;</td>
 
-                                            </select>
-                                            <span id="m_ucDisplayPicker_m_spnPageSize">
-                                                <span>at</span>
-                                                <select name="m_ucDisplayPicker$m_ddlPageSize"
-                                                    id="m_ucDisplayPicker_m_ddlPageSize" class="dropdown"
-                                                    onchange="return ResultsJs.displayPickerPageSizeChange(event);"
-                                                    style="width:53px;">
-                                                    <option value="10">10</option>
-                                                    <option selected="selected" value="25">25</option>
-                                                    <option value="50">50</option>
-                                                    <option value="300">300</option>
+                                                <td class="css_innerRight hideOnSearch hideOnMap">
+                                                    <div style="padding: 4px 0px 4px 0px;">
+                                                        <span id="m_ucDisplayPicker_m_mlChangeDisplay">Display</span>
+                                                        <select name="m_ucDisplayPicker$m_ddlDisplayFormats"
+                                                            id="m_ucDisplayPicker_m_ddlDisplayFormats" class="dropdown"
+                                                            onchange="return ResultsJs.displayPickerDisplayChange(event);"
+                                                            style="width:140px;">
+                                                            <option value="U3992" class="hasGoggles">my:Tom Grid
+                                                            </option>
+                                                            <option selected="selected" value="5" class="hasGoggles">
+                                                                Single Line
+                                                            </option>
+                                                            <option value="6292" class="noGoggles">int map</option>
+                                                            <option value="6294" class="noGoggles">int map4</option>
+                                                            <option value="6293" class="noGoggles">int map2 resp
+                                                            </option>
+                                                            <option value="6295" class="noGoggles">int map4 resp
+                                                            </option>
+                                                            <option value="6207" class="noGoggles">All Fields</option>
+                                                            <option value="6067" class="hasGoggles">Single
+                                                                Line_Testing_CG</option>
+                                                            <option value="6038" class="noGoggles">RES/FRM agent 1
+                                                                page_copy
+                                                            </option>
+                                                            <option value="5917" class="noGoggles">Test</option>
+                                                            <option value="1216" class="hasGoggles">Agent 1 Page
+                                                            </option>
+                                                            <option value="6264" class="noGoggles">360 Property View
+                                                            </option>
+                                                            <option value="5996" class="hasGoggles">Admin 1 Page
+                                                            </option>
+                                                            <option value="6291" class="hasGoggles">Agent 2 Page_test
+                                                            </option>
+                                                            <option value="1300" class="hasGoggles">Agent 1 Page
+                                                                w/photos</option>
+                                                            <option value="1240" class="hasGoggles">Agent 2 Page
+                                                            </option>
+                                                            <option value="6001" class="noGoggles">Customer Full_test
+                                                            </option>
+                                                            <option value="6188" class="noGoggles">RESo DD Agent Full
+                                                            </option>
+                                                            <option value="1106" class="noGoggles">Hot Sheets</option>
+                                                            <option value="5830" class="noGoggles">Photo Report</option>
+                                                            <option value="9" class="noGoggles">Showing Report Full
+                                                            </option>
+                                                            <option value="5792" class="noGoggles">Sold Report</option>
+                                                            <option value="5908" class="noGoggles">Appraiser Report
+                                                            </option>
+                                                            <option value="6034" class="noGoggles">DOM/CDOM
+                                                                Investigation</option>
+                                                            <option value="73" class="noGoggles">Customer Single Line
+                                                            </option>
+                                                            <option value="76" class="noGoggles">Customer Full</option>
+                                                            <option value="1544" class="noGoggles">Customer Full
+                                                                w/photos</option>
+                                                            <option value="5824" class="noGoggles">Customer Thumbnail
+                                                            </option>
+                                                            <option value="75" class="noGoggles">Customer Showing Report
+                                                            </option>
+                                                            <option value="5945" class="noGoggles">Side-by-Side
+                                                                Thumbnail</option>
+                                                            <option value="5940" class="noGoggles">test customer showing
+                                                                report
+                                                            </option>
+                                                            <option value="5711" class="hasGoggles">Agent 1 Page_TEST
+                                                            </option>
 
-                                                </select>
-                                                <span>per page</span>
-                                            </span>
+                                                        </select>
+                                                        <span id="m_ucDisplayPicker_m_spnPageSize">
+                                                            <span>at</span>
+                                                            <select name="m_ucDisplayPicker$m_ddlPageSize"
+                                                                id="m_ucDisplayPicker_m_ddlPageSize" class="dropdown"
+                                                                onchange="return ResultsJs.displayPickerPageSizeChange(event);"
+                                                                style="width:53px;">
+                                                                <option value="10">10</option>
+                                                                <option selected="selected" value="25">25</option>
+                                                                <option value="50">50</option>
+                                                                <option value="300">300</option>
 
-                                        </div>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <input type="hidden" id="hf_DriveTimeInfoBox_Label"
-                                            value="Change DriveTime™ Info">
-                                        <a title="INRIX™ DriveTime" id="m_aDriveTime" href="javascript:void(0)"><span
-                                                class="linkIcon icon_drivetime"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <a title="Draw Radius" id="m_aCircle"
-                                            onclick="javascript:ResultsJs.drawShape(this,'c');"
-                                            href="javascript:void(0)"><span class="linkIcon icon_circle"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <a title="Draw Rectangle" id="m_aRectangle"
-                                            onclick="ResultsJs.drawShape(this,'r');" href="javascript:void(0)"><span
-                                                class="linkIcon icon_rectangle"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <a title="Draw Polygon" id="m_aPolygon"
-                                            onclick="javascript:ResultsJs.drawShape(this,'p');"
-                                            href="javascript:void(0)"><span class="linkIcon icon_polygon"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <a title="Freehand Polygon" id="m_aFingerPolygon"
-                                            onclick="javascript:ResultsJs.drawShape(this,'f');"
-                                            href="javascript:void(0)"><span
-                                                class="linkIcon icon_fingerpolygon"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <a title="Clear All Shapes" id="m_aClearShapes"
-                                            onclick="javascript:ResultsJs.clearShapes(this);"
-                                            href="javascript:void(0)"><span class="linkIcon icon_clear"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <a title="Layers" id="m_aLayers" onclick="ResultsJs.showLayersList(event);"
-                                            href="javascript:void(0)"><span class="linkIcon icon_layers"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 21px;">
-                                        <a title="Recenter" id="m_aRecenter" onclick="ResultsJs.onMapReCenter();"
-                                            href="javascript:void(0)"><span class="linkIcon icon_recenter"></span></a>
-                                    </td>
-                                    <td class="css_innerRight hideOnSearch hideOnResults" style="width: 130px;">
+                                                            </select>
+                                                            <span>per page</span>
+                                                        </span>
 
-                                        <div class="geocodeAddress" id="m_ga">
-                                            <span id="m_ga_m_spnLocBox" class="loc">
-                                                <input name="m_ga$m_tb" type="text" id="m_ga_m_tb" class="textbox"
-                                                    placeholder="Jump to Address"><a class="dropdownIcon"></a>
-                                            </span>
-                                            <input type="hidden" name="m_ga$m_hfLat" id="m_ga_m_hfLat">
-                                            <input type="hidden" name="m_ga$m_hfLong" id="m_ga_m_hfLong">
-                                            <script type="text/html" class="disamDialog">
+                                                    </div>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <input type="hidden" id="hf_DriveTimeInfoBox_Label"
+                                                        value="Change DriveTime™ Info">
+                                                    <a title="INRIX™ DriveTime" id="m_aDriveTime"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_drivetime"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Draw Radius" id="m_aCircle"
+                                                        onclick="javascript:ResultsJs.drawShape(this,'c');"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_circle"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Draw Rectangle" id="m_aRectangle"
+                                                        onclick="ResultsJs.drawShape(this,'r');"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_rectangle"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Draw Polygon" id="m_aPolygon"
+                                                        onclick="javascript:ResultsJs.drawShape(this,'p');"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_polygon"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Freehand Polygon" id="m_aFingerPolygon"
+                                                        onclick="javascript:ResultsJs.drawShape(this,'f');"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_fingerpolygon"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Clear All Shapes" id="m_aClearShapes"
+                                                        onclick="javascript:ResultsJs.clearShapes(this);"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_clear"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Layers" id="m_aLayers"
+                                                        onclick="ResultsJs.showLayersList(event);"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_layers"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Recenter" id="m_aRecenter"
+                                                        onclick="ResultsJs.onMapReCenter();"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_recenter"></span></a>
+                                                </td>
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 130px;">
+
+                                                    <div class="geocodeAddress" id="m_ga">
+                                                        <span id="m_ga_m_spnLocBox" class="loc">
+                                                            <input name="m_ga$m_tb" type="text" id="m_ga_m_tb"
+                                                                class="textbox" placeholder="Jump to Address"><a
+                                                                class="dropdownIcon"></a>
+                                                        </span>
+                                                        <input type="hidden" name="m_ga$m_hfLat" id="m_ga_m_hfLat">
+                                                        <input type="hidden" name="m_ga$m_hfLong" id="m_ga_m_hfLong">
+                                                        <script type="text/html" class="disamDialog">
 <div class="list" style="display:block;">
 <span class="">Did you mean:</span>
 </div>
 </script>
-                                            <script type="text/html" class="approxDialog">
+                                                        <script type="text/html" class="approxDialog">
 <div class="list" style="display:block;">
 Your exact location could not be determined.
 <a class="go" href="#">Use approximate location</a>
 <a class="cancel" href="#">Cancel</a>
 </div>
 </script>
-                                            <script type="text/html" class="errorDialog">
+                                                        <script type="text/html" class="errorDialog">
 <div class="list" style="display:block;">
 No matching address in MLS boundaries.
 <a class="cancel" href="#">Close</a>
 </div>
 </script>
-                                            <div class="list">
-                                                <a href="javascript:void(0);" userloc="userloc">My Current Location</a>
-                                                <a href="javascript:void(0);" id="m_ga_m_aDefault"
-                                                    data-lat="30.2995538347543" data-lon="-97.7423370689095"
-                                                    data-zoom="12">My Default Location</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td id="m_tdGridSave" class="css_innerRight hideOnSearch hideOnMap"
-                                        style="width: 21px;">
-                                        <a title="Manage Display" id="m_aGridSaveLinks" href="javascript:void(0)"><span
-                                                class="linkIcon icon_saveDisplayGrid"></span></a>
-                                    </td>
+                                                        <div class="list">
+                                                            <a href="javascript:void(0);" userloc="userloc">My Current
+                                                                Location</a>
+                                                            <a href="javascript:void(0);" id="m_ga_m_aDefault"
+                                                                data-lat="30.2995538347543" data-lon="-97.7423370689095"
+                                                                data-zoom="12">My Default Location</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td id="m_tdGridSave" class="css_innerRight hideOnSearch hideOnMap"
+                                                    style="width: 21px;">
+                                                    <a title="Manage Display" id="m_aGridSaveLinks"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_saveDisplayGrid"></span></a>
+                                                </td>
 
-                                    <td class="css_innerRight" style="width: 21px;">
-                                        <a title="Set/Clear Defaults" id="m_aSetDefaults"
-                                            href="javascript:void(0)"><span class="linkIcon icon_settings"></span></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                                <td class="css_innerRight" style="width: 21px;">
+                                                    <a title="Set/Clear Defaults" id="m_aSetDefaults"
+                                                        href="javascript:void(0)"><span
+                                                            class="linkIcon icon_settings"></span></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- // results subheading -->
+
+                        <div class="mockTable"></div>
+                        
                     </div>
 
-                </div>
+                </td>
+            </tr>
+        </table>
 
-            </div>
-
-            <!-- // results subheading -->
-        </div>
         <!-- footer bar -->
         <div id="m_upDisplayButtons">
 

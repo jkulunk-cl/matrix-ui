@@ -1,3 +1,4 @@
+/* Paging */
 span.pagingLinks a, span.pagingLinks b {
     font-size: 12px;
     font-weight: normal;
@@ -48,4 +49,27 @@ div.tabbedMenu div.paging {
     border: 1px solid #d2d2d2;
     border-right-color: transparent;
     background-color: #f1f1f1;
+}
+
+/* Subheader 
+- Most of these need to be cleaned out of the code-behind.
+- Need to account for dynamic count characters. Moves the other cells.
+- check for searchActive, mapActive, resultsActive
+*/
+.css_container .css_heading {
+    padding-left:0;
+}
+
+.resultsActive > div {
+    width:990px !important;
+    padding-left: 5px;
+}
+
+.resultsActive > div > table {
+    table-layout: auto !important;
+}
+
+.css_container div.resultsSubHeader td.css_innerLeft,
+.css_container div.resultsSubHeader td.css_innerRight {
+    width:unset !important;
 }
