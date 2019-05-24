@@ -1,12 +1,12 @@
 span.pagingLinks a, span.pagingLinks b {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: normal;
-    line-height: 28px;
+    line-height: 24px;
     color: #222222 !important;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    height: 28px;
+    height: 24px;
     border: none;
     border-right: 1px solid #d2d2d2;
     padding: 0 16px;
@@ -34,27 +34,18 @@ span.pagingLinks b:after {
     border: 2px solid #007faa;
     border-radius: 50%;
     content: '';
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
     position: absolute;
-    left: 26%;
-    top: 8%;
-}
-
-span.pagingLinks a:nth-last-child(-n+2) {
-    border: none;
-    border-right: 1px solid #d2d2d2;
+    left: 30%;
+    top: 9%;
 }
 
 div.tabbedMenu div.paging {
     height: auto;
     line-height: initial;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     border: 1px solid #d2d2d2;
-    border-right: none;
+    border-right-color: transparent;
     background-color: #f1f1f1;
-}
-
-div.tabbedMenu ul.mainmenu {
-    margin-top: 6px;
 }
