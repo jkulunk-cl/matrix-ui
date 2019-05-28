@@ -29,24 +29,11 @@
             width: 100%;
         }
 
-        .prototype-table {
+        .mockTable {
             height: 200px;
             width: 1400px;
             background-color: #f9f9f9;
         }
-
-        .prototype-btns {
-            display: inline-block;
-            padding: 5px;
-            margin: 10px 0;
-            background-color: #f9f9f9;
-            border: 1px solid #d2d2d2;
-        }
-
-        .css_heading td {
-            padding-right: 1em;
-        }
-
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -57,6 +44,7 @@
 
 
     <link rel="stylesheet" href="paging.component.css">
+    <!-- <script src="global-alert.component.js"></script> -->
 
 </head>
 
@@ -79,12 +67,6 @@
         <a href="#">Crumbs</a>
     </div>
     <div class="tier3">
-
-        <div class="prototype-btns">
-            <button id="criteriaBtn" class="btn btn-link view-btn" value="searchActive" type="button">Criteria</button>
-            <button id="mapBtn" class="btn btn-link view-btn" value="mapActive" type="button">Map</button>
-            <button id="resultsBtn" class="btn btn-link view-btn" value="resultsActive" type="button">Results</button>
-        </div>
         <table cellpadding="0" cellspacing="0" border="0" width="980">
             <tr>
                 <td>
@@ -94,21 +76,20 @@
                         <div id="m_upSubHeader">
                             <div id="m_pnlSubHeader" class="resultsSubHeader css_heading resultsActive">
 
-                                <div style="z-index: 99; position: relative">
-                                    <table cellspacing="0" cellpadding="0" border="0">
+                                <div style="width: 968px; z-index: 99; position: relative">
+                                    <table cellspacing="0" cellpadding="0" border="0"
+                                        style="width: 100%; table-layout: fixed;">
                                         <tbody>
                                             <tr align="left">
-
-                                                <!-- search -->
-                                                <td class="hideOnMap hideOnResults"
+                                                <td class="css_innerLeft hideOnMap hideOnResults"
                                                     style="padding-right: 5px;">
                                                     <img id="m_imgTableIcon"
                                                         src="/Matrix/Images/TableIcons/listing_residential.gif"
                                                         style="height:16px;width:16px;">
-                                                    <span id="m_lblSearchName">Quick</span>
+                                                    <span id="m_lblSearchName" style="vertical-align: 3px;">Quick</span>
                                                 </td>
 
-                                                <!-- <td class="hideOnMap hideOnSearch hideNoResults"
+                                                <!-- <td class="css_innerLeft hideOnMap hideOnSearch hideNoResults"
                                                     style="width: 228px;">
                                                     <span id="m_lblPagingSummary"><span class="pagingLinks">
                                                             <a disabled="disabled">Previous</a>&nbsp;·
@@ -116,69 +97,71 @@
                                                                 href="javascript:__doPostBack('m_DisplayCore','Redisplay|,,25')">Next</a></span>
                                                         ·&nbsp;<b>1</b>-<b>25</b> of <b>5000+</b></span>
                                                 </td> -->
-
-                                                <!-- result -->
-                                                <td class="hideOnMap hideOnSearch hideNoResults">
+                                                <td class="css_innerLeft hideOnMap hideOnSearch hideNoResults">
                                                     <span id="m_lblPagingSummary">
                                                         Showing <b>1</b>-<b>25</b> of <b>5000+</b></span>
                                                 </td>
-
-                                                <!-- map -->
-                                                <td class="hideOnResults hideOnSearch hideNoResults">
-                                                    <span id="m_lblMapSummary"><b>1</b> of <b>25</b></span>
+                                                
+                                                <td class="css_innerLeft hideOnResults hideOnSearch hideNoResults"
+                                                    style="width: 95px;">
+                                                    <span id="m_lblMapSummary"><b></b> of <b></b></span>
                                                 </td>
-
-                                                <!-- map results -->
-                                                <td class="hideOnSearch hideNoResults">
+                                                <td class="css_innerLeft hideOnSearch hideNoResults"
+                                                    style="width: 95px;">
                                                     <span id="m_lblCheckedCount">Checked <strong>0</strong></span>
                                                 </td>
-
-                                                <td class="hideOnSearch hideNoResults checkLinks">
-                                                    <a id="m_lnkCheckAllLink" href="javascript:void(0)"
-                                                        disabled="disabled"
+                                                <td class="css_innerLeft hideOnSearch hideNoResults checkLinks"
+                                                    style="width: 120px;">
+                                                    <a id="m_lnkCheckAllLink"
+                                                        onclick="if (!this.hasAttribute('disabled')) { javascript:DpyCB.onAllSetCheck(true); }"
+                                                        href="javascript:void(0)" disabled="disabled"
                                                         title="Too many items to check (max 5000)">All</a>
                                                     ·
                                                     <a title="Un-check All" id="m_lnkCheckNoneLink"
+                                                        onclick="if (!this.hasAttribute('disabled')) { DpyCB.onAllSetCheck(false); }"
                                                         href="javascript:void(0)" disabled="disabled">None</a>
                                                     ·
                                                     <a title="Check/Uncheck All on Page" id="m_lnkCheckPageLink"
-                                                        class="hideOnMap" href="javascript:void(0);">Page</a>
+                                                        class="hideOnMap"
+                                                        onclick="DpyCB.onPageCheck(!DpyCB.isPageChecked())"
+                                                        href="javascript:void(0);">Page</a>
                                                     <a title="Check/Uncheck visible pins" id="m_lnkCheckVisibleLink"
-                                                        class="hideOnResults" href="javascript:void(0)">Page</a>
+                                                        class="hideOnResults" onclick="ResultsJs.checkVisibleMapPins();"
+                                                        href="javascript:void(0)">Page</a>
                                                     <span class="hideOnResults">·</span>
                                                 </td>
-
-                                                <!-- results -->
-                                                <td class="hideOnMap hideOnSearch"
-                                                    style="text-overflow: ellipsis; overflow: hidden;">
+                                                <td class="css_innerLeft hideOnMap hideOnSearch"
+                                                    style="width: 155px; text-overflow: ellipsis; overflow: hidden;">
 
                                                 </td>
-
-                                                <!-- map -->
-                                                <td class="hideOnSearch hideOnResults">&nbsp;<a
+                                                <td class="css_innerLeft hideOnSearch hideOnResults"
+                                                    style="width: 24px;">&nbsp;<a
                                                         title="Clicking checks pins (Ctrl+click)" id="m_aSelectSingle"
+                                                        onclick="ResultsJs.selectSingle(this);"
                                                         href="javascript:void(0)" style="display: inline-block;"><span
                                                             class="linkIcon icon_selectSingle"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerLeft hideOnSearch hideOnResults"
+                                                    style="width: 24px;">
                                                     <a title="Check all in area (Ctrl+drag)" id="m_aSelectMultiple"
+                                                        onclick="ResultsJs.selectMultiple(this);"
                                                         href="javascript:void(0)" style="display: inline-block;"><span
                                                             class="linkIcon icon_selectMultiple"></span></a>
                                                 </td>
 
-                                                <td class="hideOnSearch hideOnResults" style="height: 26px;">&nbsp;
+                                                <td class="hideOnSearch hideOnResults"
+                                                    style="height: 26px; width: auto;">&nbsp;
                                                 </td>
-
-                                                <!-- search -->
-                                                <td class="hideOnMap hideOnResults" style="height: 26px;">
+                                                <td class="hideOnMap hideOnResults" style="height: 26px; width: 500px;">
                                                     &nbsp;</td>
 
-                                                <!-- results -->
-                                                <td class="hideOnSearch hideOnMap">
+                                                <td class="css_innerRight hideOnSearch hideOnMap">
                                                     <div style="padding: 4px 0px 4px 0px;">
                                                         <span id="m_ucDisplayPicker_m_mlChangeDisplay">Display</span>
                                                         <select name="m_ucDisplayPicker$m_ddlDisplayFormats"
-                                                            id="m_ucDisplayPicker_m_ddlDisplayFormats" class="dropdown">
+                                                            id="m_ucDisplayPicker_m_ddlDisplayFormats" class="dropdown"
+                                                            onchange="return ResultsJs.displayPickerDisplayChange(event);"
+                                                            style="width:140px;">
                                                             <option value="U3992" class="hasGoggles">my:Tom Grid
                                                             </option>
                                                             <option selected="selected" value="5" class="hasGoggles">
@@ -243,7 +226,9 @@
                                                         <span id="m_ucDisplayPicker_m_spnPageSize">
                                                             <span>at</span>
                                                             <select name="m_ucDisplayPicker$m_ddlPageSize"
-                                                                id="m_ucDisplayPicker_m_ddlPageSize" class="dropdown">
+                                                                id="m_ucDisplayPicker_m_ddlPageSize" class="dropdown"
+                                                                onchange="return ResultsJs.displayPickerPageSizeChange(event);"
+                                                                style="width:53px;">
                                                                 <option value="10">10</option>
                                                                 <option selected="selected" value="25">25</option>
                                                                 <option value="50">50</option>
@@ -255,49 +240,65 @@
 
                                                     </div>
                                                 </td>
-
-                                                <!-- map -->
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
                                                     <input type="hidden" id="hf_DriveTimeInfoBox_Label"
                                                         value="Change DriveTime™ Info">
                                                     <a title="INRIX™ DriveTime" id="m_aDriveTime"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_drivetime"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
                                                     <a title="Draw Radius" id="m_aCircle"
+                                                        onclick="javascript:ResultsJs.drawShape(this,'c');"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_circle"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
                                                     <a title="Draw Rectangle" id="m_aRectangle"
+                                                        onclick="ResultsJs.drawShape(this,'r');"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_rectangle"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
                                                     <a title="Draw Polygon" id="m_aPolygon"
+                                                        onclick="javascript:ResultsJs.drawShape(this,'p');"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_polygon"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
                                                     <a title="Freehand Polygon" id="m_aFingerPolygon"
+                                                        onclick="javascript:ResultsJs.drawShape(this,'f');"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_fingerpolygon"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
                                                     <a title="Clear All Shapes" id="m_aClearShapes"
+                                                        onclick="javascript:ResultsJs.clearShapes(this);"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_clear"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
-                                                    <a title="Layers" id="m_aLayers" href="javascript:void(0)"><span
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Layers" id="m_aLayers"
+                                                        onclick="ResultsJs.showLayersList(event);"
+                                                        href="javascript:void(0)"><span
                                                             class="linkIcon icon_layers"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
-                                                    <a title="Recenter" id="m_aRecenter" href="javascript:void(0)"><span
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 21px;">
+                                                    <a title="Recenter" id="m_aRecenter"
+                                                        onclick="ResultsJs.onMapReCenter();"
+                                                        href="javascript:void(0)"><span
                                                             class="linkIcon icon_recenter"></span></a>
                                                 </td>
-                                                <td class="hideOnSearch hideOnResults">
+                                                <td class="css_innerRight hideOnSearch hideOnResults"
+                                                    style="width: 130px;">
 
                                                     <div class="geocodeAddress" id="m_ga">
                                                         <span id="m_ga_m_spnLocBox" class="loc">
@@ -307,7 +308,24 @@
                                                         </span>
                                                         <input type="hidden" name="m_ga$m_hfLat" id="m_ga_m_hfLat">
                                                         <input type="hidden" name="m_ga$m_hfLong" id="m_ga_m_hfLong">
-
+                                                        <script type="text/html" class="disamDialog">
+<div class="list" style="display:block;">
+<span class="">Did you mean:</span>
+</div>
+</script>
+                                                        <script type="text/html" class="approxDialog">
+<div class="list" style="display:block;">
+Your exact location could not be determined.
+<a class="go" href="#">Use approximate location</a>
+<a class="cancel" href="#">Cancel</a>
+</div>
+</script>
+                                                        <script type="text/html" class="errorDialog">
+<div class="list" style="display:block;">
+No matching address in MLS boundaries.
+<a class="cancel" href="#">Close</a>
+</div>
+</script>
                                                         <div class="list">
                                                             <a href="javascript:void(0);" userloc="userloc">My Current
                                                                 Location</a>
@@ -317,16 +335,14 @@
                                                         </div>
                                                     </div>
                                                 </td>
-
-                                                <!-- results -->
-                                                <td id="m_tdGridSave" class="hideOnSearch hideOnMap">
+                                                <td id="m_tdGridSave" class="css_innerRight hideOnSearch hideOnMap"
+                                                    style="width: 21px;">
                                                     <a title="Manage Display" id="m_aGridSaveLinks"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_saveDisplayGrid"></span></a>
                                                 </td>
 
-                                                <!-- all -->
-                                                <td>
+                                                <td class="css_innerRight" style="width: 21px;">
                                                     <a title="Set/Clear Defaults" id="m_aSetDefaults"
                                                         href="javascript:void(0)"><span
                                                             class="linkIcon icon_settings"></span></a>
@@ -340,8 +356,8 @@
                         </div>
                         <!-- // results subheading -->
 
-                        <div class="prototype-table"></div>
-
+                        <div class="mockTable"></div>
+                        
                     </div>
 
                 </td>
@@ -356,7 +372,7 @@
                     style="padding: 10px 0px;width: 1427px;bottom: 0px;left: auto;position: static;top: auto;">
 
                     <input type="hidden" name="m_hfMenuState" id="m_hfMenuState" value="Actions">
-                    <div class="resultsMenu tabbedMenu">
+                    <div class="resultsMenu tabbedMenu" style="">
                         <ul class="mainmenu">
                             <li id="m_liActionsTab" class="selected">
                                 Actions</li>
@@ -411,10 +427,6 @@
         </div>
         <!-- // footer bar -->
     </div>
-
-    <!-- FOR PROTOTYPE ONLY -->
-    <script src="paging.component.js"></script>
-    <!-- FOR PROTOTYPE ONLY -->
 
 </body>
 

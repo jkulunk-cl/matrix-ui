@@ -14,7 +14,7 @@ $(function () {
         };
 
         // show alert
-        alertContainer.prepend('<span>' + message + '</span>');
+        alertContainer.append('<span>' + message + '</span>');
         alertContainer.slideDown();
 
 
