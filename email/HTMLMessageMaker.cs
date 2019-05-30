@@ -459,11 +459,18 @@ namespace Matrix.Components.MatrixMail
         width=""100%""
         style=""border-collapse: collapse; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
         <tr>
-            <td align=""center"" valign=""top"" width=""600"" style=""padding-top:10px; padding-bottom:40px;"">"
+            <td align=""center"" valign=""top"" width=""600"" style=""padding-top:10px; padding-bottom:40px;"">
+                <table class=""wrapper"" border=""0"" cellpadding=""0"" cellspacing=""0"" width=""600""
+                    style=""border: 10px solid #f5f5f5;"">
+                    <tr>
+                        <td valign=""top"" align=""left"" style=""text-align: left;"">"
 
 + "{1}" //message body
 
-+ @"		</td>
++ @"					</td>
+                    </tr>
+                </table>
+			</td>
         </tr>
     </table>"
 
