@@ -353,236 +353,147 @@ namespace Matrix.Components.MatrixMail
 		}
 		private const string HTML_MESSAGE_TEMPLATE = @"<!DOCTYPE html>
 <html xmlns=""http://www.w3.org/1999/xhtml"" lang=""en"">
-
 <head>
 	<meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
 	<meta charset=""UTF-8"">
 	<meta http-equiv=""X-UA-Compatible"" content=""IE=edge"">
 	<meta name=""viewport"" content=""width=device-width, initial-scale=1"">
-	<title>Email Alert</title>
 	<style type=""text/css"">
-		.pb-2 {{
-			padding-bottom: 20px;
-		}}
+        a:focus {{
+            opacity: 0.75;
+            outline: none;
+        }}
 
-		a:focus {{
-			-webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
-			outline: none;
-		}}
+        a[x-apple-data-detectors] {{
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }}
 
-		a[x-apple-data-detectors] {{
-			text-decoration: none !important;
-			font-size: inherit !important;
-			font-family: inherit !important;
-			font-weight: inherit !important;
-			line-height: inherit !important;
-		}}
+        @media only screen and (max-width: 480px) {{
 
-		@media only screen and (max-width: 480px) {{
+            body,
+            table,
+            td,
+            div,
+            p,
+            a,
+            li,
+            blockquote {{
+                -webkit-text-size-adjust: none !important;
+            }}
 
-			body,
-			table,
-			td,
-			p,
-			a,
-			li,
-			blockquote {{
-				-webkit-text-size-adjust: none !important;
-			}}
+            body {{
+                width: 100% !important;
+                min-width: 100% !important;
+            }}
 
-			body {{
-				width: 100% !important;
-				min-width: 100% !important;
-			}}
+            table {{
+                width: 100% !important;
+            }}
 
-			table {{
-				width: 100%;
-			}}
+            h1 {{
+                line-height: 125% !important;
+            }}
 
-			h1 {{
-				line-height: 125% !important;
-			}}
+            h2 {{
+                font-size: 20px !important;
+                line-height: 125% !important;
+            }}
 
-			h2 {{
-				font-size: 20px !important;
-				line-height: 125% !important;
-			}}
+            h3 {{
+                font-size: 18px !important;
+                line-height: 125% !important;
+            }}
 
-			h3 {{
-				font-size: 18px !important;
-				line-height: 125% !important;
-			}}
+            h4 {{
+                font-size: 16px !important;
+                line-height: 125% !important;
+            }}
 
-			h4 {{
-				font-size: 16px !important;
-				line-height: 125% !important;
-			}}
+            p {{
+                font-size: 18px !important;
+                line-height: 125% !important;
+                mso-line-height-rule: exactly;
+            }}
 
-			p {{
-				font-size: 18px !important;
-				line-height: 125% !important;
-				mso-line-height-rule: exactly;
-			}}
+            .wrapper {{
+                border: none !important;
+                margin: 0 !important;
+            }}
 
-			.pb-2 {{
-				padding-bottom: 0;
-			}}
-		}}
+
+            .fixed-table {{
+                width: auto !important;
+            }}
+
+            .responsive-table {{
+                width: 100% !important;
+            }}
+
+            .responsive-column {{
+                display: block !important;
+                width: 100% !important;
+            }}
+
+            .responsive-photo {{
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }}
+        }}
+
 	</style>
-	<!-- CIRCLE AVATAR -->
-	<style type=""text/css"">
-		.hide {{
-			display: block;
-		}}
-	</style>
-	<!--[if (mso)|(IE)]>
-			<xml:namespace ns=""urn:schemas-microsoft-com:vml"" prefix=""v"" />
-			<style>v\: * {{ behavior:url(#default#VML); display:inline-block }}</style>
-			<!<![endif]-->
-	<!--[if (gte mso 9)|(IE)]>
-			<style>
-			.hide {{
-				display: none;
-			}}
-			</style>
-			<![endif]-->
-
-	<!-- // CIRCLE AVATAR -->
-
 </head>
 
-<body leftmargin=""0"" marginwidth=""0"" topmargin=""0"" marginheight=""0"" offset=""0"" style='height: 100%; width: 100%; color: #3a3a3a; font-size: 16px; font-family: ""geomanist-light"", ""Helvetica"", Arial, sans-serif, ""Apple Color Emoji"", ""Segoe UI Emoji"", ""Segoe UI Symbol""; font-weight: 300; line-height: 25px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;'
-	bgcolor=""#f1f1f1"">
-	<!--PREVIEW TEXT-->
-	<span style=""display: none !important; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; visibility: hidden; mso-hide: all;"">"
-+ "{0}" //preview
-+ @"</ span >
+<body bgcolor=""#ffffff"" leftmargin=""0"" marginwidth=""0"" topmargin=""0"" marginheight=""0"" offset=""0""
+    style=""height: 100%; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">"
 
-	< !-- // PREVIEW TEXT-->
++ @"<span
+        style=""display: none !important; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; visibility: hidden; mso-hide: all;"">"
++ "{0}" //message preview
++ @"</span>"
 
-	< div class=""pb-2""></div>
-	<table role = ""main"" class=""table"" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0"" height=""100%"" width=""100%""
-		style='border-collapse: collapse; height: 100%; width: 100%; color: #3a3a3a; font-size: 16px; font-family: ""geomanist-light"", ""Helvetica"", Arial, sans-serif, ""Apple Color Emoji"", ""Segoe UI Emoji"", ""Segoe UI Symbol""; font-weight: 300; line-height: 25px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;'
-		bgcolor=""#f1f1f1"">
-		<tr>
-			<td align = ""center"" valign=""top"" style='height: 100%; width: 100%; color: #3a3a3a; font-size: 16px; font-family: ""geomanist-light"", ""Helvetica"", Arial, sans-serif, ""Apple Color Emoji"", ""Segoe UI Emoji"", ""Segoe UI Symbol""; font-weight: 300; line-height: 25px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-top-width: 0; margin: 0; padding: 0;'
-				bgcolor=""rgba(235, 235, 235, 0.25)"">
-			</td>
-		</tr>
-		<tr>
-			<td align = ""center"" valign=""top"" style=""mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"">
++ @"<table role=""main"" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0""
+        width=""100%""
+        style=""border-collapse: collapse; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
+        <tr>
+            <td align=""center"" valign=""top"" width=""600"" style=""padding-top:10px; padding-bottom:40px;"">"
 
-				<table border = ""0"" cellpadding=""0"" cellspacing=""0"" width=""100%"" style=""border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-top-width: 0; border-bottom-width: 0;""
-					bgcolor=""#f1f1f1"">
-					<tr>
-						<td align = ""center"" valign=""top"" style=""mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"">
-							<table border = ""0"" cellpadding=""0"" cellspacing=""0"" width=""600"" style=""border-collapse: separate !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-radius: 0;""
-								bgcolor=""#FFFFFF"">
-								<tr>
-									<td align = ""center"" valign=""top"" style=""mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border: 1px solid #d2d2d2;"">"
-+ "{1}" //message body - extra tables below are in this table cell, which closes below
++ "{1}" //message body
 
-+ @"									<table border=""0"" cellpadding=""0"" cellspacing=""0"" width=""100%""
-											style=""min-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"">
-											<tbody>
-												<tr>
-													<td valign=""top"" style=""padding: 18px 25px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #6B6B6B;"">
-														<table align=""left"" border=""0"" cellpadding=""0""
-															cellspacing=""0"" style=""max-width: 100%; min-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;""
-															width=""100%"">
-															<tbody>
-																<tr>
-																	<td valign=""top"" style=""mso-line-height-rule: exactly; line-height: 125%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; word-break: break-word; font-size: 16px;""
-																		align=""left"">
++ @"		</td>
+        </tr>
+    </table>"
 
-																		<!-- SUPPORT FOOTER -->
-																		<div style=""color: #ffffff; font-size:12px; line-height: 125%; font-family: geomanist-book, Helvetica, Arial; font-weight: 400;""
-																			align=""center"">"
-+ "{2}" //delivered by
-+ @"
-																		</div>"
-+ "{3}" //unsubscribe fragment
-+ @"
-																		<!-- // SUPPORT FOOTER -->
 
-																	</td>
-																</tr>
-															</tbody>
-														</table>
++ @"<table role=""main"" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0""
+    width=""100%""
+    style=""border-collapse: collapse; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
+    <tr>
+        <td align=""center"" valign=""top""
+            style=""font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;"">"
 
-													</td>
-												</tr>
-											</tbody>
-										</table>
++ "{2}" // Delivered by
++ @"<br/>"
++ "{3}" // Unsubscribe fragment
 
-										<table border=""0"" cellpadding=""0"" cellspacing=""0"" width=""100%""
-											style=""min-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"">
-											<tbody>
-												<tr>
-													<td valign=""top"" style=""padding: 18px 25px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #ffffff;"">
-														<table align=""left"" border=""0"" cellpadding=""0""
-															cellspacing=""0"" style=""max-width: 100%; min-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;""
-															width=""100%"">
-															<tbody>
-																<tr>
-																	<td valign=""top"" style=""mso-line-height-rule: exactly; line-height: 125%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; word-break: break-word; font-size: 16px;""
-																		align=""left"">
-																		<!-- EMAIL FOOTER -->
-																		<table border=""0"" cellpadding=""0""
-																			cellspacing=""0"" width=""100%""
-																			style=""min-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"">
-																			<tbody>
-																				<tr>
-																					<td valign=""bottom""
-																						align=""right"" style=""text-align:right; vertical-align: bottom; color:#6B6B6B; font-size:14px; line-height: 20px; height:36px; font-family: geomanist-light, Helvetica Neue, Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; word-break: break-word; width:49.5%; padding-right:8px; border-right:2px solid #6B6B6B"">
-																						Powered By
-																					</td>
-																					<td valign=""top"" style=""padding-left:8px; height:36px;"">
-																						<img src=""src/cl-logo-h.png""
-																							border=""0""
-																							width=""127""
-																							height=""36"" alt=""CoreLogic Inc.""
-																							style=""display: block;"" />
-																					</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																		<!-- // EMAIL FOOTER -->
++ @"	</td>
+    </tr>
+    <tr>
+        <td align=""center"" valign=""top""
+            style=""font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;"">
+            Copyright &copy; 2019 CoreLogic. All Rights Reserved.
+        </td>
+    </tr>
+    </table>"
 
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-</body>
-
++ @"</body>
 </html>";
 
-		private const string UNSUBSCRIBE_FRAGMENT = @"<div style=""color:#ffffff; font-size:12px; font-family: geomanist-book, Helvetica, Arial; font-weight: 400;""
-																			align=""center"">
-																			<a title=""Unsubscribe"" href="""
-+ "{0}" //unsubscribe url
-+ @"""
-																				target=""_self"" style=""letter-spacing: normal; line-height: 100%; text-align: center; color: #FFFFFF !important; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"">
-																				<font color=""#ffffff"">"
-+ "{1}" //unsubscribe text
-+ @"
-																				</font>
-																			</a>
-																		</div>";
+		// Unsubscribe URL (0) and text (1)
+		private const string UNSUBSCRIBE_FRAGMENT = @"<a style=""color:#c0c0c0;"" title=""Unsubscribe"" target=""_self"" href=""" + "{0}" + @""">"
+		+ @"<font color=""#c0c0c0"">" + "{1}" + @"</font></a>";
 	}
 }
