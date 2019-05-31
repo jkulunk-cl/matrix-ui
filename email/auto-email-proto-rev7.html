@@ -21,7 +21,7 @@
             line-height: inherit !important;
         }
 
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: 576px) {
 
             body,
             table,
@@ -43,54 +43,32 @@
                 width: 100% !important;
             }
 
-            h1 {
-                line-height: 125% !important;
-            }
-
-            h2 {
-                font-size: 20px !important;
-                line-height: 125% !important;
-            }
-
-            h3 {
-                font-size: 18px !important;
-                line-height: 125% !important;
-            }
-
-            h4 {
-                font-size: 16px !important;
-                line-height: 125% !important;
-            }
-
-            p {
-                font-size: 18px !important;
-                line-height: 125% !important;
-                mso-line-height-rule: exactly;
-            }
-
-            .wrapper {
+            table.wrapper {
                 border: none !important;
                 margin: 0 !important;
             }
 
-
-            .fixed-table {
+            table.width-auto {
                 width: auto !important;
             }
 
-            .responsive-table {
+            table.responsive-table {
                 width: 100% !important;
-            }
-
-            .responsive-column {
-                display: block !important;
-                width: 100% !important;
-            }
-
-            .responsive-photo {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
+
+            td.responsive-column {
+                display: block !important;
+                width: 100% !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
         }
     </style>
 </head>
@@ -127,7 +105,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        [Displaycontent]<br />
+                                        [DisplayContent]
                                         <!-- SMALL LISTING CARD -->
                                         <table border="0" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="600"
                                             class="responsive-table"
@@ -140,14 +118,16 @@
                                                         style="width:100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                         <tbody>
                                                             <tr>
-                                                                <td valign="top" class="responsive-photo"
+                                                                <td valign="top" class="responsive-column"
                                                                     style="padding-left:20px; padding-bottom:20px;">
-
+                                                                    
+                                                                    <!-- formula -->
                                                                     <img id="listing-photo" align="center" alt=""
                                                                         src="https://raw.githubusercontent.com/jkulunk-cl/matrix-ui/master/email/src/listing-photo.jpg"
                                                                         width="100%" height="100%"
                                                                         style="display: block !important; height: auto; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; vertical-align: bottom; border: 0;">
-
+                                                                    <!-- // formula -->
+                                                                    
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -178,7 +158,7 @@
                                                                     </div>
                                                                     <div>
                                                                         <table border="0" bgcolor="#eeeeee"
-                                                                            cellpadding="0" class="fixed-table"
+                                                                            cellpadding="0" class="width-auto"
                                                                             cellspacing="0"
                                                                             style="color: #000000;border-collapse: separate !important; border-radius: 14px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                                             <tbody>
@@ -195,7 +175,7 @@
 
                                                                     <!-- BUTTON -->
                                                                     <table border="0" bgcolor="#007FAA" cellpadding="0"
-                                                                        class="fixed-table" cellspacing="0"
+                                                                        class="width-auto" cellspacing="0"
                                                                         style="color: #FFFFFF;border-collapse: separate !important; border-radius: 0px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                                         <tbody>
                                                                             <tr>
@@ -231,9 +211,9 @@
                                     <td valign="top"
                                         style="padding-left:20px; padding-right: 20px; padding-bottom: 20px;">
                                         <!-- PORTAL CTA -->
-                                        <table border="1" bgcolor="#ffffff" align="center" cellpadding="0"
+                                        <table border="2" bgcolor="#ffffff" align="center" cellpadding="0"
                                             cellspacing="0" bordercolor="#007faa"
-                                            style="border-color:#007faa; border-collapse: separate !important; border-radius: 0px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                            style="border-color:#007faa; border-width:2px; border-collapse: collapse; border-radius: 0px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                             <tbody>
                                                 <tr>
                                                     <td valign="middle"
@@ -255,7 +235,7 @@
                                     <td valign="top"
                                         style="padding-left:20px; padding-right: 20px; padding-bottom: 20px;">
                                         <!-- Publish Comments -->
-                                        {PublishComments}
+                                        [(IsEmpty({PublishComments}) ? "" : "" & {PublishComments})]
                                         <!-- // Publish Comments -->
 
                                     </td>
@@ -286,7 +266,8 @@
                 style="font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;">
                 Delivered by TRIAD MLS | 4196 Mendenhall Oaks<br />Parkway, Suite 110, High Point, NC<br />
                 <a style="color:#c0c0c0;" title="Unsubscribe" target="_self" href="#">
-                    <font color="#c0c0c0">Click this link if you wish to unsubscribe.</font></a>
+                    <font color="#c0c0c0">Click this link if you wish to unsubscribe.</font>
+                </a>
             </td>
         </tr>
         <tr>

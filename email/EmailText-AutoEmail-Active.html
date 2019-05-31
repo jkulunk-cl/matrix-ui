@@ -1,0 +1,18 @@
+<table border="0" cellpadding="0" cellspacing="0" width="600"><tr><td valign="top" style="padding-left:20px; padding-right: 20px; padding-bottom: 20px;"><p>[Salutation]</p><p>[Message]</p></td></tr><tr><td>[DisplayContent]</td></tr><tr><td valign="top" style="padding-left:20px; padding-right: 20px; padding-bottom: 20px;"><table border="2" bgcolor="#ffffff" align="center" cellpadding="0" cellspacing="0" bordercolor="#007faa" style="border-color:#007faa; border-width:2px; border-collapse: collapse; border-radius: 0px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td valign="middle" style="padding: 12px 26px; color: #007faa !important; font-size: 16px; font-weight: 400; mso-line-height-rule: exactly;"><a title="See Details" href="[FullListingsLink]" target="_self" style="letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFFFFF !important; mso-line-height-rule: exactly; display: block;"><font color="#007faa">View All Listings</font></a></td></tr></tbody></table></td></tr><tr><td valign="top" style="padding-left:20px; padding-right: 20px; padding-bottom: 20px;">[(IsEmpty({PublishComments}) ? "" : "" & {PublishComments})]</td></tr><tr><td valign="top" style="padding-left:20px; padding-right: 20px; padding-bottom: 20px;">[AgentEmailSignature]</td></tr></table>
+
+
+<!-- Original  -->
+[Salutation]
+
+[(IsEmpty({message}) ? ("One or more new/updated listing(s) match your search criteria:") : {message} )]
+
+[displaycontent]
+
+["Click the Link to view the new/updated Listings: <a href=\"" & {FullListingsLink} & "\">View Listings in Portal</a><br>"]
+[IsEmpty({DeepLink}) ? "" : 
+"Click here to see these listings in Matrix: <a href=\"" & {DeepLink} & "\">Agent View in Matrix</a><br>"]
+
+[(IsEmpty({PublishComments}) ? "" : "
+" & {PublishComments})]
+
+[ToString({AgentEmailSignature})]

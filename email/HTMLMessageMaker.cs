@@ -372,7 +372,7 @@ namespace Matrix.Components.MatrixMail
             line-height: inherit !important;
         }}
 
-        @media only screen and (max-width: 480px) {{
+        @media only screen and (max-width: 576px) {{
 
             body,
             table,
@@ -394,54 +394,32 @@ namespace Matrix.Components.MatrixMail
                 width: 100% !important;
             }}
 
-            h1 {{
-                line-height: 125% !important;
-            }}
-
-            h2 {{
-                font-size: 20px !important;
-                line-height: 125% !important;
-            }}
-
-            h3 {{
-                font-size: 18px !important;
-                line-height: 125% !important;
-            }}
-
-            h4 {{
-                font-size: 16px !important;
-                line-height: 125% !important;
-            }}
-
-            p {{
-                font-size: 18px !important;
-                line-height: 125% !important;
-                mso-line-height-rule: exactly;
-            }}
-
-            .wrapper {{
+            table.wrapper {{
                 border: none !important;
                 margin: 0 !important;
             }}
 
-
-            .fixed-table {{
+            table.width-auto {{
                 width: auto !important;
             }}
 
-            .responsive-table {{
+            table.responsive-table {{
                 width: 100% !important;
+                padding-left:0 !important;
+                padding-right: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }}
 
-            .responsive-column {{
+            td.responsive-column {{
                 display: block !important;
                 width: 100% !important;
+                padding-left:0 !important;
+                padding-right: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }}
 
-            .responsive-photo {{
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }}
         }}
 
 	</style>
@@ -499,7 +477,7 @@ namespace Matrix.Components.MatrixMail
 + @"</body>
 </html>";
 
-		// Unsubscribe URL (0) and text (1)
+		// Unsubscribe URL(0) and text(1)
 		private const string UNSUBSCRIBE_FRAGMENT = @"<a style=""color:#c0c0c0;"" title=""Unsubscribe"" target=""_self"" href=""" + "{0}" + @""">"
 		+ @"<font color=""#c0c0c0"">" + "{1}" + @"</font></a>";
 	}
