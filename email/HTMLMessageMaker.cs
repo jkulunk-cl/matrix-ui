@@ -353,18 +353,21 @@ namespace Matrix.Components.MatrixMail
 		}
 		private const string HTML_MESSAGE_TEMPLATE = @"<!DOCTYPE html>
 <html xmlns=""http://www.w3.org/1999/xhtml"" lang=""en"">
+
 <head>
-	<meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
-	<meta charset=""UTF-8"">
-	<meta http-equiv=""X-UA-Compatible"" content=""IE=edge"">
-	<meta name=""viewport"" content=""width=device-width, initial-scale=1"">
-	<style type=""text/css"">
-        a:focus {{
+    <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8""/>
+    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge""/>
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1""/>
+    <title> </title>
+    <style type=""text/css"">
+        a:focus,
+        A:focus {{
             opacity: 0.75;
             outline: none;
         }}
 
-        a[x-apple-data-detectors] {{
+        a[x-apple-data-detectors],
+        A[x-apple-data-detectors] {{
             text-decoration: none !important;
             font-size: inherit !important;
             font-family: inherit !important;
@@ -375,106 +378,85 @@ namespace Matrix.Components.MatrixMail
         @media only screen and (max-width: 576px) {{
 
             body,
-            table,
-            td,
-            div,
-            p,
-            a,
-            li,
-            blockquote {{
+            BODY,
+            table, TABLE,
+            td,TD,
+            div, DIV,
+            p, P,
+            a, A,
+            li, LI {{
                 -webkit-text-size-adjust: none !important;
             }}
 
-            body {{
+            body, BODY {{
                 width: 100% !important;
                 min-width: 100% !important;
             }}
 
-            table {{
-                width: 100% !important;
-            }}
-
-            table.wrapper {{
+            .mtx-wrapper {{
                 border: none !important;
                 margin: 0 !important;
             }}
 
-            table.width-auto {{
-                width: auto !important;
-            }}
-
-            table.responsive-table {{
-                width: 100% !important;
-                padding-left:0 !important;
-                padding-right: 0 !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }}
-
-            td.responsive-column {{
+            .mtx-stacked {{
                 display: block !important;
                 width: 100% !important;
-                padding-left:0 !important;
-                padding-right: 0 !important;
+				max-width: 100% !important;
                 margin-left: 0 !important;
                 margin-right: 0 !important;
             }}
 
         }}
-
-	</style>
+    </style>
 </head>
 
-<body bgcolor=""#ffffff"" leftmargin=""0"" marginwidth=""0"" topmargin=""0"" marginheight=""0"" offset=""0""
-    style=""height: 100%; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">"
-
-+ @"<span
+<body bgcolor=""#ffffff"" leftmargin=""0"" marginwidth=""0"" topmargin=""0"" marginheight=""0""
+    style=""height: 100%; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
+    <span
         style=""display: none !important; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; visibility: hidden; mso-hide: all;"">"
-+ "{0}" //message preview
-+ @"</span>"
-
-+ @"<table role=""main"" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0""
-        width=""100%""
-        style=""border-collapse: collapse; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
+		+ "{0}" //message preview
+		+ @"
+    </span>
+	<center>
+    <table class=""mtx-stacked"" role=""main"" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0"" width=""600""
+        style=""border-collapse: collapse; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
         <tr>
-            <td align=""center"" valign=""top"" width=""600"" style=""padding-top:10px; padding-bottom:40px;"">
-                <table class=""wrapper"" border=""0"" cellpadding=""0"" cellspacing=""0"" width=""600""
+            <td class=""mtx-stacked"" valign=""top"" width=""600"" style=""padding-top:10px; padding-bottom:40px;"">
+
+                <table class=""mtx-wrapper mtx-stacked"" border=""0"" cellpadding=""0"" cellspacing=""0"" width=""600""
                     style=""border: 10px solid #f5f5f5;"">
                     <tr>
                         <td valign=""top"" align=""left"" style=""text-align: left;"">"
-
 + "{1}" //message body
-
-+ @"					</td>
+                        + @"</td>
                     </tr>
                 </table>
-			</td>
+
+            </td>
         </tr>
-    </table>"
+    </table>
 
+    <table class=""mtx-stacked"" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0"" width=""600""
+        style=""border-collapse: collapse; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
+        <tr>
+            <td align=""center"" valign=""top""
+                style=""font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;"">"
+				+ "{2}" // Delivered by
+				+ @"<br />"
+				+ "{3}" // Unsubscribe fragment
+				+ @"
+            </td>
+        </tr>
+        <tr>
+            <td align=""center"" valign=""top""
+                style=""font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;"">
+                Copyright &#169; 2019 CoreLogic. All Rights Reserved.
+            </td>
+        </tr>
+    </table>
+	</center>
+</body>
 
-+ @"<table role=""main"" align=""center"" border=""0"" cellpadding=""0"" cellspacing=""0""
-    width=""100%""
-    style=""border-collapse: collapse; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;"">
-    <tr>
-        <td align=""center"" valign=""top""
-            style=""font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;"">"
-
-+ "{2}" // Delivered by
-+ @"<br/>"
-+ "{3}" // Unsubscribe fragment
-
-+ @"	</td>
-    </tr>
-    <tr>
-        <td align=""center"" valign=""top""
-            style=""font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;"">
-            Copyright &copy; 2019 CoreLogic. All Rights Reserved.
-        </td>
-    </tr>
-    </table>"
-
-+ @"</body>
 </html>";
 
 		// Unsubscribe URL(0) and text(1)
