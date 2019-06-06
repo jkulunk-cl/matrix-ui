@@ -33,7 +33,6 @@ ToString( {SqFtTotal}, "#,0" )
 <!-- link -->
 <span contentEditable=true function="QnVpbGRGdWxsVGVtcGxhdGVMaW5rKCJNT1JFIERFVEFJTFMiKQ==" j_functiontype="formula" j_text-decoration="none" stylevaluetext-decoration="none">More Details</span>
 
-
 -- address formula
 
 ((ToString({StreetNumber})="0")?(""):(ToString({StreetNumber}))) & " " & ((!IsEmpty({StreetDirPrefix}))?(ProperCase({StreetDirPrefix})& " "):("")) & ProperCase({StreetName}) & ((!IsEmpty( {StreetSuffix} ))?(" "&ProperCase({StreetSuffix})):("")) & ((!IsEmpty( {StreetDirSuffix} ))?(" " & ProperCase({StreetDirSuffix})) :("")) &((!IsEmpty({UnitNumber} ))?(" Unit#"&ToString({UnitNumber})):("")) & ", " & ToString({City}) & ", "&ToString({PostalCode})
@@ -41,6 +40,10 @@ ToString( {SqFtTotal}, "#,0" )
 -- link
 
 BuildFullTemplateLink("MORE DETAILS")
+
+-- link formula??
+
+"<span title=\"See Details\" style=\"letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFFFFF !important; display: block;\">" & BuildFullTemplateLink("More Details") & "</span>"
 
 <!-- table 2x2 -->
 <table class="table d-table mtx-cursor" class_value="table d-table" j_controltype="Table" j_rows="2" j_cols="2"

@@ -1,9 +1,9 @@
 $(function () {
 
     // Tooltip
-    $(".j-layerListItems .NavBar_menuItem.disabled").tooltip({
-        "title": "Zoom-in to enable"
-    });
+    // $(".j-layerListItems .NavBar_menuItem.disabled").tooltip({
+    //     "title": "Zoom-in to enable"
+    // });
 
     // Toggle Date Range Options with jQuery
 
