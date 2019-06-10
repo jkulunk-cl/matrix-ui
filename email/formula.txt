@@ -81,3 +81,14 @@ BuildFullTemplateLink("MORE DETAILS")
         </tr>
     </tbody>
 </table>
+
+
+-- url
+
+"<table class='table d-table mtx-cursor' class_value='table d-table' j_controltype='Table' j_rows='1' j_cols='1' j_caption='false' j_header='false' j_rowheader='false' j_striping='false' j_borders='false' j_hover='false' j_condense='0' j_responsive='false'><tbody><tr><td j_contentcontainer='1' style='background-color: #007faa; padding-top:6px; padding-bottom:6px; padding-left:12px; padding-right:12px;'><a style='display:block; text-decoration: none; color: #007faa !important;' href='" 
+& BuildFullTemplateUrl( ) 
+& "'><font color='#ffffff'>More Details</font></a></td></tr></tbody></table>"
+
+
+
+
