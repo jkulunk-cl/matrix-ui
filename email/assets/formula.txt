@@ -12,8 +12,16 @@ ToString( {SqFtTotal}, "#,0" )
 <img id=listing-photo src="http://localhost:53157/MediaServer/getmedia.ashx?Key=29072163&amp;TableID=9&amp;Type=1&amp;Number=0&amp;Size=3&amp;exk=2b24113aa6a6458119294084680d921c" width="100%" align=center height="100%"></img>
 </span>
 
+
+-- address formula
+((ToString({StreetNumber})="0")?(""):(ToString({StreetNumber}))) & " " & ((!IsEmpty({StreetDirPrefix}))?(ProperCase({StreetDirPrefix})& " "):("")) & ProperCase({StreetName}) & ((!IsEmpty( {StreetSuffix} ))?(" "&ProperCase({StreetSuffix})):("")) & ((!IsEmpty( {StreetDirSuffix} ))?(" " & ProperCase({StreetDirSuffix})) :("")) &((!IsEmpty({UnitNumber} ))?(" Unit#"&ToString({UnitNumber})):("")) & ", " & ToString({City}) & ", "&ToString({PostalCode})
+
+
 <!-- Price -->
 <span contentEditable=false function="VG9TdHJpbmcoIHtMaXN0UHJpY2V9LCAiJCMsMCIgKQ==" j_functiontype="field" j_selection="12">$100,001</span>
+
+-- price formula
+"<span style='font-size:1.5em;'>" & ToString( {ListPrice}, "$#,0" ) & "</span>"
 
 <!-- bed -->
 <span contentEditable=false function="VG9TdHJpbmcoIHtCZWRzVG90YWx9LCAiIywwIiAp" j_functiontype="field" j_selection="8">1</span>
@@ -30,18 +38,23 @@ ToString( {SqFtTotal}, "#,0" )
 <!-- status -->
 <span contentEditable=false function="WE1MRXNjYXBlKHtTdGF0dXN9KQ==" j_functiontype="field" j_selection="1">Expired</span>
 
+-- status formula
+XMLEscape({Status})
+
+
 <!-- link -->
 <span contentEditable=true function="QnVpbGRGdWxsVGVtcGxhdGVMaW5rKCJNT1JFIERFVEFJTFMiKQ==" j_functiontype="formula" j_text-decoration="none" stylevaluetext-decoration="none">More Details</span>
-
--- address formula
-
-((ToString({StreetNumber})="0")?(""):(ToString({StreetNumber}))) & " " & ((!IsEmpty({StreetDirPrefix}))?(ProperCase({StreetDirPrefix})& " "):("")) & ProperCase({StreetName}) & ((!IsEmpty( {StreetSuffix} ))?(" "&ProperCase({StreetSuffix})):("")) & ((!IsEmpty( {StreetDirSuffix} ))?(" " & ProperCase({StreetDirSuffix})) :("")) &((!IsEmpty({UnitNumber} ))?(" Unit#"&ToString({UnitNumber})):("")) & ", " & ToString({City}) & ", "&ToString({PostalCode})
 
 -- link
 
 BuildFullTemplateLink("MORE DETAILS")
 
--- link formula??
+-- More Details button formula
+"<table class='table d-table mtx-cursor' class_value='table d-table' j_controltype='Table' j_rows='1' j_cols='1' j_caption='false' j_header='false' j_rowheader='false' j_striping='false' j_borders='false' j_hover='false' j_condense='0' j_responsive='false'><tbody><tr><td j_contentcontainer='1' style='background-color: #007faa; padding-top:6px; padding-bottom:6px; padding-left:12px; padding-right:12px;'><a style='display:block; text-decoration: none; color: #007faa !important;' href='" 
+& BuildFullTemplateUrl( ) 
+& "'><font color='#ffffff'>More Details</font></a></td></tr></tbody></table>"
+
+-- More Details link formula
 
 "<span title=\"See Details\" style=\"letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFFFFF !important; display: block;\">" & BuildFullTemplateLink("More Details") & "</span>"
 
