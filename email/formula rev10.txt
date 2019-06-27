@@ -1,0 +1,19 @@
+"<img class=\"mtx-stacked\" style=\"width:280px; height: auto; outline: none;\" src=\"" & BuildMediaURL(1,0,2) & "\"></img>"
+
+"<span style='font-size:1.5em;'>" & ToString( {ListPrice}, "$#,0" ) & "</span>"
+
+
+((ToString({StreetNumber})="0")?(""):(ToString({StreetNumber}))) & " " & ((!IsEmpty({StreetDirPrefix}))?(ProperCase({StreetDirPrefix})& " "):("")) & ProperCase({StreetName}) & ((!IsEmpty( {StreetSuffix} ))?(" "&ProperCase({StreetSuffix})):("")) & ((!IsEmpty( {StreetDirSuffix} ))?(" " & ProperCase({StreetDirSuffix})) :("")) &((!IsEmpty({UnitNumber} ))?(" Unit#"&ToString({UnitNumber})):("")) & ", " & ToString({City}) & ", "&ToString({PostalCode})
+
+
+ToString( {BedsTotal} ) & " beds, "
+& ToString( {BathsTotal} ) & " baths | "
+& ToString( {SqFtTotal}, "#,0" ) & " sqft."
+
+
+"<span style='font-size:0.8em; font-weight:bold;'>" & ToString( {Status} ) & "</span>"
+
+
+"<table class='table d-table mtx-cursor' class_value='table d-table' j_controltype='Table' j_rows='1' j_cols='1' j_caption='false' j_header='false' j_rowheader='false' j_striping='false' j_borders='false' j_hover='false' j_condense='0' j_responsive='false'><tbody><tr><td j_contentcontainer='1' style='background-color: #007faa; padding-top:6px; padding-bottom:6px; padding-left:12px; padding-right:12px;'><a style='display:block; text-decoration: none; color: #007faa !important;' href='" 
+& BuildFullTemplateUrl( ) 
+& "'><font color='#ffffff'>More Details</font></a></td></tr></tbody></table>"
