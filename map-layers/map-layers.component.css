@@ -1,6 +1,6 @@
 /* Subtractions
-Need to remove from css and inherit properties */
-
+Need to remove from css and inherit properties 
+*/
 .layerMenu {
     border-top: none;
 }
@@ -9,13 +9,16 @@ Need to remove from css and inherit properties */
     min-width: auto;
 }
 
-.mtx-layerMenu-panel-heading {
-    padding: 10px 15px;
+
+.mtx-layerMenu-panel-heading div{
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
-.layerMenu li.disabled {
+/* .layerMenu li.disabled {
     color: inherit;
-}
+} */
+
 
 /* Changes */
 
@@ -31,10 +34,10 @@ Need to remove from css and inherit properties */
 .layerMenu div.zoomIn {
     display: block;
 
-    color: inherit;
+    /* color: inherit;
     font-size: 11px;
-    font-weight: normal;
-    padding-bottom:1em;
+    font-weight: normal; */
+    padding-bottom:6px;
 }
 
 /* Additions */
@@ -44,43 +47,43 @@ Need to remove from css and inherit properties */
 }
 
 .layerMenu {
-    font-size: 14px;
+    /* font-size: 14px; */
     min-width: 240px;
     border: 1px solid #d2d2d2;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .2);
 }
 
-.layerMenu .panel {
+.mtx-layerMenu-panel-group .panel {
     border-radius: 0;
 }
 
-.layerMenu li.disabled label {
+.mtx-layerMenu-panel-body li.disabled label {
     cursor: not-allowed;
     opacity: 0.5;
 }
 
-.layerMenu li label {
+.mtx-layerMenu-panel-body li label {
     display: block;
 }
 
-.layerMenu input[type='checkbox'], .layerMenu input[type="radio"] {
+.mtx-layerMenu-panel-body input[type='checkbox'], .mtx-layerMenu-panel-body input[type="radio"] {
     margin: 3px 0 0 0;
 }
 
-.layerMenu .date-range-options {
+.mtx-layerMenu-panel-body .date-range-options {
     display: none;
     margin: 6px 0;
 }
 
-.layerMenu .mtx-layerMenu-panel-group {
+.mtx-layerMenu-panel-group {
     margin-bottom: 0;
 }
 
-.layerMenu .mtx-layerMenu-panel-heading {
+.mtx-layerMenu-panel-group .mtx-layerMenu-panel-heading {
     border-radius: 0;
 }
 
-.layerMenu .j-layerLabel::before {
+.mtx-layerMenu-panel-heading .j-layerLabel::before {
     display: inline-block;
     font-style: normal;
     font-variant: normal;
@@ -94,7 +97,7 @@ Need to remove from css and inherit properties */
     transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-.layerMenu .j-layerLabel.collapsed::before {
+.mtx-layerMenu-panel-heading .j-layerLabel.collapsed::before {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
