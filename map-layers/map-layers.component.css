@@ -40,11 +40,12 @@ Need to remove from css and inherit properties
     padding-bottom:6px;
 }
 
-/* Additions */
+/* Additions 
 
 .text-amethyst {
     color: #77448b;
 }
+*/
 
 .layerMenu {
     /* font-size: 14px; */
@@ -53,33 +54,15 @@ Need to remove from css and inherit properties
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .2);
 }
 
-.mtx-layerMenu-panel-group .panel {
-    border-radius: 0;
-}
-
-.mtx-layerMenu-panel-body li.disabled label {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-.mtx-layerMenu-panel-body li label {
-    display: block;
-}
-
-.mtx-layerMenu-panel-body input[type='checkbox'], .mtx-layerMenu-panel-body input[type="radio"] {
-    margin: 3px 0 0 0;
-}
-
-.mtx-layerMenu-panel-body .date-range-options {
-    display: none;
-    margin: 6px 0;
-}
-
 .mtx-layerMenu-panel-group {
     margin-bottom: 0;
 }
 
-.mtx-layerMenu-panel-group .mtx-layerMenu-panel-heading {
+.mtx-layerMenu-panel-group .panel {
+    border-radius: 0;
+}
+
+.mtx-layerMenu-panel-heading {
     border-radius: 0;
 }
 
@@ -101,3 +84,23 @@ Need to remove from css and inherit properties
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
+
+.mtx-layerMenu-panel-body li.disabled label {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.mtx-layerMenu-panel-body li label {
+    display: block;
+}
+
+.mtx-layerMenu-panel-body input[type='checkbox'], .mtx-layerMenu-panel-body input[type="radio"] {
+    margin: 3px 0 0 0;
+}
+
+.mtx-layerMenu-panel-body .date-range-options {
+    display: none;
+    margin: 6px 0;
+}
+
+
