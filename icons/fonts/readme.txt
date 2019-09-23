@@ -1,0 +1,2 @@
+This folder exists because the nuget packages for bootstrap, jQuery and other frontend tools use it as a standard location
+for servable content and it is hard to change.  Don't add files manually here - put them in ~/3rdparty instead.
