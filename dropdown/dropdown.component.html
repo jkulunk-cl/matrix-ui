@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!-- 
+    
+        Notes
+        - Replace "Zoom In" warning label and with Tooltip
+        - Replace "textCenterPointer" class with "btn btn-link pull-right"
+
+    -->
+
+    <!-- FOR PROTOTYPE ONLY -->
+    <!-- <link
+        href="http://dogwood.argon.dev.tarasoft.local/Matrix/css/matrix?v=t1t_zwImln-5g2LjHrSB8aeHnmaMttAJEvv1KfZJPSQ1"
+        rel="stylesheet" /> -->
+
+    <!-- <link
+        href="http://aac-abor.argon.dev.tarasoft.local/Matrix/css/matrix?v=uOaNRhSiQc7igTMoJs0EK8ZLKKgd7CrkpjiyBGqOLKo1"
+        rel="stylesheet" /> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- // FOR PROTOTYPE ONLY -->
+
+    <link rel="stylesheet" href="dropdown.component.css">
+
+</head>
+
+<body>
+
+    <!-- <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                
+                <div class="form-control">
+                    
+                    value
+                    
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+<label>Filter</label>
+    <div class="filter">
+        <a id="filter-dropdown" class="filter-btn btn btn-secondary" data-target="set1">Show All</a>
+        <a id="filter-reset" class="btn btn-link"><i class="fa fa-undo"></i></a>
+        <div id="set1" class="filter-menu">
+            <a href="#">With active auto-emails</a>
+            <a href="#">With inactive auto-emails</a>
+
+            <div data-target="set2" class="filter-btn">In the category...</div>
+            <div id="set2" class="filter-menu">
+                <a href="#">Buyers</a>
+                <a href="#">Sellers</a>
+                <a href="#">Prospects</a>
+            </div>
+
+            <div data-target="set3" class="filter-btn">I have not worked with...</div>
+            <div id="set3" class="filter-menu">
+                <a href="#">Last 3 months</a>
+                <a href="#">Last 6 months</a>
+                <a href="#">Last 12 months</a>
+            </div>
+
+            <a href="#">All inactive</a>
+        </div>
+    </div>
+
+    <script src="dropdown.component.js"></script>
+
+</body>
+
+</html>

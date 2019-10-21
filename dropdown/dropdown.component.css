@@ -1,0 +1,31 @@
+.btn-secondary {
+    color:#fff !important;
+}
+
+.filter .reset {
+    display: none;
+}
+
+.filter-btn {
+    cursor: pointer;
+}
+
+.filter-menu {
+    list-style: none;
+    display: none;
+    padding-left: 15px;
+}
+
+.filter-menu a {
+    display: block;
+    color: #000;
+    line-height: 1.5em;
+}
+
+.filter-menu a:hover {
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+}
