@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SpeedbarComponent } from './speedbar/speedbar.component';
 import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NavbarComponent,
     SpeedbarComponent,
     NavComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
