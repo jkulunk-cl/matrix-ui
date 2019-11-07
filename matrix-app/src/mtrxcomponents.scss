@@ -1,0 +1,403 @@
+
+
+/******************************************************************************/
+/* Styling for Matrix implementation of Bootstrap4 components.
+/*
+/* Please notice the distinction between this and the mtxcomponents file
+/* which is for Bootstrap3 components still used by legacy Matrix.
+/* 
+/* Each UI component should have its own section in this file and within
+/* mtxcomponents.js if there is a need for enhanced script functionality.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* CSS variables.
+/*
+/* Use these instead of specifying colors in component blocks.
+/******************************************************************************/
+
+:root {
+  --mtrx-primary: #247fab;
+  --mtrx-neutral: #f1f1f1;
+  --mtrx-lightest: #ffffff;
+  --mtrx-darkest: #3a3a3a;
+  --mtrx-boxShadow: 0 0 4px rgba(0,0,0,0.25);
+}
+/* End CSS variables.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Main components.
+/*
+/* For standard broadly used things like BODY, page, typography.
+/******************************************************************************/
+
+.mtrx-body {
+  background-color: var(--mtrx-neutral);
+  font-size: 0.875rem;
+}
+
+.mtrx-pageContainer {
+  background-color: var(--mtrx-lightest);
+  box-shadow: var(--mtrx-boxShadow);
+}
+
+.mtrx-body h1,
+.mtrx-body .h1 {
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+
+.mtrx-body h2,
+.mtrx-body .h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.mtrx-body h3,
+.mtrx-body .h3 {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.mtrx-body a {
+  color: var(--mtrx-primary);
+}
+
+.mtrx-body small,
+.mtrx-body .small,
+.mtrx-body .text-muted {
+  color: #7f7f7f;
+}
+
+.mtrx-keyvalue.inline .mtrx-key {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.mtrx-keyvalue.inline .mtrx-value {
+  display: inline-block;
+}
+
+.mtrx-keyvalue .mtrx-key {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+/*TODO: evaluate*/
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: var(--mtrx-primary);
+  background-color: var(--mtrx-primary);
+}
+/* End Main components.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Buttons.
+/*
+/* Styling of Bootstrap button components.
+/******************************************************************************/
+
+.mtrx-body .btn {
+  border-radius: 0;
+}
+
+.mtrx-body .btn-primary {
+  background-color: var(--mtrx-primary);
+  border-color: var(--mtrx-primary);
+  color: var(--mtrx-lightest);
+}
+
+.mtrx-body .badge-primary {
+  background-color: var(--mtrx-primary);
+}
+
+.mtrx-body .form-group label,
+.mtrx-body .label {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+/* End Buttons.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Pagination.
+/*
+/* Styling of Bootstrap button groups used for pagination purposes.
+/******************************************************************************/
+
+.mtrx-pagination--isActive span {
+  border-radius: 30px;
+  content: '';
+  height: 30px;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  z-index: 999;
+  border: 3px solid #007faa;
+}
+/* End Pagination.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Navbar.
+/*
+/* Styling of Bootstrap main navbar.
+/******************************************************************************/
+
+.mtrx-navbar {
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--mtrx-boxShadow);
+}
+
+.mtrx-navbar.bg-primary {
+  background-color: var(--mtrx-primary) !important;
+}
+
+.mtrx-navbar .nav-item {
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+
+.mtrx-navbar .nav-item.active {
+  border-bottom-color: rgba(255,255,255,0.5);
+}
+
+.mtrx-navbar .nav-link,
+.mtrx-navbar .mtrx-nav-item .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mtrx-navbar .nav-link:hover,
+.mtrx-navbar .mtrx-nav-item .dropdown-toggle:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.mtrx-navbar .nav-item .nav-link.dropdown-toggle::after {
+  display: none; /* hide arrow */
+}
+
+.mtrx-navbar .dropdown-menu {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* hover for desktop only. To reconsider */
+@media only screen and (min-width: 1024px) {
+  .mtrx-navbar .nav-item:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 575px) {
+  .mtrx-navbar .nav-item {
+    border-bottom: none;
+  }
+
+  .mtrx-navbar .nav-link {
+    font-weight: 500;
+    line-height: 1.4rem;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mtrx-navbar .dropdown-menu-right {
+    position: relative;
+    float: none;
+  }
+}
+
+.mtrx-navbar .navbar-brand img {
+}
+/* End Navbar.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Speedbar.
+/*
+/* Styling of Responsive Speedbar.
+/******************************************************************************/
+
+.mtrx-speedbar {
+  border-bottom: 1px solid #cccccc;
+}
+
+.mtrx-speedbar .input-group-text,
+.mtrx-speedbar .form-control {
+  font-size: 0.875rem;
+}
+
+.mtrx-speedbar input,
+.mtrx-speedbar .input-group-text {
+  color: #7F7F7F;
+  background: var(--mtrx-lightest);
+  border: none;
+  border-radius: 0;
+}
+
+/*TODO: variable color*/
+.mtrx-speedbar input::placeholder {
+  color: #D2D2D2;
+}
+
+/*TODO: variable color*/
+.mtrx-speedbar .form-control:focus {
+  background: var(--mtrx-lightest);
+  color: #7F7F7F;
+}
+/* End Speedbar.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Widgets.
+/*
+/* For Bootstrap card elements which should appear uniform.
+/* Example of usage is on the Matrix Responsive home page.
+/******************************************************************************/
+
+.mtrx-widget {
+  margin-bottom: .5rem;
+  border-radius: 0;
+  box-shadow: var(--mtrx-boxShadow);
+  border: none;
+  padding-bottom: 0.5rem;
+}
+
+.mtrx-widget .list-group {
+  margin: 1rem;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 4px;
+  max-height: 400px;
+  overflow: auto;
+  margin: 0 0.50rem;
+}
+
+.mtrx-widget .list-group-flush .list-group-item {
+  border-radius: 4px;
+}
+
+.mtrx-widget .card-header {
+  background-color: transparent;
+  border-bottom: 0;
+  padding: 0.25rem 0.50rem;
+  color: var(--mtrx-primary);
+}
+/* End Widgets.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Section.
+/*
+/* For styling a card header in a more flowing way within a page.
+/* Class mtrx-section must be used with the bootstrap4 card class 
+/* to apply the visual change.
+/* Add mtrx-section--isCollapsible to the element which wraps the 
+/* card-header text to use the optional collapsing arrow indicator.
+/******************************************************************************/
+
+.mtrx-section {
+  border: none;
+}
+
+.mtrx-section .card-header {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d2d2d2;
+  color: var(--mtrx-primary);
+}
+
+.mtrx-section--isCollapsible {
+  padding-left: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.mtrx-section--isCollapsible:before {
+  content: '\f078';
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 0.875rem;
+  left: 0;
+  line-height: 10px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  transition: transform 300ms ease-in-out;
+  width: 10px;
+}
+
+.collapsed .mtrx-section--isCollapsible:before {
+  transform: rotate(-90deg);
+  transition: transform 300ms ease-in-out;
+}
+/* End Section.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Tables.
+/*
+/* Styling of Bootstrap table components.
+/******************************************************************************/
+
+.mtrx-table {
+  max-height: 60vh;
+}
+
+.mtrx-table th {
+  position: sticky;
+  top: 0;
+  background-color: var(--mtrx-lightest);
+}
+/* End Tables.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Visualizations.
+/*
+/* Custom graphs, charts, etc.
+/******************************************************************************/
+
+.mtrx-plannerGraph .mtrx-donutChart {
+  width: 240px;
+  max-width: 90%;
+}
+/* End Visualizations.
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Utilities.
+/*
+/* Helpful things, stateful things, miscellaneous.
+/******************************************************************************/
+
+.mtrx-widget-badge {
+  padding: .5rem;
+}
+
+.mtrx-isClickable {
+  cursor: pointer;
+}
+
+.mtrx-top--30percent {
+  top: 30%;
+}
+/* End Utilities.
+/******************************************************************************/
