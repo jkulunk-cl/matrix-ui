@@ -9,6 +9,7 @@ import { SpeedbarComponent } from './speedbar/speedbar.component';
 import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     SpeedbarComponent,
     NavComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

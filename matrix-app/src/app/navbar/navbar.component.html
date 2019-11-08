@@ -1,100 +1,46 @@
 <nav class="mtrx-navbar navbar navbar-expand-sm navbar-dark bg-primary pt-0 pb-0">
   <a class="navbar-brand" href="/Matrix/Default.aspx">
-    <img src="assets/images/mtrx-logo.png" />
+    <img src="assets/images/mtrx-logo.svg" />
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbar">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" role="button" id="navMyMatrix" data-toggle="dropdown" href="/Matrix/Default.aspx">My Matrix</a>
-        <div class="dropdown-menu" aria-labelledby="navMyMatrix">
-          <a class="dropdown-item" href="/Matrix/Default.aspx">Dashboard</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/Summary">Summary</a>
-          <a class="dropdown-item" href="">Contacts</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/MyListings">My Listings</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/ReverseProspectingEmailHistory">Reverse Prospecting Email History</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/SentEmail">Sent Email</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/SavedSearches">Saved Searches</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/MyCMAs">My CMAs</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/AutoEmail">Auto Email</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/TeamSettings">Team Settings</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/Carts">Carts</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/Concierge">Concierge</a>
-          <a class="dropdown-item" href="/matrix/MyMatrix/ReverseProspecting">Reverse Prospecting</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle" role="button" id="navSearch" data-toggle="dropdown" href="/matrix/Search">Search</a>
+
+      <li class="nav-item active">
+        <a class="nav-link dropdown-toggle" role="button" id="navSearch" data-toggle="dropdown" href="/matrix/Search">Components</a>
         <div class="dropdown-menu" aria-labelledby="navSearch">
-          <a class="dropdown-item" href="#">Residential</a>
-          <a class="dropdown-item" href="#">Quick</a>
-          <a class="dropdown-item" href="#">Lease</a>
-          <a class="dropdown-item" href="#">Multi-Family</a>
-          <a class="dropdown-item" href="#">Farm</a>
-          <a class="dropdown-item" href="#">Lot</a>
-          <a class="dropdown-item" href="#">Commercial</a>
-          <a class="dropdown-item" href="#">Cross Property</a>
-          <a class="dropdown-item" href="#">Agent</a>
-          <a class="dropdown-item" href="#">Quick</a>
-          <a class="dropdown-item" href="#">Office</a>
-          <a class="dropdown-item" href="#">More...</a>
+          <a class="dropdown-item" href="#">Widgets</a>
+          <a class="dropdown-item" href="#">Tabs</a>
+          <a class="dropdown-item" href="#">Show/Hide Toggle</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle" role="button" id="navStats" data-toggle="dropdown" href="/matrix/Stats">Stats</a>
-        <div class="dropdown-menu" aria-labelledby="navStats">
-          <a class="dropdown-item" href="#">Residential</a>
-          <a class="dropdown-item" href="#">Lease</a>
-          <a class="dropdown-item" href="#">Multi-Family</a>
-          <a class="dropdown-item" href="#">Farm</a>
-          <a class="dropdown-item" href="#">Lot</a>
-          <a class="dropdown-item" href="#">Commercial</a>
-          <a class="dropdown-item" href="#">Cross Property</a>
-        </div>
+        <a class="nav-link" href="">Forms</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle" role="button" id="navTax" data-toggle="dropdown"  href="/matrix/Tax">Tax</a>
-        <div class="dropdown-menu" aria-labelledby="navTax">
-          <a class="dropdown-item" href="#">Realist</a>
-          <a class="dropdown-item" href="#">More...</a>
-        </div>
+        <a class="nav-link" href="">Buttons</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/matrix/Links">Links</a>
+        <a class="nav-link" href="">Typography</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle" role="button" id="navFinance" data-toggle="dropdown" href="/matrix/Finance">Finance</a>
-        <div class="dropdown-menu" aria-labelledby="navFinance">
-          <a class="dropdown-item" href="#">Financial Calculators</a>
-          <a class="dropdown-item" href="#">Seller's Estimated Net Proceeds</a>
-          <a class="dropdown-item" href="#">Buyer's Closing Costs</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/matrix/MarketReports">Market Reports</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle" role="button" id="navAddEdit" data-toggle="dropdown" href="/matrix/AddEdit">Add/Edit</a>
-        <div class="dropdown-menu" aria-labelledby="navAddEdit">
-          <a class="dropdown-item" href="#">Listing Input</a>
-          <a class="dropdown-item" href="#">Listing Transfer</a>
-        </div>
-      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" id="navMyMatrix" data-toggle="dropdown" href="/Matrix/Default.aspx">Pages</a>
+          <div class="dropdown-menu" aria-labelledby="navMyMatrix">
+            <a class="dropdown-item" href="">Contacts</a>
+            <a class="dropdown-item" href="">Contact Detail</a>
+
+          </div>
+        </li>
     </ul>
     <div class="dropdown mtrx-nav-item">
-      <a class="dropdown-toggle nav-link" role="button" id="navProfile" data-toggle="dropdown" href="#">Hello, Thomas</a>
+      <a class="dropdown-toggle nav-link" role="button" id="navProfile" data-toggle="dropdown" href="#">Utility</a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navProfile">
-        <a class="dropdown-item" href="/matrix/MyMatrix/TeamSettings">Team Settings</a>
-        <a class="dropdown-item" href="/matrix/HelloUser/ControlPanel">Control Panel</a>
-        <a class="dropdown-item" href="/Matrix/m/">Mobile</a>
-        <a class="dropdown-item" href="/matrix/HelloUser/Settings">Settings</a>
-        <a class="dropdown-item" href="/matrix/HelloUser/Diagnostics">Diagnostic</a>
+        <a class="dropdown-item" href="">Settings</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="/matrix/HelloUser/Help">Help</a>
-        <a class="dropdown-item" href="/matrix/Logout.aspx">Logout</a>
+        <a class="dropdown-item" href="">Help</a>
+        <a class="dropdown-item" href="">Logout</a>
       </div>
     </div>
   </div>
