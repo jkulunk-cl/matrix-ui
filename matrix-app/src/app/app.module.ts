@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TabsComponent } from './tabs/tabs.component';
     NavComponent,
     DashboardComponent,
     FooterComponent,
-    TabsComponent
+    TabsComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
