@@ -1,0 +1,22 @@
+.mtrx-notification {
+    font-size: 1.125rem;
+    width: 38px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mtrx-count {
+    font-size: 14px;
+    display: block;
+    border-radius: 9px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    top: 6px;
+    right: 0;
+}

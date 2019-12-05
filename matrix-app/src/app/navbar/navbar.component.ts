@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from '../interface';
+import { Notifications } from '../notifications/notifications.component';
 
 @Component({
   selector: 'app-navbar',

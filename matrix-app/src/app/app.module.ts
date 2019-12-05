@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TableComponent } from './table/table.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TableComponent } from './table/table.component';
     DashboardComponent,
     FooterComponent,
     TabsComponent,
-    TableComponent
+    TableComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,
