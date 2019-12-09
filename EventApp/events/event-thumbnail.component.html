@@ -1,0 +1,20 @@
+<div aria-label="card" class="card">
+  <div class="card-header">
+    <div class="heading">{{event.name}}</div>
+  </div>
+  <div class="card-body">
+    <ul class="list-unstyled">
+      <li>Date: {{event.date}}</li>
+      <li>Time: {{event.time}}</li>
+      <li [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
+        <span *ngSwitchCase="'8:00 am'">Early Session</span>
+        <span *ngSwitchCase="'10:00 am'">Late Session</span>
+        <span *ngSwitchDefault>Regular Session</span>
+
+      </li>
+      <li>Price: ${{event.price}}</li>
+    </ul>
+    <p *ngIf="event?.location">Location: {{event?.location?.city}}, {{event?.location?.country}}</p>
+    <p *ngIf="event?.onlineUrl">Online: {{event?.onlineUrl}}</p>
+  </div>
+</div>
