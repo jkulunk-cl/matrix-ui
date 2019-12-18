@@ -2,12 +2,9 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Notifications Component - Legacy</title>
 
     <!-- FOR PROTOTYPE ONLY -->
-    <!-- <link
-        href="http://dogwood.argon.dev.tarasoft.local/Matrix/css/matrix?v=t1t_zwImln-5g2LjHrSB8aeHnmaMttAJEvv1KfZJPSQ1"
-        rel="stylesheet" /> -->
 
     <link href="http://holly.matrixstaging.com/Matrix/css/matrix?v=M6RyrKiYjH9HUUHFblMDQ-N0xrem6jmlGEAGamDayKs1"
         rel="stylesheet" />
@@ -18,71 +15,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <style>
-        .mtx-notification {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mtx-notification.active {
-            color: #ffffff;
-        }
-
-        .mtx-count {
-            background-color: red;
-            display: block;
-            border-radius: 9px;
-            width: 18px;
-            height: 18px;
-            line-height: 18px;
-            text-align: center;
-            position: absolute;
-            top: 6px;
-            right: 0;
-        }
-
-        .mtx-popover {
-            border-radius: 0 !important;
-            border: none !important;
-            box-shadow: 0 0 16px rgba(0, 0, 0, 0.25) !important;
-        }
-
-        .mtx-popover .mtx-arrow {
-            top: -10px !important;
-        }
-
-        .mtx-popover .mtx-arrow::after {
-            border-bottom-color: #007aaa !important;
-        }
-
-        .mtx-popover .mtx-popover-title {
-            font-size: 18px;
-            color: #ffffff;
-            background-color: #007aaa;
-            border-radius: 0;
-        }
-
-        .mtx-popover .mtx-popover-title::before {
-            border-bottom: 0 !important;
-        }
-
-        .mtx-popover .mtx-popover-content {
-            padding: 0;
-        }
-
-        .mtx-popover .mtx-list-group {
-            margin-bottom: 0;
-        }
-
-        .mtx-popover .mtx-list-group-item {
-            padding: .5rem .75rem;
-        }
-
-        .mtx-popover .mtx-list-group-item:first-child,
-        .mtx-popover .mtx-list-group-item:last-child {
-            border-radius: 0;
-        }
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -91,8 +23,7 @@
         crossorigin="anonymous"></script>
     <!-- // FOR PROTOTYPE ONLY -->
 
-    <!-- <link rel="stylesheet" href="notifications.component.css"> -->
-    <!-- <script src="notifications.component.js"></script> -->
+    <link rel="stylesheet" href="notifications.component.css">
 
 </head>
 
@@ -105,13 +36,15 @@
                     <td style="width:100%;">&nbsp;</td>
                     <td>
 
-                        <a id="ExampleNotificationAlert" class="btn btn-link mtx-notification active" href="javascript:" rel="notification"
-                            data-toggle="popover" data-html="true">
+                        <!-- Alert Indicator -->
+                        <a id="ExampleNotificationAlert" class="btn btn-link mtx-notification active" href="javascript:"
+                            rel="notification" data-toggle="popover" data-html="true">
                             <span class="mtx-count">3</span>
                             <span class="far fa-bell">
                                 <span class="sr-only">Notifications</span>
                             </span>
                         </a>
+                        <!-- END Alert Indicator -->
 
                     </td>
                 </tr>
@@ -124,83 +57,52 @@
 
         <!-- Example Notification Items -->
         <div id="ExampleNotificationItems">
-
-        
-        <ul class="list-group mtx-list-group">
-            <li class="mtx-list-group-item list-group-item">
-                <div class="row">
-                    <div class="col-xs-10">
-                                            <strong>Concierge Alert</strong><small class="pl-1">Today</small><br />
-                    You have 5 auto-emails awaiting approval.
+            <ul class="list-group mtx-list-group">
+                <li class="mtx-list-group-item list-group-item">
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <strong>Concierge Alert</strong><small class="pl-1">Today</small><br />
+                            You have 5 auto-emails awaiting approval.
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            <span class="fal fa-trash text-danger"></span>
+                        </div>
                     </div>
-                    <div class="col-xs-2 text-right">
-                        <span class="fal fa-trash text-danger"></span>
+                </li>
+                <li class="mtx-list-group-item list-group-item">
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <strong>Planner Alert</strong><small class="pl-1">1 day ago</small><br />
+                            <a href="javascript;">Violet Baudelaire</a> completed the "Look into your finances" task.
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            <span class="fal fa-trash text-danger"></span>
+                        </div>
                     </div>
-                </div>
-               
-                
-            </li>
-            <li class="mtx-list-group-item list-group-item">
-                <div class="row">
-                    <div class="col-xs-10">
-<strong>Planner Alert</strong><small class="pl-1">1 day ago</small><br />
-                    <a href="javascript;">Violet Baudelaire</a> completed the "Look into your finances" task.
+                </li>
+                <li class="mtx-list-group-item list-group-item">
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <strong>PropertyFit Alert</strong><small class="pl-1">1 day ago</small><br />
+                            <a href="javascript;">Dan Brown</a> has updated their preferences.
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            <span class="fal fa-trash text-danger"></span>
+                        </div>
                     </div>
-                    <div class="col-xs-2 text-right">
-                        <span class="fal fa-trash text-danger"></span>
+                </li>
+                <li class="mtx-list-group-item list-group-item">
+                    <div class="text-right small">
+                        <a href="javascript:">Clear All</a>
                     </div>
-                </div>
-                
-                
-            </li>
-            <li class="mtx-list-group-item list-group-item">
-                <div class="row">
-                    <div class="col-xs-10">
-                        <strong>PropertyFit Alert</strong><small class="pl-1">1 day ago</small><br />
-                    <a href="javascript;">Dan Brown</a> has updated their preferences.
-                    </div>
-                    <div class="col-xs-2 text-right">
-                        <span class="fal fa-trash text-danger"></span>
-                    </div>
-                </div>
-                
-                
-            </li>
-            <li class="mtx-list-group-item list-group-item">
-                <div class="text-right small">
-                    <a href="javascript:">Clear All</a>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
         </div>
         <!-- end Notification Items -->
 
     </div>
 
-    <script>
-        //
-        // jQuery Popover Function
-
-        var popoverTemplate = '<div class="popover mtx-popover" role="tooltip"><div class="arrow mtx-arrow"></div><h3 class="popover-title mtx-popover-title"></h3><div class="popover-content mtx-popover-content"></div></div>';
-        var popoverContent = $('#ExampleNotificationItems').html();
-        console.log(popoverContent);
-
-        $("#ExampleNotificationAlert").popover(
-            {
-                html: true,
-                title: 'Notifications',
-                content: popoverContent,
-                template: popoverTemplate,
-                placement: 'bottom',
-                trigger: 'click'
-            }
-        );
-
-      // TODO - If count > 0 add "active" class to alert badge
-
-    // end Popover
-    //
-    </script>
+    <script src="notifications.component.js"></script>
 
 </body>
 
