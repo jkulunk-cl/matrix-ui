@@ -23,7 +23,7 @@ export class NotificationsComponent implements OnInit {
         content: $('#ExampleNotificationItems'),
         template: popoverTemplate,
         placement: 'bottom',
-        trigger: 'focus'
+        trigger: 'click'
       }
     );
 

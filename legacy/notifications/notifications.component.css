@@ -1,0 +1,12 @@
+.short_footer {
+    /* Remove this CSS class */
+}
+
+.mtx-footer {
+    margin-top: 20px;
+}
+
+.mtx-footer-logo {
+    padding: 0 20px;
+    vertical-align: top;
+}
