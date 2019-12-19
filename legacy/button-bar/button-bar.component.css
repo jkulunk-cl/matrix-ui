@@ -1,0 +1,14 @@
+
+.buttonBar TD.disabled.rightImportant,
+.buttonBar TD.disabled.leftImportant
+{
+    width: 13px;
+    background: none;
+}
+
+.buttonBar TD.disabled
+{
+	background-color: #5A9CE6 !important;
+}
+
+

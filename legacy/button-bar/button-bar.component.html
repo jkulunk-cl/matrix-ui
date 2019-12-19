@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Button Bar - Legacy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FOR PROTOTYPE ONLY -->
+
+    <link href="http://holly.matrixstaging.com/Matrix/css/matrix?v=M6RyrKiYjH9HUUHFblMDQ-N0xrem6jmlGEAGamDayKs1"
+        rel="stylesheet" />
+
+    <link href="http://holly.matrixstaging.com/Matrix/css/custom?v=sV23_KTqVTQOndZ08MtrNaK44bvb4ID259O1twRkQUA1"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- // FOR PROTOTYPE ONLY -->
+
+    <link rel="stylesheet" href="button-bar.component.css">
+
+</head>
+
+<body style="padding: 15px;">
+
+    <div style="z-index: 99; position: relative">
+        <div id="m_pnlDisplayButtons" class="floating keptInViewport resultsActive" style="padding: 10px 0px; position: static; top: auto; left: auto; width: 1552px;">
+    
+            <input type="hidden" name="m_hfMenuState" id="m_hfMenuState" value="Actions">
+            <div class="resultsMenu tabbedMenu" style="">
+                <ul class="mainmenu">
+                    <li id="m_liActionsTab" class="selected">
+                        Actions
+                    </li>
+                    <li id="m_liResultsTab">
+                        Refine
+                    </li>
+                    <li id="m_liSaveAsTab">
+                        Save
+                    </li>
+                    <li id="m_liCartsTab">
+                        Carts
+                    </li>
+                    
+                </ul>
+                <div class="paging hideOnMap">
+                    
+                    <span id="m_upPaging">
+                            <span class="pagingLinks">
+<b><a href="javascript:__doPostBack('m_DisplayCore','Redisplay|,,0')">1</a></b>
+<a disabled="disabled">Previous</a><a disabled="disabled">Next</a></span>
+
+                        </span>
+                </div>
+                <div style="clear: both;"></div>
+                <div id="m_tblActionMenu" class="submenu" style="display: block;">
+                    <table border="0" cellspacing="0" cellpadding="0" class="buttonBar">
+                        <tbody><tr>
+                            <td class="leftImportant disabled">
+                                <!-- <img src="/matrix/images/c.gif" width="13" alt="spc"> -->
+                            </td>
+                            
+                            <td id="m_tdEmail" class="link important barright disabled" title="You must check at least 1 item.">
+                                <a id="m_lbEmail" href="javascript:__doPostBack('m_lbEmail','')"><span class="linkIcon icon_emailSend">Email</span></a>
+                            </td>
+    
+                            <td id="m_tdPrint" class="link important disabled" title="You must check at least 1 item.">
+                                <a id="m_lbPrint" href="javascript:__doPostBack('m_lbPrint','')"><span class="linkIcon icon_print">Print</span></a>
+                            </td>
+    
+                            <td id="m_tdCMA" class="link important barleft disabled" title="You must check at least 1 item.">
+                                <a id="m_lbCMA" href="javascript:__doPostBack('m_lbCMA','')"><span class="linkIcon icon_cma">CMA</span></a>
+                            </td>
+    
+                            <td id="m_tdDrivingDirections" class="link important barleft disabled" title="You must check at least 1 item.">
+                                <a id="m_lbDrivingDirections" href="javascript:__doPostBack('m_lbDrivingDirections','')"><span class="linkIcon icon_driving_directions">Directions</span></a>
+                            </td>
+    
+                            <td id="m_tdStats" class="link important barleft enabled" title="">
+                                <a id="m_btnStats" href="javascript:__doPostBack('m_btnStats','')"><span class="linkIcon icon_chartBar">Stats</span></a>
+                            </td>
+    
+                            <td id="m_tdExport" class="link important barleft disabled" title="You must check at least 1 item.">
+                                <a id="m_lbExport" href="javascript:__doPostBack('m_lbExport','')"><span class="linkIcon icon_export">Export</span></a>
+                            </td>
+    
+                            
+    
+    <td id="m_cbbActionMenu_m_lvButtons_ctrl0_cbbButtonBar_m_tdTableCell" class="link important barleft disabled" title="You must check at least 1 item.">
+<a id="m_cbbActionMenu_m_lvButtons_ctrl0_cbbButtonBar_m_lbCustomLink" href="javascript:Dpy.redirectThroughPopupCheck(2);">
+    <span class="linkIcon icon_cma" style="">
+        Quick CMA
+    </span>
+</a>
+
+</td>
+    
+
+
+    <td id="m_cbbActionMenu_m_lvButtons_ctrl1_cbbButtonBar_m_tdTableCell" class="link important barleft disabled" title="You must check at least 1 item.">
+<a id="m_cbbActionMenu_m_lvButtons_ctrl1_cbbButtonBar_m_lbCustomLink" href="javascript:Dpy.redirectThroughPopupCheck(1);">
+    <span class="linkIcon icon_forward" style="">
+        CloudCMA
+    </span>
+</a>
+
+</td>
+    
+
+
+
+<td class="rightImportant disabled"><img src="/matrix/images/c.gif" width="13" alt="spc"></td>
+
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div id="m_tblRefineMenu" class="submenu" style="display: none;">
+                    <table border="0" cellspacing="0" cellpadding="0" class="buttonBar">
+                        <tbody><tr>
+                            <td class="leftImportant">
+                                <img src="/matrix/images/c.gif" width="13" alt="spc">
+                            </td>
+                            <td id="m_tdGoggles" class="link important" style="position: relative;">
+                                <span id="m_ucContacts_m_upMain">
+    <span class="contactSelectorInnerSpan">
+        <span id="m_ucContacts_m_lblText">View as</span><span id="m_ucContacts_m_spnSpace">&nbsp;</span><select name="m_ucContacts$m_ddlContacts" onchange="javascript:setTimeout('__doPostBack(\'m_ucContacts$m_ddlContacts\',\'\')', 0)" id="m_ucContacts_m_ddlContacts" disabled="disabled" class="aspNetDisabled" title="The selected display has no associated contact information" style="font-size:11px;margin:0px;font-family:Verdana,Helvetica,Arial,sans-serif;width:160px;">
+        <option selected="selected" value="-1"></option>
+        <option value="1218131" title="skanderson@corelogic.com" hasclientactivatedae="false">Anderson, Scott</option>
+        <option value="1218170" title="jabaxter@corelogic.com" hasclientactivatedae="false">baxter, Ja</option>
+        <option value="1218123" title="luyoung@corelogic.com" hasclientactivatedae="true">Beta, Alpha</option>
+        <option value="1218178" title="vbalaguruswamy@corelogic.com" hasclientactivatedae="false">core, balu</option>
+        <option value="1218106" title="tnarendra@corelogic.com" hasclientactivatedae="true">core, naren</option>
+        <option value="1218110" title="narendra.tatikonda@cognizant.com" hasclientactivatedae="true">cts, naren</option>
+        <option value="1218175" title="luyoung@corelogic.onmicrosoft.com" hasclientactivatedae="false">Delta, Gamma</option>
+        <option value="642260" title="tstarbuck@marketlinx.com" hasclientactivatedae="true">Et'linques, Mark</option>
+        <option value="1218161" title="vhogade@corelogic.com" hasclientactivatedae="false">Hogade, Varun</option>
+        <option value="1218107" title="balaguruswamy.vanukuri@cognizant.com" hasclientactivatedae="false">Holly, 8.4</option>
+        <option value="1218171" title="balaguru.vanakuri@gmail.com" hasclientactivatedae="true">Test, Gmail</option>
+        <option value="-2">--- more (click) ---</option>
+
+    </select>
+    </span>
+</span>
+
+                            </td>
+    
+                            <td id="m_tdNarrow" class="link important barleft disabled" title="You must check at least 1 item.">
+                                <a id="m_lbNarrow" href="javascript:__doPostBack('m_lbNarrow','')"><span class="linkIcon icon_narrow">Narrow</span></a>
+                            </td>
+    
+                            <td id="m_tdDiscard" class="link important barleft disabled" title="You must check at least 1 item.">
+                                <a id="m_lbDiscard" href="javascript:__doPostBack('m_lbDiscard','')"><span class="linkIcon icon_discard">Discard</span></a>
+                            </td>
+    
+                            
+                            <td id="m_tdMultiSort" class="link important barleft enabled" title="">
+                                <a id="m_aSort" href="javascript:__doPostBack('m_aSort','')"><span class="linkIcon icon_sort">Sort</span></a>
+                            </td>
+    
+                            
+                            
+<td class="rightImportant enabled"><img src="/matrix/images/c.gif" width="13" alt="spc"></td>
+
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div id="m_tblSaveAsMenu" class="submenu" style="display: none;">
+                    <table border="0" cellspacing="0" cellpadding="0" class="buttonBar">
+                        <tbody><tr>
+                            <td class="leftImportant">
+                                <img src="/matrix/images/c.gif" width="13" alt="spc">
+                            </td>
+                            
+                            <td class="link important barright">
+                                <a id="m_lbSaveAsSavedSearch" href="javascript:__doPostBack('m_lbSaveAsSavedSearch','')"><span class="linkIcon icon_savedsearch">New Saved Search</span></a>
+                            </td>
+                            <td id="m_tdSaveAsAutoEmail" class="link important barright">
+                                <a id="m_lbSaveAsAutoEmail" href="javascript:__doPostBack('m_lbSaveAsAutoEmail','')"><span class="linkIcon icon_autoemail">New Auto Email</span></a>
+                            </td>
+    
+                            <td id="m_tdSaveAsSpeedbar" class="link important">
+                                <a id="m_lbSaveAsSpeedbarMacro" href="javascript:__doPostBack('m_lbSaveAsSpeedbarMacro','')"><span class="linkIcon icon_speedbar">New Speed Bar Shortcut</span></a>
+                            </td>
+    
+                            
+<td class="rightImportant"><img src="/matrix/images/c.gif" width="13" alt="spc"></td>
+
+                        </tr>
+                    </tbody></table>
+                </div>
+                
+
+
+
+
+<table border="0" cellspacing="0" cellpadding="0" id="m_ucCartControl" class="buttonBar submenu" style="display: none;">
+<tbody><tr>
+    <td class="leftImportant"><img src="/matrix/images/c.gif" width="13" alt="spc"></td>
+    <td id="m_ucCartControl_m_tdList" class="link important">
+        <div id="m_ucCartControl_m_upCarts">
+        
+                <span>Select Cart:</span>
+                <select name="m_ucCartControl$m_ddlCarts" id="m_ucCartControl_m_ddlCarts" onchange="return CartObj.ChangeSelectedCart(this,'m_ucCartControl_','A',function(){__doPostBack('m_ucCartControl$m_ddlCarts','');});">
+            <option selected="selected" value="66123">New listings Cart (24)</option>
+
+        </select>
+            
+    </div>
+    </td>
+    
+    <td id="m_ucCartControl_m_tdRemoveFrom" class="link important disabled" title="You must check at least 1 item." style="display:none;"><a id="m_ucCartControl_m_lbRemove" href="javascript:__doPostBack('m_ucCartControl$m_lbRemove','')"><span class="linkIcon icon_clear">Remove Checked</span></a></td>
+    
+    <td id="m_ucCartControl_m_tdAddTo" class="link important disabled" title="You must check at least 1 item." style="display:;"><a id="m_ucCartControl_m_lbAddTo" href="javascript:__doPostBack('m_ucCartControl$m_lbAddTo','')"><span class="linkIcon icon_add">Add to</span></a></td>
+    
+    <td id="m_ucCartControl_m_tdView" class="link important barleft enabled" title=""><a id="m_ucCartControl_m_lbView" href="javascript:__doPostBack('m_ucCartControl$m_lbView','')"><span class="linkIcon icon_search">View</span></a></td>
+    
+    <td id="m_ucCartControl_m_tdNewCart" class="link important barleft enabled" title="">
+        <a id="m_ucCartControl_m_lbAddCart" href="javascript:void(0);"><span class="linkIcon icon_cart">New Cart</span></a>
+        
+<div id="m_ucCartControl_m_ucAddEditCart_ctl00">
+
+    </div>
+
+<div id="m_ucCartControl_m_ucAddEditCart_m_divAddEditCart" class="jqmWindow" style="overflow:auto;max-height:79%;padding:0;z-index:3300;">
+<div id="m_ucCartControl_m_ucAddEditCart_m_upCartDetails">
+        
+        <div id="m_ucCartControl_m_ucAddEditCart_m_divCartFields" style="margin:12px;">
+            <input type="hidden" name="m_ucCartControl$m_ucAddEditCart$m_hfCartID" id="m_ucCartControl_m_ucAddEditCart_m_hfCartID">
+            <div class="css_container">
+                
+                <div class="css_subheading">
+                    <span class="icon icon_cart">&nbsp;</span>
+                    <span class="title">
+                        <span>Add/Edit Cart</span>
+                    </span>
+                </div>
+                <div class="css_content noBottomPaddingWhenCollapsed addCartFields">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td><span>Cart Name:</span></td>
+                                <td><input name="m_ucCartControl$m_ucAddEditCart$m_txtCartName" type="text" maxlength="30" id="m_ucCartControl_m_ucAddEditCart_m_txtCartName" class="textbox required" style="background-color:khaki;"></td>
+                            </tr>					
+                        <tr id="m_ucCartControl_m_ucAddEditCart_m_trContactSelector">
+            <td>
+                                <span>Contact:</span>
+                            </td>
+            <td colspan="3">
+                                <span id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_upMain">
+    <span class="contactSelectorInnerSpan">
+        <select name="m_ucCartControl$m_ucAddEditCart$m_ucContacts$m_ddlContacts" onchange="javascript:setTimeout('__doPostBack(\'m_ucCartControl$m_ucAddEditCart$m_ucContacts$m_ddlContacts\',\'\')', 0)" id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_ddlContacts" class="">
+                <option selected="selected" value="-1"></option>
+                <option value="1218131" title="skanderson@corelogic.com" hasclientactivatedae="false">Anderson, Scott</option>
+                <option value="1218170" title="jabaxter@corelogic.com" hasclientactivatedae="false">baxter, Ja</option>
+                <option value="1218123" title="luyoung@corelogic.com" hasclientactivatedae="true">Beta, Alpha</option>
+                <option value="1218178" title="vbalaguruswamy@corelogic.com" hasclientactivatedae="false">core, balu</option>
+                <option value="1218106" title="tnarendra@corelogic.com" hasclientactivatedae="true">core, naren</option>
+                <option value="1218110" title="narendra.tatikonda@cognizant.com" hasclientactivatedae="true">cts, naren</option>
+                <option value="1218175" title="luyoung@corelogic.onmicrosoft.com" hasclientactivatedae="false">Delta, Gamma</option>
+                <option value="642260" title="tstarbuck@marketlinx.com" hasclientactivatedae="true">Et'linques, Mark</option>
+                <option value="1218161" title="vhogade@corelogic.com" hasclientactivatedae="false">Hogade, Varun</option>
+                <option value="1218107" title="balaguruswamy.vanukuri@cognizant.com" hasclientactivatedae="false">Holly, 8.4</option>
+                <option value="1218171" title="balaguru.vanakuri@gmail.com" hasclientactivatedae="true">Test, Gmail</option>
+                <option value="-2">--- more (click) ---</option>
+
+            </select><span id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_spnAdd">&nbsp;<a id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_lnkAdd" href="javascript:void(0);">Create a New Contact</a></span>
+    </span>
+</span>
+<div id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_ucAddEditContact_ctl00">
+
+            </div>
+<div id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_ucAddEditContact_m_divCustomCategories" class="jqmWindow" style="margin-left:-140px;top:7%;z-index:4000;">
+<div id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_ucAddEditContact_m_upCustomCategories">
+                
+        
+    
+            </div>
+</div>
+<div id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_ucAddEditContact_m_divContactFields" class="jqmWindow" style="overflow:auto;max-height:79%;padding:0;z-index:3500;">
+<div id="m_ucCartControl_m_ucAddEditCart_m_ucContacts_m_ucAddEditContact_m_upContactFields">
+                
+        
+    
+            </div>
+</div>
+
+
+                            </td>
+        </tr>
+                    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <table class="buttonBar" cellpadding="0" cellspacing="0" border="0">
+                <tbody><tr>
+                    <td class="left"></td>
+                    <td class="link barleft barright">
+                        <a data-wireup="cancel"><span class="linkIcon icon_cancel">Cancel</span></a>
+                    </td>
+                    <td class="link barleft important">
+                        <a id="m_ucCartControl_m_ucAddEditCart_m_btnSave" data-wireup="save"><span class="linkIcon icon_save">Save</span></a>
+                    </td>
+        
+                    <td class="rightImportant"></td>
+                </tr>
+            </tbody></table>
+        </div>
+    
+    </div>
+</div>
+    </td>
+    
+    
+<td class="rightImportant enabled"><img src="/matrix/images/c.gif" width="13" alt="spc"></td>
+
+</tr>
+</tbody></table>
+                
+
+            </div>
+        
+</div>
+    </div>
+
+    <!-- <script src="notifications.component.js"></script> -->
+
+</body>
+
+</html>
