@@ -79,3 +79,8 @@
 .mtx-popover .mtx-list-group-item:last-child {
     border-radius: 0;
 }
+
+.mtx-popover .mtx-clear {
+    float: right;
+    margin: 3px;
+}
