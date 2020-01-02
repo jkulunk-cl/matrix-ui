@@ -1,27 +1,27 @@
-.mtrx-custom-select {
+.mtrx-custom-selector {
     position: relative;
 }
 
-.mtrx-custom-select:after { 
-    color: #434B67;
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 300;
-    content: "\f078";
-    background-color: #ffffff;
-    border: 1px solid transparent;
-  	position: absolute;
-  	top: 6px;
-  	right: 0.75rem;
-    pointer-events: none;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out;
-}
+    .mtrx-custom-selector:after { 
+        color: #434B67;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 300;
+        content: "\f078";
+        background-color: #ffffff;
+        border: 1px solid transparent;
+        position: absolute;
+        top: 6px;
+        right: 0.75rem;
+        pointer-events: none;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out;
+    }
 
-    .mtrx-custom-select:hover:after {
+    .mtrx-custom-selector:hover:after {
         color: #fff;
         background-color: #6c757d;
     }
 
-.mtrx-custom-select .custom-select {
+.mtrx-custom-select {
     color: #6c757d;
     font-size: 0.875rem;
     border-color: #6c757d;
@@ -34,16 +34,16 @@
     appearance: none;
 }
 
-    .mtrx-custom-select .custom-select:hover {
+    .mtrx-custom-select:hover {
         color: #fff;
         background-color: #6c757d;
         border-color: #6c757d;
     }
 
-    .mtrx-custom-select .custom-select:focus {
+    .mtrx-custom-select:focus {
         box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
     }
 
-    .mtrx-custom-select .custom-select:-ms-expand {
+    .mtrx-custom-select:-ms-expand {
     display: none;
     }
