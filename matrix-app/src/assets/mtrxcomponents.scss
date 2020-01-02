@@ -18,31 +18,152 @@
 /******************************************************************************/
 
 :root {
-	--mtrx-primary: #247fab;
-	--mtrx-lightest: #ffffff;
-	--mtrx-neutral: #f1f1f1;
-	--mtrx-darker: #D2D2D2;
-	--mtrx-darkest: #3a3a3a;
+	/*System*/
+	--mtrx-gray-lightest: #ffffff; //f1f1f1
+	--mtrx-gray-lighter: #ebebeb;
+	--mtrx-gray-light: #d2d2d2;
+	--mtrx-gray: #bebebe;
+	--mtrx-gray-dark: #9f9f9f;
+	--mtrx-gray-darker: #6c6c6c;
+	--mtrx-gray-darkest: #393939;
 	--mtrx-boxShadow: 0 0 4px rgba(0,0,0,0.25);
-	--mtrx-success: #428542; /*#1E824C*/
-	--mtrx-danger: #B33D4B; /*#D23E43, #82271E*/
-	--mtrx-warning: #E7AB08; /*#FFD761*/
+
+	/*Primary*/
+	--mtrx-primary-lighter: #77d9ff;
+	--mtrx-primary-light: #11bcff;
+	--mtrx-primary: #007aaa;
+	--mtrx-primary-dark: #003144;
+
+	/*Secondary*/
+	--mtrx-secondary-lighter: #d5bcde;
+	--mtrx-secondary-light: #aa78bd;
+	--mtrx-secondary: #77448b;
+	--mtrx-secondary-dark: #3c2246;
+
+	/*Accent*/
+	--mtrx-accent-lighter: #fdecbe;
+	--mtrx-accent-light: #f9cf5c;
+	--mtrx-accent: #e7ab08;
+	--mtrx-accent-dark: #846205;
+
+	/*Contextual*/
+	--mtrx-success: #428542;
+	--mtrx-danger: #B33D4B;
+	--mtrx-warning: #dfaf13;
+	--mtrx-info: #285cab;
+
 	/*TODO font-sizes*/
-}
-
-.mtrx-primary {
-	color: var(--mtrx-primary);
-}
-
-.mtrx-neutral {
-	color: var(--mtrx-neutral);
-}
-
-.mtrx-darker {
-	color: var(--mtrx-darker);
 }
 /* End CSS variables.
 /******************************************************************************/
+
+
+
+/******************************************************************************/
+/* Color utility classes.
+/*
+/* Use these to directly invoke the css-var colors for one-off intances when a
+/* component or element doesn't need a full class treatment, but you still want
+/* to affect text or background color. This keeps colors out of inline style
+/* and easily changeable system-wide from one location.
+/*
+/* Naming convention is [namespace]-[attribute to affect]--[matrix color var]
+/******************************************************************************/
+
+/*Text color utility classes.*/
+.mtrx-color--primary {
+	color: var(--mtrx-primary);
+}
+
+.mtrx-color--gray-lightest {
+	color: var(--mtrx-gray-lightest);
+}
+
+.mtrx-color--gray {
+	color: var(--mtrx-gray);
+}
+
+.mtrx-color--gray-darker {
+	color: var(--mtrx-gray-darker);
+}
+
+/*Background color utility classes.*/
+.mtrx-bg--gray-lightest {
+	background: var(--mtrx-gray-lightest);
+}
+.mtrx-bg--gray-lighter {
+	background: var(--mtrx-gray-lighter);
+}
+.mtrx-bg--gray-light {
+	background: var(--mtrx-gray-light);
+}
+.mtrx-bg--gray {
+	background: var(--mtrx-gray);
+}
+.mtrx-bg--gray-dark {
+	background: var(--mtrx-gray-dark);
+}
+.mtrx-bg--gray-darker {
+	background: var(--mtrx-gray-darker);
+}
+.mtrx-bg--gray-darkest {
+	background: var(--mtrx-gray-darkest);
+}
+/*Primary*/
+.mtrx-bg--primary-lighter {
+	background: var(--mtrx-primary-lighter);
+}
+.mtrx-bg--primary-light {
+	background: var(--mtrx-primary-light);
+}
+.mtrx-bg--primary {
+	background: var(--mtrx-primary);
+}
+.mtrx-bg--primary-dark {
+	background: var(--mtrx-primary-dark);
+}
+/*Secondary*/
+.mtrx-bg--secondary-lighter {
+	background: var(--mtrx-secondary-lighter);
+}
+.mtrx-bg--secondary-light {
+	background: var(--mtrx-secondary-light);
+}
+.mtrx-bg--secondary {
+	background: var(--mtrx-secondary);
+}
+.mtrx-bg--secondary-dark {
+	background: var(--mtrx-secondary-dark);
+}
+.mtrx-bg--accent-lighter {
+	background: var(--mtrx-accent-lighter);
+}
+/*Accent*/
+.mtrx-bg--accent-light {
+	background: var(--mtrx-accent-light);
+}
+.mtrx-bg--accent {
+	background: var(--mtrx-accent);
+}
+.mtrx-bg--accent-dark {
+	background: var(--mtrx-accent-dark);
+}
+/*Contextual*/
+.mtrx-bg--info {
+	background-color: var(--mtrx-info);
+}
+.mtrx-bg--success {
+	background-color: var(--mtrx-success);
+}
+.mtrx-bg--warning {
+	background-color: var(--mtrx-warning);
+}
+.mtrx-bg--danger {
+	background-color: var(--mtrx-danger);
+}
+/* End Color utility classes.
+/******************************************************************************/
+
 
 
 /******************************************************************************/
@@ -52,13 +173,15 @@
 /******************************************************************************/
 
 .mtrx-body {
-	background-color: var(--mtrx-neutral);
+	background-color: var(--mtrx-gray-lighter);
 	font-size: 0.875rem;
 }
 
 .mtrx-pageContainer {
-	background-color: var(--mtrx-lightest);
+	background-color: var(--mtrx-gray-lightest);
 	box-shadow: var(--mtrx-boxShadow);
+	padding: 1rem 0;
+	margin: 1rem;
 }
 
 .mtrx-body h1,
@@ -86,7 +209,11 @@
 .mtrx-body small,
 .mtrx-body .small,
 .mtrx-body .text-muted {
-	color: #7f7f7f;
+	color: var(--mtrx-gray-darker) !important;
+}
+
+.mtrx-keyvalue {
+	margin-bottom: 1rem;
 }
 
 .mtrx-keyvalue.inline .mtrx-key {
@@ -112,6 +239,52 @@
 /******************************************************************************/
 
 
+
+/******************************************************************************/
+/* Sidebar.
+/*
+/* WIP. In case we want a drawer/pullout/sidebar menu thing. Should probably
+/* be a nav if we want to do this someday.
+/******************************************************************************/
+
+.mtrx-sidebar {
+	border-right: 1px solid var(--mtrx-gray);
+	min-height: calc(100vh - 400px);
+	/*height: calc(100vh - 400px);
+	//position: sticky;
+	//top: 4rem;
+	//z-index: 1000;
+	//height: calc(100vh - 4rem);*/
+}
+/* End Sidebar.
+/******************************************************************************/
+
+
+
+/******************************************************************************/
+/* Example.
+/*
+/* Container for showing example code.
+/******************************************************************************/
+
+.mtrx-example {
+	cursor: text;
+	padding: 1rem;
+	background-color: var(--mtrx-gray-lighter);
+}
+
+.mtrx-example-display {
+	background-color: var(--mtrx-gray-lightest);
+	padding: .5rem;
+	margin-top: -.75px;
+	margin-left: -.75px;
+	margin-right: -.75px;
+}
+/* End Example.
+/******************************************************************************/
+
+
+
 /******************************************************************************/
 /* Buttons.
 /*
@@ -126,7 +299,7 @@
 .mtrx-body .btn-primary {
 	background-color: var(--mtrx-primary);
 	border-color: var(--mtrx-primary);
-	color: var(--mtrx-lightest);
+	color: var(--mtrx-gray-lightest);
 }
 
 .mtrx-body .badge-primary {
@@ -158,10 +331,28 @@
 	font-size: 0.75rem;
 }
 
-.mtrx-body .dropdown-menu {
-	font-size: 0.875rem;
+.mtrx-body .input-group-text {
+	font-size: 0.75rem;
 }
 /* End Forms.
+/******************************************************************************/
+
+
+
+/******************************************************************************/
+/* Dropzone.
+/*
+/* A container which is a target for file drop interaction.
+/******************************************************************************/
+
+.mtrx-dropzone {
+	min-height: 200px;
+	border: 3px dashed;
+	border-color: var(--mtrx-gray);
+	border-radius: 4px;
+	color: var(--mtrx-gray);
+}
+/* End Dropzone.
 /******************************************************************************/
 
 
@@ -196,6 +387,7 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	z-index: 0; /*So the -indicator:after gets a proper stacking context.*/
 }
 
 .mtrx-toggle-indicator {
@@ -203,7 +395,7 @@
 	cursor: pointer;
 	pointer-events: auto;
 	border-radius: 15px;
-	background-color: var(--mtrx-darker);
+	background-color: var(--mtrx-gray);
 	height: 31px;
 	width: 61px;
 	transition: background .4s;
@@ -222,7 +414,7 @@
 	top: 2px;
 	left: 2px;
 	z-index: 4;
-	background-color: var(--mtrx-lightest);
+	background-color: var(--mtrx-gray-lightest);
 	transition: left .2s linear;
 }
 
@@ -235,12 +427,12 @@
 	left: 0;
 	top: 5px;
 	width: 61px;
-	color: var(--mtrx-darkest);
+	color: var(--mtrx-gray-darkest);
 	transition: color .2s linear;
 }
 
 .custom-control-input:checked ~ .mtrx-toggle-description {
-	color: var(--mtrx-lightest);
+	color: var(--mtrx-gray-lightest);
 }
 
 .mtrx-toggle-description-on {
@@ -276,7 +468,7 @@
 	top: 50%;
 	width: 30px;
 	z-index: 999;
-	border: 3px solid #007faa;
+	border: 3px solid var(--mtrx-primary);
 }
 /* End Pagination.
 /******************************************************************************/
@@ -304,28 +496,23 @@
 }
 
 .mtrx-navbar .nav-item.active {
-	border-bottom-color: rgba(255,255,255,0.5);
+	border-bottom-color: rgba(255,255,255,0.5); /*TODO:color var.*/
 }
 
 .mtrx-navbar .nav-link,
 .mtrx-navbar .mtrx-nav-item .nav-link {
 	font-weight: 500;
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.5); /*TODO:color var.*/
 }
 
 .mtrx-navbar .nav-link:hover,
 .mtrx-navbar .mtrx-nav-item .dropdown-toggle:hover {
 	text-decoration: none;
-	color: rgba(255, 255, 255, 0.75);
+	color: rgba(255, 255, 255, 0.75); /*TODO:color var.*/
 }
 
 .mtrx-navbar .nav-item .nav-link.dropdown-toggle::after {
 	display: none; /* hide arrow */
-}
-
-.mtrx-navbar .dropdown-menu {
-	font-size: 0.875rem;
-	margin: 0;
 }
 
 /* hover for desktop only. To reconsider */
@@ -334,7 +521,6 @@
 		display: block;
 	}
 }
-
 
 @media only screen and (max-width: 575px) {
 	.mtrx-navbar .nav-item {
@@ -361,6 +547,33 @@
 /******************************************************************************/
 
 
+
+/******************************************************************************/
+/* Dropdown.
+/*
+/* Set defaults and extend Bootstrap dropdown component.
+/* Please note some additional dropdown styles are specific to the navbar and
+/* are grouped in that section.
+/******************************************************************************/
+
+.mtrx-body .dropdown-menu {
+	font-size: 0.875rem;
+}
+
+.mtrx-dropdown--withHeader .dropdown-menu {
+	padding-top: 0;
+	min-width: 300px; /*TODO: for notifications. Don't want this default.*/
+}
+
+.mtrx-dropdown--withHeader .dropdown-header {
+	background-color: var(--mtrx-primary);
+	color: var(--mtrx-gray-lightest);
+	font-size: 1rem;
+}
+/* End Dropdown.
+/******************************************************************************/
+
+
 /******************************************************************************/
 /* Speedbar.
 /*
@@ -368,7 +581,7 @@
 /******************************************************************************/
 
 .mtrx-speedbar {
-	border-bottom: 1px solid #cccccc;
+	border-bottom: 1px solid var(--mtrx-gray-light);
 }
 
 .mtrx-speedbar .input-group-text,
@@ -378,21 +591,21 @@
 
 .mtrx-speedbar input,
 .mtrx-speedbar .input-group-text {
-	color: #7F7F7F;
-	background: var(--mtrx-lightest);
+	color: var(--mtrx-gray-darker);
+	background: var(--mtrx-gray-lightest);
 	border: none;
 	border-radius: 0;
 }
 
 /*TODO: variable color*/
 .mtrx-speedbar input::placeholder {
-	color: #D2D2D2;
+	color: var(--mtrx-gray-light);
 }
 
 /*TODO: variable color*/
 .mtrx-speedbar .form-control:focus {
-	background: var(--mtrx-lightest);
-	color: #7F7F7F;
+	background: var(--mtrx-gray-lightest);
+	color: var(--mtrx-gray-darker);
 }
 /* End Speedbar.
 /******************************************************************************/
@@ -410,16 +623,13 @@
 	border-radius: 0;
 	box-shadow: var(--mtrx-boxShadow);
 	border: none;
-	padding-bottom: 0.5rem;
 }
 
 .mtrx-widget .list-group {
-	margin: 1rem;
-	border: 1px solid rgba(0,0,0,0.125);
+	border: 1px solid rgba(0,0,0,0.125); /*TODO: color var.*/
 	border-radius: 4px;
 	max-height: 400px;
 	overflow: auto;
-	margin: 0 0.50rem;
 }
 
 .mtrx-widget .list-group-flush .list-group-item {
@@ -431,6 +641,15 @@
 	border-bottom: 0;
 	padding: 0.25rem 0.50rem;
 	color: var(--mtrx-primary);
+}
+
+.mtrx-widget .card-body {
+	padding: .25rem;
+}
+
+.mtrx-widget .card-footer {
+	background: transparent;
+	border: 0;
 }
 /* End Widgets.
 /******************************************************************************/
@@ -453,7 +672,7 @@
 .mtrx-section .card-header {
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid #d2d2d2;
+	border-bottom: 1px solid var(--mtrx-gray-light);
 	color: var(--mtrx-primary);
 }
 
@@ -496,7 +715,7 @@
 .mtrx-table th {
 	position: sticky;
 	top: 0;
-	background-color: var(--mtrx-lightest);
+	background-color: var(--mtrx-gray-lightest);
 }
 /* End Tables.
 /******************************************************************************/
@@ -537,8 +756,8 @@
 	overflow: hidden;
 	border-radius: 1.5em;
 	background-color: gray;
-	border: 2px solid rgba(0,0,0,.25);
-	color: rgba(255, 255, 255, .85);
+	border: 2px solid rgba(0,0,0,.25); /*TODO: color var.*/
+	color: rgba(255, 255, 255, .85); /*TODO: color var.*/
 }
 
 .mtrx-author--large {
@@ -546,6 +765,32 @@
 	font-weight: 700;
 }
 /* End Author
+/******************************************************************************/
+
+
+/******************************************************************************/
+/* Badges, counts, things.
+/*
+/* Count, in particular, is used to add data context to an icon.
+/* An example of usage is indicating the number of unseen notifications in nav.
+/******************************************************************************/
+
+.mtrx-count {
+	position: relative;
+	/*width: fit-content;*/
+}
+
+.mtrx-count-badge {
+	font-size: 0.75rem;
+	border-radius: 9px;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	position: absolute;
+	top: -2px;
+	right: -8px;
+}
+/* End Badges.
 /******************************************************************************/
 
 

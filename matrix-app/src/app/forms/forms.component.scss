@@ -1,0 +1,49 @@
+.mtrx-custom-select {
+    position: relative;
+}
+
+.mtrx-custom-select:after { 
+    color: #434B67;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    content: "\f078";
+    background-color: #ffffff;
+    border: 1px solid transparent;
+  	position: absolute;
+  	top: 6px;
+  	right: 0.75rem;
+    pointer-events: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+    .mtrx-custom-select:hover:after {
+        color: #fff;
+        background-color: #6c757d;
+    }
+
+.mtrx-custom-select .custom-select {
+    color: #6c757d;
+    font-size: 0.875rem;
+    border-color: #6c757d;
+    background-color: #ffffff;
+    border-radius: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+    appearance: none;
+}
+
+    .mtrx-custom-select .custom-select:hover {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .mtrx-custom-select .custom-select:focus {
+        box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+    }
+
+    .mtrx-custom-select .custom-select:-ms-expand {
+    display: none;
+    }
