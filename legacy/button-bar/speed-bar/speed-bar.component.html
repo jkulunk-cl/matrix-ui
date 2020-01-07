@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speed Bar - Legacy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FOR PROTOTYPE ONLY -->
+
+    <link href="http://holly.matrixstaging.com/Matrix/css/matrix?v=M6RyrKiYjH9HUUHFblMDQ-N0xrem6jmlGEAGamDayKs1"
+        rel="stylesheet" />
+
+    <link href="http://holly.matrixstaging.com/Matrix/css/custom?v=sV23_KTqVTQOndZ08MtrNaK44bvb4ID259O1twRkQUA1"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- // FOR PROTOTYPE ONLY -->
+
+    <link rel="stylesheet" href="speed-bar.component.css">
+
+</head>
+
+<body>
+    <nav class="TopMenuInner" style="height: 70px;"></nav>
+
+    <div id="ctl02_m_ucSpeedBar_m_divSpeedBar" class="SB_outerDiv">
+        <div style="width:990px;">
+        <table style="border-collapse:collapse;height:28px;" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td width="350px;"></td>
+            <td style="width:300px;">
+                <div id="ctl02_m_ucSpeedBar_m_upSB">
+        
+                        <table id="ctl02_m_ucSpeedBar_m_tblSpeedBox" align="center" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+                <td class="SB_speedbox"><div class="left" style="display: block;"></div></td>
+                <td class="SB_speedbox"><div class="borders">
+                                <a title="Click for Speed Bar search samples" id="ctl02_m_ucSpeedBar_m_lnkHelp" href="javascript:SpeedBarJs.showHelp(1952)" style="position:absolute; top:3px; right:0px;"><span class="linkIcon icon_help"></span></a>
+                                </div>
+                            </td>
+                <td class="SB_speedbox">
+                                <div class="tier4">
+                                    <input name="ctl02$m_ucSpeedBar$m_tbSpeedBar" type="text" id="ctl02_m_ucSpeedBar_m_tbSpeedBar" onkeydown="return SpeedBarJs.onKeyDown(event);" onfocus="SpeedBarJs.onFocus();">
+                                    
+                                </div>
+                            </td>
+                <td class="SB_speedbox"><div class="borders">
+                                <a title="Speed Bar Search" onclick="return SpeedBarJs.checkGo();" id="ctl02_m_ucSpeedBar_m_lnkGo" href="javascript:__doPostBack('ctl02$m_ucSpeedBar$m_lnkGo','')" style="position:absolute; top:3px; left:4px;"><span class="linkIcon icon_speedbar_search"></span></a>
+                                </div>
+                            </td>
+                <td class="SB_speedbox"><div class="right" style="display: block;"></div></td>
+            </tr>
+        </tbody></table>
+        
+                    
+    </div>
+            </td>
+            <td style="white-space:nowrap;width:250px;">
+                <div id="ctl02_m_ucSpeedBar_m_upSBextra">
+        
+                        <table id="ctl02_m_ucSpeedBar_m_tblExtras" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr>
+                <td>
+                                
+                            </td>
+                <td style="padding:2px;"></td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody></table>
+        
+                    
+    </div>
+            </td>
+            <td style="width:100px;">
+                <div id="ctl02_m_ucSpeedBar_m_ucrs_m_upMain">
+        
+            <table cellspacing="0" cellpadding="0">
+                <tbody><tr><td>
+                    <div class="recentSearchesControl">
+                        <a onclick="$('#ctl02_m_ucSpeedBar_m_ucrs_m_lbOpenDropDown SPAN.recentSearchesBox').addClass('ajaxLoading'); return true;" id="ctl02_m_ucSpeedBar_m_ucrs_m_lbOpenDropDown" class="recentSearchesLink" href="javascript:__doPostBack('ctl02$m_ucSpeedBar$m_ucrs$m_lbOpenDropDown','')">
+                            <span class="recentSearchesBox">
+                                <span>Recent Searches</span>
+                            </span>
+                        </a>
+                    </div>
+                </td></tr>
+                <tr><td>
+                    <div class="recentSearchesPlaceholder">
+                        
+                    </div>
+                </td></tr>
+            </tbody></table>
+        
+    </div>
+    
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+    </div>
+
+
+    <!-- <script src="notifications.component.js"></script> -->
+
+</body>
+
+</html>
