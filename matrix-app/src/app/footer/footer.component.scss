@@ -1,17 +1,7 @@
-.mtrx-footer-content {
-    text-align: center;
-}
-
-.mtrx-footer .small {
+.mtrx-footer {
     color: var(--mtrx-darkest);
 }
 
 .mtrx-footer a {
     color: var(--mtrx-darkest);
-}
-
-@media only screen and (max-width: 768px){
-    .mtrx-footer .mtrx-footer-logo {
-        text-align: center !important;
-    }
 }

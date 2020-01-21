@@ -1,0 +1,23 @@
+
+.stepButtonBar TD.left,
+.stepButtonBar TD.right {
+	background: none;
+	background-color: #e5e5e5;
+	width: 13px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white
+}
+
+.stepButtonBar TD.left {
+	border-radius: 14px 0 0 14px;
+
+}
+
+.stepButtonBar TD.right {
+	border-radius: 0 14px 14px 0;
+}
+
+.stepButtonBar TD.selected {
+	background-color: #559be3;
+}
+
