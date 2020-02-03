@@ -33,12 +33,12 @@
   transition: transform 1s ease;
 }
 
-.mtrx-speedbar .an .fa-search {
+.mtrx-speedbar .mtrx-help--animate .fa-search {
   transform: rotate(-180deg) translateY(-80px);
   transition: transform 1s ease;
 }
 
-.mtrx-speedbar .an .fa-info-circle {
+.mtrx-speedbar .mtrx-help--animate .fa-info-circle {
   transform: rotate(0deg) translateY(0);
   transition: transform 1s ease;
 }
