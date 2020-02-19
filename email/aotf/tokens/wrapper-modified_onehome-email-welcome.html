@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- OneHome -->
+    <meta name="x-apple-disable-message-reformatting" />
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+    <meta name="color-scheme" content="light only" />
+    <meta name="supported-color-schemes" content="light only" />
+    <!-- Tell iOS not to automatically link certain text strings. -->
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet" />
+    <!-- OneHome End -->
+
+    <title> </title>
+    <style type="text/css">
+        a:focus,
+        A:focus {
+            opacity: 0.75;
+            outline: none;
+        }
+
+        a[x-apple-data-detectors],
+        A[x-apple-data-detectors] {
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        @media only screen and (max-width: 576px) {
+
+            body,
+            BODY,
+            table,
+            TABLE,
+            td,
+            TD,
+            div,
+            DIV,
+            p,
+            P,
+            a,
+            A,
+            li,
+            LI {
+                -webkit-text-size-adjust: none !important;
+            }
+
+            body,
+            BODY {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            .mtx-wrapper {
+                border: none !important;
+                margin: 0 !important;
+            }
+
+            .mtx-stacked {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            .mtx-stacked-footer {
+                display: inline !important;
+            }
+        }
+
+        /* OneHome */
+        @media only screen and (max-width: 599px) {
+            .mtx-stacked {
+                padding-top: 0 !important;
+            }
+
+            body {
+                background-color: #ffffff !important;
+            }
+
+            .onehome-wrapper h1 {
+                font-size: 26px;
+                line-height: 1.23;
+            }
+
+            .onehome-wrapper.wrapper-table {
+                background-color: #ffffff !important;
+            }
+
+            .onehome-wrapper .wrapper-pad-y {
+                height: 0 !important;
+            }
+
+            .onehome-wrapper .inner-table-pad-top {
+                height: 0 !important;
+                display: none !important;
+            }
+
+            .onehome-wrapper .main-content-margin-x {
+                background-color: #f5f5f5 !important;
+            }
+
+            .onehome-wrapper .main-content-margin-x,
+            .onehome-wrapper .main-content-margin-x table,
+            .onehome-wrapper .main-content-margin-x td {
+                width: 0 !important;
+                display: none !important;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .onehome-wrapper .content {
+                width: 600px !important;
+            }
+
+            .onehome-wrapper .intro-text {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .onehome-wrapper .inner-table-pad-y {
+                height: 16px !important;
+            }
+
+            .onehome-wrapper .footer {
+                width: 500px;
+            }
+
+            .onehome-wrapper .main-content-margin-x {
+                width: 20px !important;
+            }
+
+            .onehome-wrapper .main-content-padding-x {
+                width: 30px !important;
+            }
+
+            .onehome-wrapper .main-content-center {
+                width: 500px !important;
+            }
+
+            .onehome-wrapper .wrapper-pad-y {
+                height: 40px !important;
+            }
+
+            .onehome-wrapper .inner-table-pad-top {
+                height: 16px !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            @supports not (-webkit-overflow-scrolling: touch) {
+
+                .onehome-wrapper .inner-table,
+                .onehome-wrapper .main-content-margin-x {
+                    background-image: linear-gradient(#ffffff, #ffffff) !important;
+                }
+
+                .onehome-wrapper .main-content {
+                    background-image: linear-gradient(#f5f5f5, #f5f5f5) !important;
+                }
+
+                .onehome-wrapper body,
+                .onehome-wrapper.wrapper-table {
+                    background-image: linear-gradient(#e8e8e8, #e8e8e8) !important;
+                }
+
+                .onehome-wrapper p,
+                .onehome-wrapper li,
+                .onehome-wrapper img,
+                .onehome-wrapper .body-copy,
+                .onehome-wrapper .list-item,
+                .onehome-wrapper .bullet {
+                    -webkit-text-fill-color: #5c5c5c !important;
+                }
+
+                .onehome-wrapper .onehome-wrapper h1,
+                .onehome-wrapper h2,
+                .onehome-wrapper h3,
+                .onehome-wrapper .highlight p,
+                .onehome-wrapper .highlight h3,
+                .onehome-wrapper .highlight span,
+                .onehome-wrapper .highlight img {
+                    -webkit-text-fill-color: #323232 !important;
+                }
+
+                .onehome-wrapper .hyperlink {
+                    -webkit-text-fill-color: #137A8F !important;
+                }
+
+                .onehome-wrapper .highlight {
+                    background-image: linear-gradient(#ffffff, #ffffff) !important;
+                    border: 0 !important;
+                }
+
+            }
+        }
+        /* OneHome End */
+    </style>
+</head>
+
+<body bgcolor="#e8e8e8" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0"
+      style="height: 100%; width: 100%; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue' , Helvetica, Arial, sans-serif, 'Apple Color Emoji' , 'Segoe UI Emoji' , 'Segoe UI Symbol' ; font-weight: 300; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;">
+    
+    <!--[if (gte mso 9)|(IE)]>
+        <style type="text/css">
+            body { background-color: #FFFFFF !important;}
+        </style>
+    <![endif]-->
+
+    <span style="display: none !important; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; visibility: hidden; mso-hide: all;">
+        <!--*#*PREVIEW*#*-->(preview goes here)
+        <!--*#*PREVIEW*#*-->
+    </span>
+
+    <center style="padding-bottom: 40px;">
+        <table class="mtx-stacked" role="main" align="center" border="0" cellpadding="0" cellspacing="0" width="600"
+               style="border-collapse: collapse; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue' , Helvetica, Arial, sans-serif, 'Apple Color Emoji' , 'Segoe UI Emoji' , 'Segoe UI Symbol' ; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;">
+            <tr>
+                <td class="mtx-stacked" align="left" valign="top" width="600" style="text-align: left; padding-top: 40px;">
+                    <table class="mtx-wrapper mtx-stacked" width="600" style="border: 0;" border="0" cellpadding="0"
+                           cellspacing="0">
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td valign="top" style="padding-left: 0; padding-right: 0; padding-bottom: 0;">
+                                            <!--*#*BODY*#*-->
+
+                                            <!--[if mso]>
+                                                <style type="text/css">
+                                                    h1, h2, h3, p, a, li, span {font-family: sans-serif !important;}
+                                                </style>
+                                            <![endif]-->
+
+                                            <table align="center" cellpadding="0" cellspacing="0" border="0" class="container-table onehome-wrapper" style="width: 100%; max-width: 600px; background-color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 11px; line-height: 1.45; text-decoration: none;" width="100%" bgcolor="#FFFFFF">
+                                                <tr>
+                                                    <td>
+                                                        <!-- == HEADER / TOP BAR -->
+                            
+                                                        <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="header" style="background-color: #137a8f;" bgcolor="#137a8f">
+                                                            <tr>
+                                                                <td height="20" width="20" class="td-spacer header-padding-x" style="font-size: 0; line-height: 0; width: 20px; max-width: 20px;"></td>
+                                                                <td height="20" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                <td height="20" width="20" class="td-spacer header-padding-x" style="font-size: 0; line-height: 0; width: 20px; max-width: 20px;"></td>
+                                                            </tr>
+                            
+                                                            <tr>
+                                                                <td width="20" class="td-spacer header-padding-x" style="font-size: 0; line-height: 0; width: 20px; max-width: 20px;"></td>
+                                                                <td class="logo-container" valign="middle" width="580" style="width: 580px; max-width: 100%;">
+                                                                    <img src="onehome-logo.gif" alt="onehome" width="126" height="30" style="display: block; margin: 0; outline: none; border: 0; line-height: 1.45; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; text-decoration: none; color: #5c5c5c;">
+                                                                </td>
+                                                                <td width="20" class="td-spacer header-padding-x" style="font-size: 0; line-height: 0; width: 20px; max-width: 20px;"></td>
+                                                            </tr>
+                            
+                                                            <tr>
+                                                                <td height="20" width="20" class="td-spacer header-padding-x" style="font-size: 0; line-height: 0; width: 20px; max-width: 20px;"></td>
+                                                                <td height="20" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                <td height="20" width="20" class="td-spacer header-padding-x" style="font-size: 0; line-height: 0; width: 20px; max-width: 20px;"></td>
+                                                            </tr>
+                                                        </table>
+                            
+                                                        <!-- == HEADER END -->
+                                                    </td>
+                                                </tr>
+                            
+                                                <tr>
+                                                    <td>
+                            
+                                                        <!-- == INTRO TEXT == -->
+                            
+                                                        <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <td></td>
+                                                                <td width="" height="40" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                <td></td>
+                                                            </tr>
+                            
+                                                            <tr class="intro-text-container">
+                                                                <td width="30"></td>
+                                                                <td width="500">
+                                                                    <h1 class="intro-text" style="font-size: 36px; font-family: 'Josefin Sans', sans-serif; font-weight: 700; line-height: 1.17; margin: 0; color: #323232;">Welcome to OneHome</h1>
+                                                                </td>
+                                                                <td width="30"></td>
+                                                            </tr>
+                            
+                                                            <tr>
+                                                                <td></td>
+                                                                <td width="" height="24" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </table>
+                            
+                                                        <!-- == INTRO TEXT END == -->
+                            
+                                                        <!-- == INTRO IMAGE == -->
+                                                        <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff">
+                                                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                            
+                                                                <td class="td-spacer" align="center" width="500" style="font-size: 0; line-height: 0;">
+                                                                    <img src="welcome.jpg" width="560" alt="" class="img welcome-img" style="display: block; margin: 0; outline: none; border: 0; line-height: 1.45; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; text-decoration: none; color: #5c5c5c; width: 100%; max-width: 100%;">
+                                                                </td>
+                            
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff">
+                                                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- == INTRO IMAGE END == -->
+                            
+                                                        <!-- == WHITE BG == -->
+                            
+                                                        <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="inner-table">
+                                                            <tr>
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff"></td>
+                            
+                                                                <td class="td-spacer main-content-center" width="500" style="font-size: 0; line-height: 0;">
+                                                                    <!-- == GREY BG == -->
+                                                                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="main-content" style="background-color: #f5f5f5;" bgcolor="#f5f5f5">
+                                                                        <tr>
+                                                                            <td class="td-spacer main-content-padding-x" width="20" style="font-size: 0; line-height: 0; width: 20px;">
+                                                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr><td></td></tr>
+                                                </table>
+                                            <![endif]-->
+                                                                            </td>
+                            
+                                                                            <td class="td-spacer main-content-center" height="24" style="font-size: 0; line-height: 0;"></td>
+                            
+                                                                            <td class="td-spacer main-content-padding-x" width="20" style="font-size: 0; line-height: 0; width: 20px;">
+                                                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr><td></td></tr>
+                                                </table>
+                                            <![endif]-->
+                                                                            </td>
+                                                                        </tr>
+                            
+                                                                        <tr>
+                                                                            <td class="td-spacer main-content-padding-x" width="20" style="font-size: 0; line-height: 0; width: 20px;">
+                                                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr><td></td></tr>
+                                                </table>
+                                            <![endif]-->
+                                                                            </td>
+                            
+                                                                            <td class="td-spacer main-content-center" height="24" style="font-size: 0; line-height: 0;">
+                            
+                                                                                <!-- == CONTENT WELCOME == -->
+                            
+                                                                                <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                    <!-- first -->
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                                <!-- second -->
+                                                                                                <tr>
+                                                                                                    <td class="body-copy" style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.45; color: #5c5c5c;">
+                                                                                                        <h2 class="text-margin" style="font-size: 13px; font-family: 'Montserrat', sans-serif; font-weight: 600; line-height: 1.38; margin: 0; color: #323232; margin-bottom: 24px;">[(IsEmpty({Salutation}) ? ("Welcome to Your Portal!") : {Salutation} )]</h2>
+                            
+                                                                                                        <!-- Editable content -->
+                                                                                                        <p class="text-margin" style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.45; color: #5c5c5c; margin: 0; margin-bottom: 24px;">[(IsEmpty({message}) ? ("I've set up a personal website for you to check out the properties I think you'll like. You'll be notified as I add new properties - just click the link I send to see them. (You can decide how often you want to be notified in the Portal.)") : {message} )]</p>
+                                                                                                        <!-- End Editable content-->
+                            
+                                                                                                        <h3 style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.45; margin: 0; color: #323232;">You'll be able to:</h3>
+                            
+                                                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                                                            <tr>
+                                                                                                                <td height="8" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                                <td></td>
+                                                                                                                <td></td>
+                                                                                                                <td></td>
+                                                                                                            </tr>
+                            
+                                                                                                            <tr>
+                                                                                                                <td class="bullet">&bull;</td>
+                                                                                                                <td></td>
+                                                                                                                <td class="list-item" style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; color: #5c5c5c; padding-left: 8px;">See the properties I pick out for you</td>
+                                                                                                                <td></td>
+                                                                                                            </tr>
+                            
+                                                                                                            <tr>
+                                                                                                                <td class="bullet">&bull;</td>
+                                                                                                                <td></td>
+                                                                                                                <td class="list-item" style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; color: #5c5c5c; padding-left: 8px;">Let me know if you like the properties, or if they're not your style</td>
+                                                                                                                <td></td>
+                                                                                                            </tr>
+                            
+                                                                                                            <tr>
+                                                                                                                <td class="bullet">&bull;</td>
+                                                                                                                <td></td>
+                                                                                                                <td class="list-item" style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; color: #5c5c5c; padding-left: 8px;">Leave notes for me or for yourself on any of the properties</td>
+                                                                                                                <td></td>
+                                                                                                            </tr>
+                            
+                                                                                                            <tr>
+                                                                                                                <td height="24" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                                <td></td>
+                                                                                                                <td></td>
+                                                                                                                <td></td>
+                                                                                                            </tr>
+                                                                                                        </table>
+                            
+                                                                                                        <p style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.45; color: #5c5c5c; margin: 0;">You'll also be able to search for properties yourself using the MLS database - the most accurate and comprehensive listing database in [[location]]!</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                            
+                                                                                    <tr>
+                                                                                        <td height="40" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                    </tr>
+                            
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <!-- == CTA == -->
+                            
+                                                                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="button-cta" style="border-radius: 9px; background-color: #4577b6; box-shadow: 0 2px 4px 0 #d0def6;" bgcolor="#4577b6">
+                                                                                                <tr>
+                                                                                                    <td height="10" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                    <td height="10" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                    <td height="10" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                </tr>
+                            
+                                                                                                <tr>
+                                                                                                    <td width="16" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                            
+                                                                                                    <td>
+                                                                                                        <!--[if (mso)|(mso 16)]>
+                                                            <style type="text/css">a {text-decoration: none;}</style>
+                                                        <![endif]-->
+                            
+                                                                                                        <a class="button-text" href=\"" & {FullListingsLink} & "\" style="color: #f5f5f5; letter-spacing: 0.42px; text-transform: uppercase; text-decoration: none; line-height: 1.45; font-size: 11px; font-style: normal; font-family: 'Montserrat', sans-serif; font-weight: 600;"><span style="display: inline-block;">View Properties</span></a>
+                                                                                                    </td>
+                            
+                                                                                                    <td width="16" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                </tr>
+                            
+                                                                                                <tr>
+                                                                                                    <td height="10" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                    <td height="10" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                    <td height="10" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                                </tr>
+                                                                                            </table>
+                            
+                                                                                            <!-- == CTA END == -->
+                                                                                        </td>
+                                                                                    </tr>
+                            
+                                                                                    <tr>
+                                                                                        <td height="96" class="td-spacer" style="font-size: 0; line-height: 0;"></td>
+                                                                                    </tr>
+                            
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <!-- == SIGNATURE == -->
+                            
+                                                                                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td width="100%" valign="top" class="signature">
+                                                                                                        <p class="signature-title" style="font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.45; color: #5c5c5c; margin: 0; margin-bottom: 2px;">[ToString({AgentEmailSignature})]</p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                            
+                                                                                            <!-- == SIGNATURE END == -->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                            
+                                                                                <!-- == CONTENT WELCOME END == -->
+                            
+                                                                            </td>
+                            
+                                                                            <td class="td-spacer main-content-padding-x" width="20" style="font-size: 0; line-height: 0; width: 20px;">
+                                                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr><td></td></tr>
+                                                </table>
+                                            <![endif]-->
+                                                                            </td>
+                                                                        </tr>
+                            
+                                                                        <tr>
+                                                                            <td class="td-spacer main-content-padding-x" width="20" style="font-size: 0; line-height: 0; width: 20px;">
+                                                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr><td></td></tr>
+                                                </table>
+                                            <![endif]-->
+                                                                            </td>
+                            
+                                                                            <td class="td-spacer main-content-center" height="24" style="font-size: 0; line-height: 0;"></td>
+                            
+                                                                            <td class="td-spacer main-content-padding-x" width="20" style="font-size: 0; line-height: 0; width: 20px;">
+                                                                                <!--[if (gte mso 9)|(IE)]>
+                                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr><td></td></tr>
+                                                </table>
+                                            <![endif]-->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                            
+                                                                    <!-- == GREY BG END == -->
+                                                                </td>
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff"></td>
+                                                            </tr>
+                            
+                                                            <tr>
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff"></td>
+                                                                <td class="td-spacer" height="16" style="font-size: 0; line-height: 0;">
+                                                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff"></td>
+                                                            </tr>
+                            
+                                                            <tr>
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff"></td>
+                                                                <td class="td-spacer" height="20" style="font-size: 0; line-height: 0;">
+                                                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="td-spacer main-content-margin-x" width="20" style="font-size: 0; line-height: 0; background-color: #ffffff;" bgcolor="#ffffff"></td>
+                                                            </tr>
+                                                        </table>
+                            
+                                                        <!-- == WHITE BG END == -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <!--*#*BODY*#*-->
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table class="mtx-stacked mtx-stacked-footer" bgcolor="#FFFFFF" align="center" border="0" cellpadding="0" cellspacing="0" width="600"
+               style="border-collapse: collapse; color: #3a3a3a; font-size: 16px; font-family: 'Helvetica Neue' , Helvetica, Arial, sans-serif, 'Apple Color Emoji' , 'Segoe UI Emoji' , 'Segoe UI Symbol' ; font-weight: 300; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;">
+            <tr>
+                <td align="center" valign="top"
+                    style="font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom:10px;">
+                    <!--*#*DELIVEREDBY*#*-->(delievered-by goes here)
+                    <!--*#*DELIVEREDBY*#*--><br />
+                    <!--*#*UNSUBSCRIBE*#*-->(unsubscribe goes here)
+                    <!--*#*UNSUBSCRIBE*#*-->
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="top"
+                    style="font-size: 12px; color: #c0c0c0; padding-left:20px; padding-right:20px; padding-bottom: 40px;">
+                    Copyright &#169; 2019 CoreLogic. All Rights Reserved.
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
