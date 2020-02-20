@@ -1,35 +1,37 @@
--- image w/ link
+-- Photo and Link
 
 "<a href='" 
 & BuildFullTemplateUrl( ) 
 & "'>"
-& "<img class=\"mtx-stacked\" style=\"width:280px; height: auto; outline: none;\" src=\"" 
+& "<img class=\"highlight-img\" border=\"0\" alt=\"Photo of recommended property\" style=\"display: block; margin: 0; outline: none; border: 0; border-radius: 3.7px; min-width: 100px; width: 100%; max-width: 100%;\" src=\"" 
 & BuildMediaURL(1,0,2,"") 
 & "\"></img>"
 & "</a>"
 
 
--- image only
-"<img class=\"mtx-stacked\" style=\"width:280px; height: auto; outline: none;\" src=\"" & BuildMediaURL(1,0,2,"") & "\"></img>"
-
--- Photo
-
-"<img style=\"width:600px\" src=\"" & BuildMediaURL(1,0,3) & "\"></img>"
-
-"<img class=\"mtx-stacked\" style=\"width:280px; height: auto; outline: none;\" src=\"" & BuildMediaURL(1,0,3) & "\"></img>"
+-- List Price
+"<div class='highlight-price' style=\"margin: 0; font-family: 'Montserrat', sans-serif; text-decoration: none; color: #323232; font-weight: 500; margin-right: 16px; margin-left: 4px; font-size: 16px; line-height: 1.38; margin-top: 12px;\">" & ToString( {ListPrice}, "$#,0" ) & "</div>"
 
 
+-- Prop type
+"<div class=\"highlight-title\" style=\"margin: 0; margin-bottom: .75em; font-family: 'Montserrat', sans-serif; text-decoration: none; color: #323232; font-weight: 500; font-size: 11px; line-height: 1.45; margin-right: 16px; margin-left: 4px;\">" & ToString( {PropertyType} ) & "</div>"
 
--- List Price Title
-"<span style='font-size:1.5em;'>" & ToString( {ListPrice}, "$#,0" ) & "</span>"
 
 -- Street address
-((ToString({StreetNumber})="0")?(""):(ToString({StreetNumber}))) & " " & ((!IsEmpty({StreetDirPrefix}))?(ProperCase({StreetDirPrefix})& " "):("")) & ProperCase({StreetName}) & ((!IsEmpty( {StreetSuffix} ))?(" "&ProperCase({StreetSuffix})):("")) & ((!IsEmpty( {StreetDirSuffix} ))?(" " & ProperCase({StreetDirSuffix})) :("")) &((!IsEmpty({UnitNumber} ))?(" Unit#"&ToString({UnitNumber})):("")) & ", " & ToString({City}) & ", "&ToString({PostalCode})
+"<p class=\"highlight-address\" style=\"margin: 0; font-family: 'Montserrat', sans-serif; text-decoration: none; color: #323232; font-weight: 500; font-size: 11px; line-height: 1.45; margin-right: 16px; margin-left: 4px;\"  >" & ((ToString({StreetNumber})="0")?(""):(ToString({StreetNumber}))) & " " & ((!IsEmpty({StreetDirPrefix}))?(ProperCase({StreetDirPrefix})& " "):("")) & ProperCase({StreetName}) & ((!IsEmpty( {StreetSuffix} ))?(" "&ProperCase({StreetSuffix})):("")) & ((!IsEmpty( {StreetDirSuffix} ))?(" " & ProperCase({StreetDirSuffix})) :("")) &((!IsEmpty({UnitNumber} ))?(" Unit#"&ToString({UnitNumber})):("")) 
+& ",<br/> " & ToString({City}) & ", "&ToString({PostalCode}) & "</p>"
+
 
 -- Details
-ToString( {BedsTotal} ) & " beds, "
-& ToString( {BathsTotal} ) & " baths | "
-& ToString( {SqFtTotal}, "#,0" ) & " sqft."
+"<p class=\"highlight-specs\" style=\"margin: 0; font-family: 'Montserrat', sans-serif; text-decoration: none; color: #323232; font-weight: 500; font-size: 11px; line-height: 1.45; margin-right: 16px; margin-left: 4px; margin-bottom: 10px;\">
+	<span style=\"display: inline-block;\">" & ToString( {BedsTotal} ) & " bd</span>
+	<span style=\"display: inline-block;\">•</span>
+	<span style=\"display: inline-block;\">" & ToString( {BathsTotal} ) & " ba</span>
+	<span style=\"display: inline-block;\">•</span>
+	<span style=\"display: inline-block;\">" & ToString( {SqFtTotal}, "#,0" ) & " sqft</span>
+</p>"
+
+
 
 -- Status, small
 "<span style='font-size:0.8em; font-weight:bold;'>" & ToString( {Status} ) & "</span>"

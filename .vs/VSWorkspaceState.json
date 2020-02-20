@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\email",
+    "\\email\\aotf",
+    "\\email\\aotf\\components",
+    "\\email\\mtx",
+    "\\email\\mtx\\AutoEmail",
+    "\\email\\mtx\\AutoEmail\\ListingCard"
+  ],
+  "SelectedNode": "\\email\\aotf\\components\\DisplayTemplate-Formulas.txt",
+  "PreviewInSolutionExplorer": false
+}
