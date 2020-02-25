@@ -2,12 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\email",
-    "\\email\\aotf",
     "\\email\\aotf\\components",
+    "\\email\\aotf\\components\\font-14px",
     "\\email\\mtx",
     "\\email\\mtx\\AutoEmail",
-    "\\email\\mtx\\AutoEmail\\ListingCard"
+    "\\email\\mtx\\AutoEmail\\ListingCard",
+    "\\email\\mtx\\AutoEmail\\MessageBody"
   ],
-  "SelectedNode": "\\email\\aotf\\components\\DisplayTemplate-Formulas.txt",
+  "SelectedNode": "\\email\\mtx\\AutoEmail\\ListingCard\\DisplayTemplate-Formulas.txt",
   "PreviewInSolutionExplorer": false
 }

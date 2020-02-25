@@ -14,7 +14,7 @@
 
 
 -- Prop type
-"<div class=\"highlight-title\" style=\"margin: 0; margin-bottom: .75em; font-family: 'Montserrat', sans-serif; text-decoration: none; color: #323232; font-weight: 500; font-size: 14px; line-height: 1.45; margin-right: 16px; margin-left: 4px;\">" & ToString( {PropertyType} ) & "</div>"
+"<div class=\"highlight-title\" style=\"margin: 0; margin-bottom: .75em; font-family: 'Montserrat', sans-serif; text-decoration: none; color: #323232; font-weight: 500; font-size: 12px; line-height: 1.45; margin-right: 16px; margin-left: 4px;\">" & ToString( {PropertyType} ) & "</div>"
 
 
 -- Street address
