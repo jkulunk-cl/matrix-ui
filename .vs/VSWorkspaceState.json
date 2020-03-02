@@ -5,11 +5,8 @@
     "\\email\\aotf",
     "\\email\\aotf\\components",
     "\\email\\aotf\\components\\body",
-    "\\email\\aotf\\wrapper",
-    "\\email\\mtx\\AutoEmail",
-    "\\email\\mtx\\AutoEmail\\ListingCard",
-    "\\email\\mtx\\AutoEmail\\MessageBody"
+    "\\email\\aotf\\wrapper"
   ],
-  "SelectedNode": "\\email\\aotf\\components\\body\\Blank.html",
+  "SelectedNode": "\\email\\aotf\\wrapper",
   "PreviewInSolutionExplorer": false
 }
