@@ -1,0 +1,1370 @@
+/******************************************************************************/
+/* Styling for Matrix implementation of Bootstrap4 components.
+/*
+/* Please notice the distinction between this and the mtxcomponents file
+/* which is for Bootstrap3 components still used by legacy Matrix.
+/* 
+/* Each UI component should have its own section in this file and within
+/* mtrxcomponents.js if there is a need for enhanced script functionality.
+/******************************************************************************/
+/******************************************************************************/
+/* CSS variables.
+/*
+/* Use these instead of specifying colors in component blocks.
+/* Fallbacks are specified when using var(), but not for any current reason.
+/* 
+/* Note that all attributes that use var() are preceded with a duplicate 
+/* attribute that does not. Yes this is annoying, yes this will mean
+/* theme-rolling which depends on cssvars won't work, yes this is only for IE.
+/******************************************************************************/
+:root {
+  /*System*/
+  --mtrx-gray-lightest: #ffffff;
+  --mtrx-gray-lighter: #ebebeb;
+  --mtrx-gray-light: #d2d2d2;
+  --mtrx-gray: #bebebe;
+  --mtrx-gray-dark: #9f9f9f;
+  --mtrx-gray-darker: #6c6c6c;
+  --mtrx-gray-darkest: #393939;
+  --mtrx-boxShadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  --mtrx-gray-lightest--50: rgba(255, 255, 255, 0.5);
+  --mtrx-gray-lighter--50: rgba(235, 235, 235, 0.5);
+  --mtrx-gray-light--50: rgba(210, 210, 210, 0.5);
+  --mtrx-gray--50: rgba(190, 190, 190, 0.5);
+  --mtrx-gray-dark--50: rgba(159, 159, 159, 0.5);
+  --mtrx-gray-darker--50: rgba(108, 108, 108, 0.5);
+  --mtrx-gray-darkest--50: rgba(57, 57, 57, 0.5);
+  /*Primary*/
+  --mtrx-primary-lighter: #77d9ff;
+  --mtrx-primary-light: #11bcff;
+  --mtrx-primary: #007aaa;
+  --mtrx-primary-dark: #003144;
+  --mtrx-primary-lighter--50: rgba(119, 217, 255, 0.5);
+  --mtrx-primary-light--50: rgba(17, 188, 255, 0.5);
+  --mtrx-primary--50: rgba(0, 122, 170, 0.5);
+  --mtrx-primary-dark--50: rgba(0, 49, 68, 0.5);
+  /*Secondary*/
+  --mtrx-secondary-lighter: #d2d2d2;
+  --mtrx-secondary-light: #bebebe;
+  --mtrx-secondary: #9f9f9f;
+  --mtrx-secondary-dark: #6c6c6c;
+  --mtrx-secondary-lighter--50: rgba(210, 210, 210, 0.5);
+  --mtrx-secondary-light--50: rgba(190, 190, 190, 0.5);
+  --mtrx-secondary--50: rgba(159, 159, 159, 0.5);
+  --mtrx-secondary-dark--50: rgba(108, 108, 108, 0.5);
+  /*Accent*/
+  /*--mtrx-accent-lighter: #fdecbe;
+	--mtrx-accent-light: #f9cf5c;
+	--mtrx-accent: #e7ab08;
+	--mtrx-accent-dark: #846205;*/
+  /*Contextual*/
+  --mtrx-success: #428542;
+  --mtrx-danger: #B33D4B;
+  --mtrx-warning: #dfaf13;
+  --mtrx-info: #285cab;
+  --mtrx-success--50: rgba(66, 133, 66, 0.5);
+  --mtrx-danger--50: rgba(179, 61, 75, 0.5);
+  --mtrx-warning--50: rgba(223, 175, 19, 0.5);
+  --mtrx-info--50: rgba(40, 92, 171, 0.5); }
+
+/* End CSS variables.
+/******************************************************************************/
+/******************************************************************************/
+/* Color utility classes override BS4 defaults. 
+/*
+/* Use these to directly invoke the css-var colors for one-off intances when a
+/* component or element doesn't need a full class treatment, but you still want
+/* to affect text or background color. This keeps colors out of inline style
+/* and easily changeable system-wide from one location.
+/*
+/* NOTE: Do not use the .mtrx- named classes when there are .text- bootstrap 
+/* alternatives available. The .mtrx- ones are mostly for theme tooling 
+/* purposes or very special one-off behavior.
+/******************************************************************************/
+/*Text color utility classes.*/
+.mtrx .text-primary {
+  color: #007aaa !important;
+  color: var(--mtrx-primary, #007aaa) !important; }
+
+.mtrx .text-secondary {
+  color: #9f9f9f !important;
+  color: var(--mtrx-secondary, #9f9f9f) !important; }
+
+.mtrx .text-success {
+  color: #428542 !important;
+  color: var(--mtrx-success, #428542) !important; }
+
+.mtrx .text-danger {
+  color: #B33D4B !important;
+  color: var(--mtrx-danger, #B33D4B) !important; }
+
+.mtrx .text-warning {
+  color: #dfaf13 !important;
+  color: var(--mtrx-warning, #dfaf13) !important; }
+
+.mtrx .text-info {
+  color: #285cab !important;
+  color: var(--mtrx-info, #285cab) !important; }
+
+.mtrx .text-muted {
+  color: #bebebe !important;
+  color: var(--mtrx-gray, #bebebe) !important; }
+
+.mtrx .text-light {
+  color: #ebebeb !important;
+  color: var(--mtrx-gray-lighter, #ebebeb) !important; }
+
+.mtrx .text-white {
+  color: #ffffff !important;
+  color: var(--mtrx-gray-lightest, #ffffff) !important; }
+
+/*Background color utility classes.*/
+.mtrx-bg--gray-lightest {
+  background: #ffffff;
+  background: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx-bg--gray-lighter {
+  background: #ebebeb;
+  background: var(--mtrx-gray-lighter, #ebebeb); }
+
+.mtrx-bg--gray-light {
+  background: #d2d2d2;
+  background: var(--mtrx-gray-light, #d2d2d2); }
+
+.mtrx-bg--gray {
+  background: #bebebe;
+  background: var(--mtrx-gray, #bebebe); }
+
+.mtrx-bg--gray-dark {
+  background: #9f9f9f;
+  background: var(--mtrx-gray-dark, #9f9f9f); }
+
+.mtrx-bg--gray-darker {
+  background: #6c6c6c;
+  background: var(--mtrx-gray-darker, #6c6c6c); }
+
+.mtrx .bg-dark,
+.mtrx-bg--gray-darkest {
+  background: #393939  !important;
+  background: var(--mtrx-gray-darkest, #393939) !important; }
+
+/*Primary*/
+.mtrx-bg--primary-lighter {
+  background: #77d9ff;
+  background: var(--mtrx-primary-lighter, #77d9ff); }
+
+.mtrx-bg--primary-light {
+  background: #11bcff;
+  background: var(--mtrx-primary-light, #11bcff); }
+
+.mtrx .bg-primary,
+.mtrx-bg--primary {
+  background: #007aaa !important;
+  background: var(--mtrx-primary, #007aaa) !important; }
+
+.mtrx-bg--primary-dark {
+  background: #003144;
+  background: var(--mtrx-primary-dark, #003144); }
+
+/*Secondary*/
+.mtrx-bg--secondary-lighter {
+  background: #d2d2d2;
+  background: var(--mtrx-secondary-lighter, #d2d2d2); }
+
+.mtrx-bg--secondary-light {
+  background: #bebebe;
+  background: var(--mtrx-secondary-light, #bebebe); }
+
+.mtrx .bg-secondary,
+.mtrx-bg--secondary {
+  background: #9f9f9f !important;
+  background: var(--mtrx-secondary, #9f9f9f) !important; }
+
+.mtrx-bg--secondary-dark {
+  background: #6c6c6c;
+  background: var(--mtrx-secondary-dark, #6c6c6c); }
+
+/*Accent*/
+/*.mtrx-bg--accent-lighter {
+	background: #fdecbe;
+	background: var(--mtrx-accent-lighter, #fdecbe);
+}
+.mtrx-bg--accent-light {
+	background: #f9cf5c;
+	background: var(--mtrx-accent-light, #f9cf5c);
+}
+
+.mtrx-bg--accent {
+	background: #e7ab08;
+	background: var(--mtrx-accent, #e7ab08);
+}
+
+.mtrx-bg--accent-dark {
+	background: #846205;
+	background: var(--mtrx-accent-dark, #846205);
+}*/
+/*Contextual*/
+.mtrx .bg-info {
+  background-color: #285cab !important;
+  background-color: var(--mtrx-info, #285cab) !important; }
+
+.mtrx .bg-success {
+  background-color: #428542 !important;
+  background-color: var(--mtrx-success, #428542) !important; }
+
+.mtrx bg-warning {
+  background-color: #dfaf13 !important;
+  background-color: var(--mtrx-warning, #dfaf13) !important; }
+
+.mtrx .bg-danger {
+  background-color: #B33D4B !important;
+  background-color: var(--mtrx-danger, #B33D4B) !important; }
+
+/*Border color utility classes.*/
+.mtrx .border-primary {
+  border-color: #007aaa !important;
+  border-color: var(--mtrx-primary, #007aaa) !important; }
+
+.mtrx .border-secondary {
+  border-color: #9f9f9f !important;
+  border-color: var(--mtrx-secondary, #9f9f9f) !important; }
+
+.mtrx .border-success {
+  border-color: #428542 !important;
+  border-color: var(--mtrx-success, #428542) !important; }
+
+.mtrx .border-danger {
+  border-color: #B33D4B !important;
+  border-color: var(--mtrx-danger, #B33D4B) !important; }
+
+.mtrx .border-warning {
+  border-color: #dfaf13 !important;
+  border-color: var(--mtrx-warning, #dfaf13) !important; }
+
+.mtrx .border-info {
+  border-color: #285cab !important;
+  border-color: var(--mtrx-info, #285cab) !important; }
+
+.mtrx .border-light {
+  border-color: #ebebeb !important;
+  border-color: var(--mtrx-gray-lighter, #ebebeb) !important; }
+
+.mtrx .border-dark {
+  border-color: #393939  !important;
+  border-color: var(--mtrx-gray-darkest, #393939) !important; }
+
+.mtrx .border-white {
+  border-color: #ffffff !important;
+  border-color: var(--mtrx-gray-lightest, #ffffff) !important; }
+
+/* End Color utility classes.
+/******************************************************************************/
+/******************************************************************************/
+/*Main components.
+/*
+/* For standard broadly used things like BODY, page, typography.
+/*
+/* Typography based on overriding browser default 16px to 14px at HTML level.
+/* html		14px/1rem
+/* body
+/* a										baseprimary
+/* disable									basegray	(BS:.text-muted)
+/* small	% of parent									(BS default)
+/* H1		20px/1.43rem	300/light
+/* H2		18px/1.285rem	700/bold
+/* H3		18px/1.285rem	400/normal
+/* H4		16px/1.143rem	700/bold
+/* H5		16px/1.143rem	400/normal
+/* H6		14px/1rem		700/bold
+/******************************************************************************/
+html.mtrx {
+  font-size: 14px; }
+
+.mtrx-body {
+  background-color: #ebebeb;
+  background-color: var(--mtrx-gray-lighter, #ebebeb); }
+
+.mtrx-pageContainer {
+  background-color: #ffffff;
+  background-color: var(--mtrx-gray-lightest, #ffffff);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--mtrx-boxShadow, 0 0 4px rgba(0, 0, 0, 0.25));
+  padding: 1rem 0;
+  margin: 1rem; }
+
+.mtrx h1,
+.mtrx .h1 {
+  font-weight: 300;
+  font-size: 1.43rem; }
+
+.mtrx h2,
+.mtrx .h2 {
+  font-weight: 700;
+  font-size: 1.285rem; }
+
+.mtrx h3,
+.mtrx .h3 {
+  font-weight: 400;
+  font-size: 1.285rem; }
+
+.mtrx h4,
+.mtrx .h4 {
+  font-weight: 700;
+  font-size: 1.143rem; }
+
+.mtrx h5,
+.mtrx .h5 {
+  font-weight: 400;
+  font-size: 1.143rem; }
+
+.mtrx h6,
+.mtrx .h6 {
+  font-weight: 700;
+  font-size: 1rem; }
+
+.mtrx a {
+  color: #007aaa;
+  color: var(--mtrx-primary, #007aaa); }
+
+.mtrx-keyvalue {
+  margin-bottom: 1rem; }
+
+.mtrx-keyvalue.inline .mtrx-key {
+  display: inline-block;
+  margin-right: 6px; }
+
+.mtrx-keyvalue.inline .mtrx-value {
+  display: inline-block; }
+
+.mtrx-keyvalue .mtrx-key {
+  font-weight: 700;
+  font-size: 0.85rem; }
+
+/*TODO: evaluate*/
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #007aaa;
+  border-color: var(--mtrx-primary, #007aaa);
+  background-color: #007aaa;
+  background-color: var(--mtrx-primary, #007aaa); }
+
+/* End Main components.
+/******************************************************************************/
+/******************************************************************************/
+/* Sidebar.
+/*
+/* WIP. In case we want a drawer/pullout/sidebar menu thing. Should probably
+/* be a nav if we want to do this someday.
+/******************************************************************************/
+.mtrx-sidebar {
+  border-right: 1px solid #bebebe;
+  border-right: 1px solid var(--mtrx-gray, #bebebe);
+  min-height: calc(100vh - 400px);
+  /*height: calc(100vh - 400px);
+	//position: sticky;
+	//top: 4rem;
+	//z-index: 1000;
+	//height: calc(100vh - 4rem);*/ }
+
+/* End Sidebar.
+/******************************************************************************/
+/******************************************************************************/
+/* Example.
+/*
+/* Container for showing example code.
+/******************************************************************************/
+.mtrx-example {
+  cursor: text;
+  padding: 1rem;
+  background-color: #ebebeb;
+  background-color: var(--mtrx-gray-lighter, #ebebeb); }
+
+.mtrx-example-display {
+  background-color: #ffffff;
+  background-color: var(--mtrx-gray-lightest), #ffffff;
+  padding: .5rem;
+  margin-top: -.75px;
+  margin-left: -.75px;
+  margin-right: -.75px; }
+
+/* End Example.
+/******************************************************************************/
+/******************************************************************************/
+/* Buttons.
+/*
+/* Styling of Bootstrap button components.
+/******************************************************************************/
+.mtrx .btn {
+  border-radius: 0; }
+
+.mtrx .btn-primary,
+.mtrx .btn-primary:active,
+.mtrx .show > .btn-primary.dropdown-toggle,
+.mtrx .btn-primary:not(:disabled):not(.disabled):active,
+.mtrx .btn-primary:not(:disabled):not(.disabled).active {
+  background-color: #007aaa;
+  background-color: var(--mtrx-primary, #007aaa);
+  border-color: #007aaa;
+  border-color: var(--mtrx-primary, #007aaa);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .btn-primary:focus,
+.mtrx .btn-primary.focus,
+.mtrx .show > .btn-primary.dropdown-toggle:focus,
+.mtrx .btn-primary:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-primary:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 122, 170, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-primary--50, rgba(0, 122, 170, 0.5)); }
+
+.mtrx .btn-secondary,
+.mtrx .btn-secondary:active,
+.mtrx .show > .btn-secondary.dropdown-toggle,
+.mtrx .btn-secondary:not(:disabled):not(.disabled):active,
+.mtrx .btn-secondary:not(:disabled):not(.disabled).active {
+  background-color: #9f9f9f;
+  background-color: var(--mtrx-secondary, #9f9f9f);
+  border-color: #9f9f9f;
+  border-color: var(--mtrx-secondary, #9f9f9f);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .btn-secondary:focus,
+.mtrx .btn-secondary.focus,
+.mtrx .show > .btn-secondary.dropdown-toggle:focus,
+.mtrx .btn-secondary:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-secondary:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(159, 159, 159, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-secondary--50, rgba(159, 159, 159, 0.5)); }
+
+.mtrx .btn-success,
+.mtrx .btn-success:active,
+.mtrx .show > .btn-success.dropdown-toggle,
+.mtrx .btn-success:not(:disabled):not(.disabled):active,
+.mtrx .btn-success:not(:disabled):not(.disabled).active {
+  background-color: #428542;
+  background-color: var(--mtrx-success, #428542);
+  border-color: #428542;
+  border-color: var(--mtrx-success, #428542);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .btn-success:focus,
+.mtrx .btn-success.focus,
+.mtrx .show > .btn-success.dropdown-toggle:focus,
+.mtrx .btn-success:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-success:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 66, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-success--50, rgba(66, 133, 66, 0.5)); }
+
+.mtrx .btn-danger,
+.mtrx .btn-danger:active,
+.mtrx .show > .btn-danger.dropdown-toggle,
+.mtrx .btn-danger:not(:disabled):not(.disabled):active,
+.mtrx .btn-danger:not(:disabled):not(.disabled).active {
+  background-color: #B33D4B;
+  background-color: var(--mtrx-danger, #B33D4B);
+  border-color: #B33D4B;
+  border-color: var(--mtrx-danger, #B33D4B);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .btn-danger:focus,
+.mtrx .btn-danger.focus,
+.mtrx .show > .btn-danger.dropdown-toggle:focus,
+.mtrx .btn-danger:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-danger:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(179, 61, 75, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-danger--50, rgba(179, 61, 75, 0.5)); }
+
+.mtrx .btn-warning,
+.mtrx .btn-warning:active,
+.mtrx .show > .btn-warning.dropdown-toggle,
+.mtrx .btn-warning:not(:disabled):not(.disabled):active,
+.mtrx .btn-warning:not(:disabled):not(.disabled).active {
+  background-color: #dfaf13;
+  background-color: var(--mtrx-warning, #dfaf13);
+  border-color: #dfaf13;
+  border-color: var(--mtrx-warning, #dfaf13);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .btn-warning:focus,
+.mtrx .btn-warning.focus,
+.mtrx .show > .btn-warning.dropdown-toggle:focus,
+.mtrx .btn-warning:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-warning:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(223, 175, 19, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-warning--50, rgba(223, 175, 19, 0.5)); }
+
+.mtrx .btn-info,
+.mtrx .btn-info:active,
+.mtrx .show > .btn-info.dropdown-toggle,
+.mtrx .btn-info:not(:disabled):not(.disabled):active,
+.mtrx .btn-info:not(:disabled):not(.disabled).active {
+  background-color: #285cab;
+  background-color: var(--mtrx-info, #285cab);
+  border-color: #285cab;
+  border-color: var(--mtrx-info, #285cab);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .btn-info:focus,
+.mtrx .btn-info.focus,
+.mtrx .show > .btn-info.dropdown-toggle:focus,
+.mtrx .btn-info:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-info:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 92, 171, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-info--50, rgba(40, 92, 171, 0.5)); }
+
+.mtrx .btn-light,
+.mtrx .btn-light:active,
+.mtrx .show > .btn-light.dropdown-toggle,
+.mtrx .btn-light:not(:disabled):not(.disabled):active,
+.mtrx .btn-light:not(:disabled):not(.disabled).active {
+  background-color: #ebebeb;
+  background-color: var(--mtrx-gray-lighter, #ebebeb);
+  border-color: #ebebeb;
+  border-color: var(--mtrx-gray-lighter, #ebebeb);
+  color: #393939;
+  color: var(--mtrx-gray-darkest, #393939); }
+
+.mtrx .btn-light:focus,
+.mtrx .btn-light.focus,
+.mtrx .show > .btn-light.dropdown-toggle:focus,
+.mtrx .btn-light:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-light:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(235, 235, 235, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-gray-lighter--50, rgba(235, 235, 235, 0.5)); }
+
+.mtrx .btn-dark,
+.mtrx .btn-dark:active,
+.mtrx .show > .btn-dark.dropdown-toggle,
+.mtrx .btn-dark:not(:disabled):not(.disabled):active,
+.mtrx .btn-dark:not(:disabled):not(.disabled).active {
+  background-color: #393939;
+  background-color: var(--mtrx-gray-darkest, #393939);
+  border-color: #393939;
+  border-color: var(--mtrx-gray-darkest, #393939);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .btn-dark:focus,
+.mtrx .btn-dark.focus,
+.mtrx .show > .btn-dark.dropdown-toggle:focus,
+.mtrx .btn-dark:not(:disabled):not(.disabled):active:focus,
+.mtrx .btn-dark:not(:disabled):not(.disabled).active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(57, 57, 57, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-gray-darkest--50, rgba(57, 57, 57, 0.5)); }
+
+.mtrx .btn-link {
+  color: #007aaa;
+  color: var(--mtrx-primary, #007aaa); }
+
+/*OK as default or should it be pagination specific?*/
+.mtrx .btn-group .btn {
+  min-width: 46px; }
+
+/* End Buttons.
+/******************************************************************************/
+/******************************************************************************/
+/* Alerts.
+/*
+/* Styling of Bootstrap alert components.
+/******************************************************************************/
+.mtrx .alert {
+  border: 0;
+  border-radius: 0;
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .alert-primary {
+  background-color: #007aaa;
+  background-color: var(--mtrx-primary, #007aaa); }
+
+.mtrx .alert-secondary {
+  background-color: #9f9f9f;
+  background-color: var(--mtrx-secondary, #9f9f9f); }
+
+.mtrx .alert-success {
+  background-color: #428542;
+  background-color: var(--mtrx-success, #428542); }
+
+.mtrx .alert-danger {
+  background-color: #B33D4B;
+  background-color: var(--mtrx-danger, #B33D4B); }
+
+.mtrx .alert-warning {
+  background-color: #dfaf13;
+  background-color: var(--mtrx-warning, #dfaf13); }
+
+.mtrx .alert-info {
+  background-color: #285cab;
+  background-color: var(--mtrx-info, #285cab); }
+
+.mtrx .alert-light {
+  background-color: #ebebeb;
+  background-color: var(--mtrx-gray-lighter, #ebebeb);
+  color: #393939;
+  color: var(--mtrx-gray-darkest, #393939); }
+
+.mtrx .alert-dark {
+  background-color: #393939;
+  background-color: var(--mtrx-gray-darkest, #393939); }
+
+/* End Alerts.
+/******************************************************************************/
+/******************************************************************************/
+/* Forms.
+/*
+/* Styling of Bootstrap form components.
+/******************************************************************************/
+.mtrx .form-control {
+  border-radius: 0; }
+
+.mtrx .form-group label,
+.mtrx .label {
+  font-weight: 700;
+  font-size: 0.875rem; }
+
+/* Adds a clear "X" icon to end of input fields with data-mtrxInputClear.*/
+/* Supported by mtrxInputClear in mtrxcomponents.js*/
+.mtrx-input-clear {
+  position: absolute;
+  right: 42px;
+  top: 6px;
+  cursor: pointer;
+  z-index: 3;
+  height: 1.75rem;
+  width: 2rem;
+  background-color: #ffffff;
+  background-color: var(--mtrx-gray-lightest, #ffffff);
+  text-align: center; }
+
+/* End Forms.
+/******************************************************************************/
+/******************************************************************************/
+/* Dropzone.
+/*
+/* A container which is a target for file drop interaction.
+/******************************************************************************/
+.mtrx-dropzone {
+  min-height: 200px;
+  border: 3px dashed;
+  border-color: #bebebe;
+  border-color: var(--mtrx-gray, #bebebe);
+  border-radius: 4px;
+  color: #bebebe;
+  color: var(--mtrx-gray, #bebebe); }
+
+/* End Dropzone.
+/******************************************************************************/
+/******************************************************************************/
+/* Validation.
+/*
+/* Styling of MVC generated validation classes.
+/******************************************************************************/
+.input-validation-error {
+  border-color: #B33D4B !important;
+  border-color: var(--mtrx-danger, #B33D4B) !important; }
+
+.field-validation-error {
+  color: #B33D4B !important;
+  color: var(--mtrx-danger, #B33D4B) !important; }
+
+/* End Validation.
+/******************************************************************************/
+/******************************************************************************/
+/* Toggle.
+/*
+/* Toggle styling for a form checkbox..
+/******************************************************************************/
+.mtrx-toggle {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 0;
+  /*So the -indicator:after gets a proper stacking context.*/ }
+
+.mtrx-toggle-indicator {
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: auto;
+  border-radius: 15px;
+  background-color: #bebebe;
+  background-color: var(--mtrx-gray, #bebebe);
+  height: 31px;
+  width: 61px;
+  transition: background .4s; }
+
+.custom-control-input:checked ~ .mtrx-toggle-indicator {
+  background-color: #007aaa;
+  background-color: var(--mtrx-primary, #007aaa); }
+
+.mtrx-toggle-indicator:after {
+  content: '';
+  height: 28px;
+  width: 28px;
+  border-radius: 28px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 4;
+  background-color: #ffffff;
+  background-color: var(--mtrx-gray-lightest, #ffffff);
+  transition: left .2s linear; }
+
+.custom-control-input:checked ~ .mtrx-toggle-indicator:after {
+  left: 31px; }
+
+.mtrx-toggle-description {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 61px;
+  color: #393939;
+  color: var(--mtrx-gray-darkest, #393939);
+  transition: color .2s linear; }
+
+.custom-control-input:checked ~ .mtrx-toggle-description {
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx-toggle-description-on {
+  position: absolute;
+  left: 8px;
+  white-space: nowrap; }
+
+.mtrx-toggle-description-off {
+  position: absolute;
+  right: 8px;
+  white-space: nowrap; }
+
+/* End Toggle.
+/******************************************************************************/
+/******************************************************************************/
+/* Pagination.
+/*
+/* Styling of Bootstrap button groups used for pagination purposes.
+/******************************************************************************/
+.mtrx-pagination--isActive span {
+  border-radius: 30px;
+  content: '';
+  height: 30px;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  z-index: 999;
+  border: 3px solid #007aaa;
+  border: 3px solid var(--mtrx-primary, #007aaa); }
+
+/* End Pagination.
+/******************************************************************************/
+/******************************************************************************/
+/* Navbar.
+/*
+/* Styling of Bootstrap main navbar.
+/******************************************************************************/
+.mtrx-navbar {
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--mtrx-boxShadow, 0 0 4px rgba(0, 0, 0, 0.25)); }
+
+.mtrx-navbar.bg-primary {
+  background-color: #007aaa !important;
+  background-color: var(--mtrx-primary, #007aaa) !important; }
+
+.mtrx-navbar .nav-item {
+  position: relative;
+  border-bottom: 1px solid transparent; }
+
+.mtrx-navbar .nav-item.active {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  /*TODO:color var.*/ }
+
+.mtrx-navbar .nav-link,
+.mtrx-navbar .mtrx-nav-item .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  /*TODO:color var.*/ }
+
+.mtrx-navbar .nav-link:hover,
+.mtrx-navbar .mtrx-nav-item .dropdown-toggle:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  /*TODO:color var.*/ }
+
+.mtrx-navbar .nav-item .nav-link.dropdown-toggle::after {
+  display: none;
+  /* hide arrow */ }
+
+/* hover for desktop only. To reconsider */
+@media only screen and (min-width: 1024px) {
+  .mtrx-navbar .nav-item:hover > .dropdown-menu {
+    display: block; } }
+
+@media only screen and (max-width: 575px) {
+  .mtrx-navbar .nav-item {
+    border-bottom: none; }
+  .mtrx-navbar .nav-link {
+    font-weight: 500;
+    line-height: 1.4rem;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0; }
+  .mtrx-navbar .dropdown-menu-right {
+    position: relative;
+    float: none; } }
+
+/*Start Submenu inside dropdown-item menu*/
+.mtrx-dropdown-item--withSubMenu {
+  position: relative; }
+
+.mtrx-dropdown-item--withSubMenu a::after {
+  position: absolute;
+  right: 6px;
+  top: .8em; }
+
+.mtrx-dropdown-item--withSubMenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem; }
+
+.mtrx-dropdown-item--withoutSubMenu a {
+  padding-left: 2rem; }
+
+/*End Submenu inside dropdown-item menu*/
+/* End Navbar.
+/******************************************************************************/
+/******************************************************************************/
+/* Dropdown.
+/*
+/* Set defaults and extend Bootstrap dropdown component.
+/* Please note some additional dropdown styles are specific to the navbar and
+/* are grouped in that section.
+/******************************************************************************/
+.mtrx-dropdown--withHeader .dropdown-menu {
+  padding-top: 0;
+  min-width: 300px;
+  /*TODO: for notifications. Don't want this default.*/ }
+
+.mtrx-dropdown--withHeader .dropdown-header {
+  background-color: #007aaa;
+  background-color: var(--mtrx-primary, #007aaa);
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff);
+  font-size: 1rem; }
+
+/* End Dropdown.
+/******************************************************************************/
+/******************************************************************************/
+/* Speedbar.
+/*
+/* Styling of Responsive Speedbar.
+/******************************************************************************/
+.mtrx-speedbar input::placeholder {
+  color: #bebebe;
+  color: var(--mtrx-gray, #bebebe); }
+
+.mtrx-speedbar input::-webkit-input-placeholder {
+  color: #bebebe;
+  color: var(--mtrx-gray, #bebebe); }
+
+.mtrx-speedbar input::-moz-placeholder {
+  color: #bebebe;
+  color: var(--mtrx-gray, #bebebe); }
+
+.mtrx-speedbar input:-ms-input-placeholder {
+  color: #bebebe;
+  color: var(--mtrx-gray, #bebebe); }
+
+.mtrx-speedbar input::-ms-input-placeholder {
+  color: #bebebe;
+  color: var(--mtrx-gray, #bebebe); }
+
+/*TODO: make this generic. Perhaps part of some alt faux-tooltip component.*/
+.mtrx-speedbar-error {
+  white-space: nowrap;
+  padding: 4px 8px;
+  position: absolute;
+  bottom: -22px;
+  left: 5px;
+  background-color: #B33D4B;
+  background-color: var(--mtrx-danger, #B33D4B);
+  box-shadow: 0 0 1px #B33D4B;
+  box-shadow: 0 0 1px var(--mtrx-danger, #B33D4B);
+  color: #ffffff !important;
+  color: var(--mtrx-gray-lightest, #ffffff) !important;
+  font-size: 12px;
+  z-index: 1000; }
+
+.mtrx-speedbar-error .fal {
+  font-size: 12px; }
+
+.mtrx-speedbar-error::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 0.8em solid transparent;
+  position: absolute;
+  left: 15%;
+  top: -16px;
+  border-bottom: 10px solid #B33D4B;
+  border-bottom: 10px solid var(--mtrx-danger, #B33D4B); }
+
+.mtrx-recentSearches {
+  color: #6c6c6c;
+  color: var(--mtrx-gray-darker, #6c6c6c);
+  background: #ffffff;
+  background: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx-recentsearches-dropdown {
+  min-width: 300px; }
+
+.mtrx-recentsearches-criteria {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 1rem; }
+
+.mtrx-recentsearches-button {
+  color: #007aaa !important;
+  color: var(--mtrx-primary, #007aaa) !important;
+  background: #ffffff;
+  background: var(--mtrx-gray-lightest, #ffffff);
+  border: 0; }
+
+/* End Speedbar.
+/******************************************************************************/
+/******************************************************************************/
+/* Widgets.
+/*
+/* For Bootstrap card elements which should appear uniform.
+/* Example of usage is on the Matrix Responsive home page.
+/******************************************************************************/
+.mtrx-widget {
+  margin-bottom: .5rem;
+  border-radius: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--mtrx-boxShadow, 0 0 4px rgba(0, 0, 0, 0.25));
+  border: none; }
+
+.mtrx-widget .list-group {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  /*TODO: color var.*/
+  border-radius: 4px;
+  max-height: 400px;
+  overflow: auto; }
+
+.mtrx-widget .list-group-flush .list-group-item {
+  border-radius: 4px; }
+
+.mtrx-widget .card-header {
+  background-color: transparent;
+  border-bottom: 0;
+  padding: 0.25rem 0.50rem;
+  color: #007aaa;
+  color: var(--mtrx-primary, #007aaa); }
+
+.mtrx-widget .card-body {
+  padding: .25rem; }
+
+.mtrx-widget .card-footer {
+  background: transparent;
+  border: 0; }
+
+/* End Widgets.
+/******************************************************************************/
+/******************************************************************************/
+/* More.
+/*
+/* Attempting to create generic, reusable elements which can be used for
+/* show more/show less type functionality. 
+/******************************************************************************/
+.mtrx-more {
+  -moz-transition: .25s linear;
+  -webkit-transition: .25s linear;
+  transition: .25s linear; }
+
+[aria-expanded="true"] .mtrx-more {
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+/* End More.
+/******************************************************************************/
+/******************************************************************************/
+/* Section.
+/*
+/* For styling a card header in a more flowing way within a page.
+/* Class mtrx-section must be used with the bootstrap4 card class 
+/* to apply the visual change.
+/* Add mtrx-section--isCollapsible to the element which wraps the 
+/* card-header text to use the optional collapsing arrow indicator.
+/******************************************************************************/
+.mtrx-section {
+  border: none; }
+
+.mtrx-section .card-header {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d2d2d2;
+  border-bottom: 1px solid var(--mtrx-gray-light, #d2d2d2);
+  color: #007aaa;
+  color: var(--mtrx-primary, #007aaa); }
+
+.mtrx-section--isCollapsible {
+  padding-left: 20px;
+  position: relative;
+  width: 100%; }
+
+.mtrx-section--isCollapsible:before {
+  content: '\f078';
+  font-family: 'Font Awesome 5 Pro';
+  /*font-size: 0.875rem;*/
+  left: 0;
+  line-height: 10px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  transition: transform 300ms ease-in-out;
+  width: 10px; }
+
+.collapsed .mtrx-section--isCollapsible:before {
+  transform: rotate(-90deg);
+  transition: transform 300ms ease-in-out; }
+
+/* End Section.
+/******************************************************************************/
+/******************************************************************************/
+/* Tables.
+/*
+/* Styling of Bootstrap table components.
+/******************************************************************************/
+.mtrx-table th {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  background-color: var(--mtrx-gray-lightest, #ffffff); }
+
+/* End Tables.
+/******************************************************************************/
+/******************************************************************************/
+/* Visualizations.
+/*
+/* Custom graphs, charts, etc.
+/******************************************************************************/
+.mtrx-plannerGraph .mtrx-donutChart {
+  width: 240px;
+  max-width: 90%; }
+
+/* End Visualizations.
+/******************************************************************************/
+/******************************************************************************/
+/* Author
+/*
+/* Decorative bubble for high visibility of things like initials.
+/* The base class should work with the font sizing of the element it is applied
+/* to, but optional class sizes can be specified here to address common usage
+/* scenarios without having to do a lot of overriding of typographic elements.
+/*
+/* TODO: Dry out color specifications and provide inverse alternatives.
+/******************************************************************************/
+.mtrx-author {
+  height: 2.5em;
+  width: 2.5em;
+  margin: 10px;
+  line-height: 2.3em !important;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 1.5em;
+  background-color: gray;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  /*TODO: color var.*/
+  color: rgba(255, 255, 255, 0.85);
+  /*TODO: color var.*/ }
+
+.mtrx-author--large {
+  font-size: 1.5em;
+  font-weight: 700; }
+
+/* End Author
+/******************************************************************************/
+/******************************************************************************/
+/* Badges, counts, things.
+/*
+/* Count, in particular, is used to add data context to an icon.
+/* An example of usage is indicating the number of unseen notifications in nav.
+/******************************************************************************/
+.mtrx-count {
+  position: relative;
+  /*width: fit-content;*/ }
+
+.mtrx-count-badge {
+  font-size: 0.85rem;
+  border-radius: 9px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  position: absolute;
+  top: -2px;
+  left: 8px;
+  padding-top: 1px; }
+
+.mtrx .badge,
+.mtrx a.badge {
+  color: #ffffff;
+  color: var(--mtrx-gray-lightest, #ffffff); }
+
+.mtrx .badge-primary,
+.mtrx a.badge-primary:hover,
+.mtrx a.badge-primary:focus {
+  background-color: #007aaa;
+  background-color: var(--mtrx-primary, #007aaa); }
+
+.mtrx a.badge-primary:focus,
+.mtrx a.badge-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 122, 170, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-primary--50, rgba(0, 122, 170, 0.5)); }
+
+.mtrx .badge-secondary,
+.mtrx a.badge-secondary:hover,
+.mtrx a.badge-secondary:focus {
+  background-color: #9f9f9f;
+  background-color: var(--mtrx-secondary, #9f9f9f); }
+
+.mtrx a.badge-secondary:focus,
+.mtrx a.badge-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(159, 159, 159, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-secondary--50, rgba(159, 159, 159, 0.5)); }
+
+.mtrx .badge-success,
+.mtrx a.badge-success:hover,
+.mtrx a.badge-success:focus {
+  background-color: #428542;
+  background-color: var(--mtrx-success, #428542); }
+
+.mtrx a.badge-success:focus,
+.mtrx a.badge-success.focus {
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 66, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-success--50, rgba(66, 133, 66, 0.5)); }
+
+.mtrx .badge-danger,
+.mtrx a.badge-danger:hover,
+.mtrx a.badge-danger:focus {
+  background-color: #B33D4B;
+  background-color: var(--mtrx-danger, #B33D4B); }
+
+.mtrx a.badge-danger:focus,
+.mtrx a.badge-danger.focus {
+  box-shadow: 0 0 0 0.2rem rgba(179, 61, 75, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-danger--50, rgba(179, 61, 75, 0.5)); }
+
+.mtrx .badge-warning,
+.mtrx a.badge-warning:hover,
+.mtrx a.badge-warning:focus {
+  background-color: #dfaf13;
+  background-color: var(--mtrx-warning, #dfaf13); }
+
+.mtrx a.badge-warning:focus,
+.mtrx a.badge-warning.focus {
+  box-shadow: 0 0 0 0.2rem rgba(223, 175, 19, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-warning--50, rgba(223, 175, 19, 0.5)); }
+
+.mtrx .badge-info,
+.mtrx a.badge-info:hover,
+.mtrx a.badge-info:focus {
+  background-color: #285cab;
+  background-color: var(--mtrx-info, #285cab); }
+
+.mtrx a.badge-info:focus,
+.mtrx a.badge-info.focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 92, 171, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-info--50, rgba(40, 92, 171, 0.5)); }
+
+.mtrx .badge-light,
+.mtrx a.badge-light,
+.mtrx a.badge-light:hover,
+.mtrx a.badge-light:focus {
+  background-color: #ebebeb;
+  background-color: var(--mtrx-gray-lighter, #ebebeb);
+  color: #393939;
+  color: var(--mtrx-gray-darkest, #393939); }
+
+.mtrx a.badge-light:focus,
+.mtrx a.badge-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(235, 235, 235, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-gray-lighter--50, rgba(235, 235, 235, 0.5)); }
+
+.mtrx .badge-dark,
+.mtrx a.badge-dark:hover,
+.mtrx a.badge-dark:focus {
+  background-color: #393939;
+  background-color: var(--mtrx-gray-darkest, #393939); }
+
+.mtrx a.badge-dark:focus,
+.mtrx a.badge-dark.focus {
+  box-shadow: 0 0 0 0.2rem rgba(57, 57, 57, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--mtrx-gray-darkest--50, rgba(57, 57, 57, 0.5)); }
+
+/* End Badges.
+/******************************************************************************/
+/******************************************************************************/
+/* Icon swapper and animation flourishes.
+/*
+/* Use sparingly to draw attention to a changing element.
+/******************************************************************************/
+.mtrx-iconswapper {
+  overflow: hidden;
+  height: 1.5em;
+  line-height: 1.5em;
+  width: 1.5em; }
+
+.mtrx-iconswapper [data-iconswap] {
+  transition: transform 1s ease; }
+
+.mtrx-iconswapper [data-iconswap="2"] {
+  transform: rotate(180deg) translateY(80px); }
+
+.mtrx-iconswapper.mtrx-isSwapped [data-iconswap="1"] {
+  transform: rotate(-180deg) translateY(-80px); }
+
+.mtrx-iconswapper.mtrx-isSwapped [data-iconswap="2"] {
+  transform: rotate(0deg) translateY(0); }
+
+.mtrx-pulsar:after {
+  content: "";
+  background: var(--mtrx-primary);
+  animation: pulse .25s;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  opacity: 0;
+  display: inline;
+  position: absolute;
+  z-index: 1000;
+  top: -10px;
+  left: -10px; }
+
+.mtrx-pulsar.mtrx-isOff:after {
+  animation-name: none; }
+
+@keyframes pulse {
+  from {
+    transform: scale(0);
+    opacity: 1; }
+  to {
+    transform: scale(1);
+    opacity: 0; } }
+
+/* End Icon swapper and animation flourishes.
+/******************************************************************************/
+/******************************************************************************/
+/*	mtrx-flipper
+/*
+/*	A container which can be used to animate flipping between front and back 
+/*	child elements.
+/*
+/*	Be sure to use the parent/child relationship as follows:
+/*	mtrx-flipper > mtrx-flipper-inner > mtrx-flipper-front|mtrx-flipper-back
+/*
+/* Activate the flipping animation by adding mtrx-isFlipped stateful class to
+/* the mtrx-flipper DOM element.
+/******************************************************************************/
+.mtrx-flipper {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%; }
+
+.mtrx-flipper.mtrx-isFlipped .mtrx-flipper-inner {
+  transform: rotateY(180deg); }
+
+.mtrx-flipper-inner {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.mtrx-flipper-front {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%; }
+
+.mtrx-flipper-back {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* End mtrx-flipper.
+/******************************************************************************/
+/******************************************************************************/
+/* Loading indicator.
+/*
+/* Loading screen and spinner indicator. Uses Bootstrap modal.
+/******************************************************************************/
+.mtrx-loading {
+  background-color: rgba(255, 255, 255, 0.75); }
+
+.mtrx-loading .modal-content {
+  background: transparent;
+  border: 0; }
+
+.mtrx-loadingShield {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.75); }
+
+/* End Loading indicator.
+/******************************************************************************/
+/******************************************************************************/
+/* Utilities.
+/*
+/* Helpful things, stateful things, miscellaneous.
+/******************************************************************************/
+.mtrx-widget-badge {
+  padding: .5rem; }
+
+.mtrx-isClickable {
+  cursor: pointer; }
+
+/* Misc */
+.mtrx-faded {
+  opacity: .5; }
+
+/* Positioning */
+.mtrx-top--30percent {
+  top: 30%; }
+
+/* Height minimum */
+.mtrx-minH--150 {
+  min-height: 150px; }
+
+/* Border style and width */
+.mtrx-border-style--dashed {
+  border-style: dashed; }
+
+.mtrx-border-width--2px {
+  border-width: 2px !important; }
+
+.mtrx-border-width--4px {
+  border-width: 4px !important; }
+
+/* End Utilities.
+/******************************************************************************/
