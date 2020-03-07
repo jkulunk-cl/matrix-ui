@@ -13,6 +13,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TableComponent } from './table/table.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { FormsComponent } from './forms/forms.component';
+import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsComponent } from './forms/forms.component';
     TabsComponent,
     TableComponent,
     NotificationsComponent,
-    FormsComponent
+    FormsComponent,
+    UnsubscribeComponent
   ],
   imports: [
     BrowserModule,

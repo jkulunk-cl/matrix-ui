@@ -22,7 +22,7 @@
 }
 */
 
-.mtrx-speedbar .input-group-prepend { overflow: hidden;}
+/* .mtrx-speedbar .input-group-prepend { overflow: hidden;}
 
 .mtrx-speedbar .fa-search {
   transition: transform 1s ease;
@@ -41,4 +41,4 @@
 .mtrx-speedbar .mtrx-help--animate .fa-info-circle {
   transform: rotate(0deg) translateY(0);
   transition: transform 1s ease;
-}
+} */

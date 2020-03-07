@@ -1,27 +1,27 @@
-.mtrx-notification {
-    font-size: 1.125rem;
-    width: 38px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+// .mtrx-notification {
+//     font-size: 1.125rem;
+//     width: 38px;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
 
-.mtrx-notification.active { color: var(--mtrx-lightest); }
+// .mtrx-notification.active { color: var(--mtrx-lightest); }
 
-.mtrx-count {
-    background-color: var(--mtrx-danger);
-    font-size: 0.75rem;
-    display: block;
-    border-radius: 9px;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
-    text-align: center;
-    position: absolute;
-    top: 6px;
-    right: 0;
-}
+// .mtrx-count {
+//     background-color: var(--mtrx-danger);
+//     font-size: 0.75rem;
+//     display: block;
+//     border-radius: 9px;
+//     width: 18px;
+//     height: 18px;
+//     line-height: 18px;
+//     text-align: center;
+//     position: absolute;
+//     top: 6px;
+//     right: 0;
+// }
 
 .mtrx-popover {
     border-radius: 0 !important;
