@@ -182,11 +182,11 @@ LET FAicon="fa fa-tag fa-lg", Pre="#f89b24", Auc="#e3d330", Reo="#218250", Rsl="
 
 === Price Decrease
 
-(({LastChangeType} = "Price Decrease") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_decrease-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
+(({LastChangeType} = "Price Decrease") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_decreased-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
 
 === Price Increase
 
-(({LastChangeType} = "Price Increase") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_increase-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
+(({LastChangeType} = "Price Increase") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_increased-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
 
 ===========
 
@@ -194,8 +194,8 @@ LET FAicon="fa fa-tag fa-lg", Pre="#f89b24", Auc="#e3d330", Reo="#218250", Rsl="
 & (({Status} = "Sold") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/recently_sold-en.gif' alt='" & ToString({Status}) &"' height='22' border='0'><div>"):(""))
 & (({Status} = "P-Under Contract NO Showings") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/pending_sale-en.gif' alt='" & ToString({Status}) &"' height='22' border='0'><div>"):(""))
 & (({YearBuiltException} = "New Construction") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/new_construction-en.gif' alt='" & ToString({YearBuiltException}) &"' height='22' border='0'><div>"):(""))
-& (({LastChangeType} = "Price Decrease") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_decrease-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
-& (({LastChangeType} = "Price Increase") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_increase-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
+& (({LastChangeType} = "Price Decrease") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_decreased-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
+& (({LastChangeType} = "Price Increase") ? ("<div><img src='http://pine.matrixstaging.com/matrix/images/onehome/price_increased-en.gif' alt='" & ToString({LastChangeType}) &"' height='22' border='0'><div>"):(""))
 
 
 
