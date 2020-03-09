@@ -1,32 +1,77 @@
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet" />
+
 <div class="onehome">
-  <nav class="navbar onehome">
-    <span class="navbar-brand">OneHome</span>
+
+  <nav class="navbar navbar-onehome mb-5">
+    <span class="navbar-brand">
+      <img class="logo" src="/assets/images/onehome-logo.gif" alt="OneHome" />
+    </span>
   </nav>
 
-  <div class="container onehome">
-    <h1>Sorry to see you go!</h1>
-    <p>text</p>
-    <div class="form-group">
-      <label>Real Estate Agent Emails</label>
-      <div>I don't want to receive emails:</div>
+  <div class="container">
+    <div class="row">
+
+      <div class="col d-lg-none text-center mb-5">
+        <img class="artwork" src="/assets/images/unsubscribe.png" />
+      </div>
+      
     </div>
+    <div class="row">
 
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input">
-      <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+      <div class="col-lg-7 pb-5">
+
+        <h1 class="mb-3">Sorry to see you go!</h1>
+        <p>Let us know which emails you'd no longer like sent to <strong>jack@black.com</strong>. (Just keep in mind you
+          might miss out on some of the latest and greatest properties.)</p>
+        <p class="title">Real Estate Agent Emails</p>
+        <p>I don't want to receive emails:</p>
+        <div class="custom-control custom-checkbox mb-3">
+          <input id="customCheck1" type="checkbox" class="custom-control-input" checked disabled>
+          <label class="custom-control-label" for="customCheck1">About my agent's search "<strong>Listings in
+              Oakland</strong>"</label>
+        </div>
+
+        <div class="custom-control custom-checkbox mb-3">
+          <input id="customCheck2" type="checkbox" class="custom-control-input" checked disabled>
+          <label class="custom-control-label" for="customCheck2">Any email from my real estate agent, including all
+            saved searches</label>
+        </div>
+
+        <div class="custom-control custom-checkbox mb-3">
+          <input id="customCheck3" type="checkbox" class="custom-control-input" checked>
+          <label class="custom-control-label" for="customCheck3">Any emails from my real estate agent, or any agent or
+            broker from <strong>TheMLS</strong></label>
+        </div>
+
+        <hr class="my-5" />
+
+        <p class="title">Your Saved Search Emails</p>
+        <div class="custom-control custom-checkbox mb-3">
+          <input id="customCheck4" type="checkbox" class="custom-control-input">
+          <label class="custom-control-label" for="customCheck4">I don't want to receive emails from any of my saved
+            searches.</label>
+        </div>
+
+        <hr class="my-5" />
+
+        <p class="title">OneHome Updates & Offers</p>
+        <div class="custom-control custom-checkbox mb-3">
+          <input id="customCheck5" type="checkbox" class="custom-control-input">
+          <label class="custom-control-label" for="customCheck5">I don't want to receive any announcements, offers,
+            invitations or tips from OneHome.</label>
+          <small>You'll still get emails about your listings and search results.</small>
+        </div>
+
+        <button type="button" class="btn btn-primary">Unsubscribe</button>
+
+      </div>
+      <div class="col-lg-5 d-none d-lg-block">
+        <img class="artwork" src="/assets/images/unsubscribe.png" />
+      </div>
+
     </div>
-
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" checked>
-      <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-    </div>
-
-    <button type="button" class="btn btn-primary">Button</button>
-
 
   </div>
-</div>
 
-<p>unsubscribe works!</p>
+</div>

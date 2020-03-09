@@ -14,6 +14,7 @@ import { TableComponent } from './table/table.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { FormsComponent } from './forms/forms.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
+import { UnsubscribeCompleteComponent } from './unsubscribe-complete/unsubscribe-complete.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
     TableComponent,
     NotificationsComponent,
     FormsComponent,
-    UnsubscribeComponent
+    UnsubscribeComponent,
+    UnsubscribeCompleteComponent
   ],
   imports: [
     BrowserModule,
