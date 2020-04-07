@@ -4,7 +4,7 @@
 html, body { height: 100%;}
 
 
-/* 
+/*
 .mtrx-notification {
     font-size: 1.125rem;
     width: 38px;
@@ -63,3 +63,19 @@ html, body { height: 100%;}
     border-radius: 0;
 }
 */
+
+.mtrx-tour,
+.mtrx-tour .popover-title {
+  background-color: #285cab !important;
+  color:#fff;
+  border: none;
+}
+
+.popover.right>.arrow:after {
+  border-right-color: #285cab !important;
+}
+
+.mtrx-tour .btn-link
+ {
+   color: #fff;
+ }

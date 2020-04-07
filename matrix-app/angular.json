@@ -30,9 +30,13 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/3rd-party/bootstrap-tour-standalone.min.css",
               "src/assets/mtrxcomponents.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/3rd-party/bootstrap-tour-standalone.min.js"
+            ]
           },
           "configurations": {
             "production": {

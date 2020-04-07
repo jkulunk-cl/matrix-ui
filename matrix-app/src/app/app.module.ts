@@ -15,6 +15,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { FormsComponent } from './forms/forms.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { UnsubscribeCompleteComponent } from './unsubscribe-complete/unsubscribe-complete.component';
+import { TourComponent } from './tour/tour.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UnsubscribeCompleteComponent } from './unsubscribe-complete/unsubscribe
     NotificationsComponent,
     FormsComponent,
     UnsubscribeComponent,
-    UnsubscribeCompleteComponent
+    UnsubscribeCompleteComponent,
+    TourComponent
   ],
   imports: [
     BrowserModule,
