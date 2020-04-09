@@ -43,22 +43,22 @@ export class TourComponent implements OnInit, AfterViewInit {
       });
       this.tour.addStep({
           element: "#feature1",
-          title: "Introducing the Planner",
+          title: "Featuring a Widget",
           content: "The Planner lets your clients review the real estate process and check off tasks as they go - so you’ll always know where they are in the process and where they might be stuck.",
           placement: 'right',
           backdrop: true,
       });
       this.tour.addStep({
           element: "#feature2",
-          title: "Title of my step 2",
-          content: "Content of my step 2",
+          title: "Featuring a Button",
+          content: "The Planner lets your clients review the real estate process and check off tasks as they go - so you’ll always know where they are in the process and where they might be stuck.",
           placement: 'bottom',
       });
       this.tour.addStep({
         element: "#feature3",
-        title: "Title of my step 2",
-        content: "Content of my step 2",
-        placement: 'bottom',
+        title: "Featuring a Link",
+        content: "The Planner lets your clients review the real estate process and check off tasks as they go - so you’ll always know where they are in the process and where they might be stuck.",
+      placement: 'bottom',
     });
       // Initialize the tour
       this.tour.init();

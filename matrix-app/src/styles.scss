@@ -74,6 +74,9 @@ html, body { height: 100%;}
 .popover.right>.arrow:after {
   border-right-color: #285cab !important;
 }
+.popover.bottom>.arrow:after {
+  border-bottom-color: #285cab !important;
+}
 
 .mtrx-tour .btn-link
  {
