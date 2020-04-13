@@ -16,6 +16,7 @@ import { FormsComponent } from './forms/forms.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
 import { UnsubscribeCompleteComponent } from './unsubscribe-complete/unsubscribe-complete.component';
 import { TourComponent } from './tour/tour.component';
+import { TypographyComponent } from './typography/typography.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TourComponent } from './tour/tour.component';
     FormsComponent,
     UnsubscribeComponent,
     UnsubscribeCompleteComponent,
-    TourComponent
+    TourComponent,
+    TypographyComponent
   ],
   imports: [
     BrowserModule,
